@@ -1,0 +1,121 @@
+#!bin/tcsh
+
+if (! $?UNAME) then
+    setenv UNAME `uname`
+endif
+
+set packages = ( netscape gcc-3.3 j2sdk Acrobat mathematica news )
+setenv MANPATH /tools/cs/man
+
+set pathadd = ""
+foreach p ( $packages )
+    if ( -d /tools/cs/$p ) then
+    set pathadd = ( $pathadd /tools/cs/$p/bin )
+    setenv MANPATH ${MANPATH}:/tools/cs/$p/man
+    endif
+end
+
+if ( -d /usr/share/man ) then
+    setenv MANPATH ${MANPATH}:/usr/share/man
+else
+    setenv MANPATH ${MANPATH}:/usr/man
+endif
+
+# first merge $path and $pathadd
+set path = ( $pathadd $path )
+
+# then get rid of pathadd variable
+unset pathadd
+
+# now add additional paths
+set path = ( $HOME/bin $path )
+
+setenv MANPATH ${MANPATH}:/usr/local/man:/usr/local/X11/man
+
+# basic info about the host/user
+if (! $?USER) then
+    setenv USER `whoami`
+endif
+
+if (! $?HOST) then
+    setenv HOST `hostname`
+endif
+
+# Set the editor to use (usually vi).
+setenv EDITOR emacs
+
+setenv PAGER less
+
+# how many commands to keep in the history database
+set history = 200
+set savehist = 800 merge
+
+# standard csh features
+set filec           # enable filename completion
+set notify          # report status of background jobs immediately
+set noclobber       # don't clobber existing files
+set nomatch         # not an error if '*' matches nothing
+
+# Set colors
+set BLACK='\033[0;30m'
+set BLUE='\033[0;34m'
+set GREEN='\033[0;32m'
+set CYAN='\033[0;36m'
+set RED='\033[0;31m'
+set PURPLE='\033[0;35m'
+set BROWN='\033[0;33m'
+set LIGHTGRAY='\033[0;37m'
+set DARKGRAY='\033[1;30m'
+set LIGHTBLUE='\033[1;34m'
+set LIGHTGREEN='\033[1;32m'
+set LIGHTCYAN='\033[1;36m'
+set LIGHTRED='\033[1;31m'
+set LIGHTPURPLE='\033[1;35m'
+set YELLOW='\033[1;33m'
+set WHITE='\033[1;37m'
+set NC='\033[0m'            # No Color
+set DEFAULT='%{%033[0;39m%}'
+
+# tcsh-specific features
+if ($?tcsh != 0) then
+#    set prompt='\n%{$YELLOW%} <%h> %{$LIGHTRED%}%P %{$LIGHTPURPLE%}%n%{$NC%}@%{$LIGHTCYAN%}%m%{$NC%}\n -~> '\
+    set prompt='\n%{\033[1;33m%} <%h> %{\033[1;31m%}%P %{\033[1;35m%}%n%{\033[0m%}@%{\033[1;36m%}%m\n%{\033[0;39m%} -~> '
+
+    limit coredumpsize 1k
+    unset autologout    # don't log me off after a set idle time
+    set echo_style both # emulate bsd and sysV /bin/echo's
+    set addsuffix   # / on dir during file name completion
+    set ampm        # show times in 12 hr. format
+    set autolist    # list possibilities for file name completion
+    set autoexpand  # expand history automatically with 
+endif
+
+# Some useful Aliases.
+alias ls "ls -F --color=auto"
+alias rm "rm -i"
+alias mv "mv -i"
+alias cp "cp -i"
+
+# Aliases
+alias taurus='cd /d/bip3/ezbc/taurus'
+alias please='sudo'
+alias bip='ssh -XY bip'
+
+# Unalias some non-useful aliases
+unalias l.
+unalias ll
+unalias mc
+
+################################################################################
+# KARMA, Miriad, GIPSY, and CASA
+################################################################################
+
+source /usr/local/bin/miriad-carma-setup
+
+source /usr/local/bin/casa-setup
+
+source /usr/local/bin/gipsy-setup
+
+################################################################################
+#------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
