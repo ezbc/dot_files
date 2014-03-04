@@ -156,7 +156,7 @@ if [ $USER == ezbc ]; then
     alias miriad='tcsh | miriad'
     
     # Python
-    #export PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/python/myModules
+    export PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/python/
     export PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/research/python_modules
     export PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/research/python_modules/miriad
     export PATH=/usr/users/ezbc/python:$PATH # anaconda
@@ -165,10 +165,9 @@ if [ $USER == ezbc ]; then
     alias taurus='cd /d/bip3/ezbc/taurus'
     alias perseus='cd /d/bip3/ezbc/perseus'
     alias please='sudo'
+    alias engels='cd /d/engels2/ezbc/'
     alias bip='ssh -XY bip'
     alias miriad='tcsh -c miriad'
-    alias casa='tcsh -c casa'
-    #alias 'casanologger'='tcsh -c casa --nologger'
     alias kvis='tcsh -c kvis'
     alias kpvslice='tcsh -c kpvslice'
     alias gipsy='tcsh -c gipsy'
@@ -176,8 +175,8 @@ if [ $USER == ezbc ]; then
     alias clean='rm -rf #* .*.swp .*.swn .*.swo'
     alias mac='ssh -XY research@141.140.86.26'
     alias screenshot='gnome-screenshot -a'
-    alias mendeley='/usr/users/ezbc/apps/'\
-        'mendeleydesktop-1.10.1-linux-x86_64/bin/mendeleydesktop'
+    #alias mendeley='/usr/users/ezbc/apps/'\
+    #    'mendeleydesktop-1.10.1-linux-x86_64/bin/mendeleydesktop'
     alias ipython='/usr/users/ezbc/.local/bin/ipython'
     alias screen='~/apps/screen/bin/screen'
     alias sysmon='gnome-system-monitor'
@@ -194,6 +193,7 @@ if [ $USER == ezbc ]; then
     cosmos='/d/cosmos/ezbc/'
     classes='/d/cosmos/ezbc/classes/'
     bip3='/d/bip3/ezbc/'
+    engels='/d/engels2/ezbc/'
 
     # Go to home directory
     cd ~
@@ -216,12 +216,15 @@ function start_agent {
     /usr/bin/ssh-add
 }
    
-if [ -f "${SSH_ENV}" ]; then
-     . "${SSH_ENV}" > /dev/null
-     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-        start_agent;
-    }
-else
-    start_agent;
-fi
+#if [ -f "${SSH_ENV}" ]; then
+#     . "${SSH_ENV}" > /dev/null
+#     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+#        start_agent;
+#    }
+#else
+#    start_agent;
+#fi
+
+alias init_ssh='start_agent'
+
 
