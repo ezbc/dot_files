@@ -117,7 +117,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # ========================== Set bashrc for elijah ============================
-if [ $USER == elijah ]; then
+if [ $HOSTNAME == latitude ]; then
     # Defines path to CASA start-up
     PATH='/home/elijah/applications/casapy-40.0.22208-001':$PATH
     gip_root=/home/elijah/applications/gipsy/;export gip_root
@@ -129,24 +129,21 @@ if [ $USER == elijah ]; then
     export PATH=$PATH:/usr/local/bin/casa
     PATH='/home/elijah/applications/miriad/bin/linux/miriad':$PATH
     export PATH=$PATH:/usr/local/bin/miriad
-    source /usr/local/karma/.karmarc
+    #source /usr/local/karma/.karmarc
     export PYTHONPATH=$PYTHONPATH:/home/elijah/python/myModules/
 
     # Set up aliases
     alias eclipse='/usr/bin/eclipse'
-    #alias eclipse='/home/elijah/applications/eclipse/eclipse'
     alias fixinternet='please rm -rf /etc/resolv.conf'
     alias uw='ssh -XY ezbc@uwast.astro.wisc.edu'
     alias screenshot='gnome-screenshot -a'
     cosmos='ezbc@uwast.astro.wisc.edu:'
     uw='ezbc@uwast.astro.wisc.edu:'
-    paper5='/home/elijah/Dropbox/research/manuscripts/leop/paper5/'\
-        'post_circulation/'
     LOGIN_ARCH=linux
 fi
 
 # ========================== Set bashrc for ezbc ============================
-if [ $USER == ezbc ]; then
+if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ]; then
     # IDL
     export IDL_STARTUP=~/.idlstartup
     export IDL_PATH=$IDL_PATH:+/usr/users/ezbc/idl/
