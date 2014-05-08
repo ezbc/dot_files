@@ -57,12 +57,12 @@ set incsearch		" incremental search
 set autoread		" auto read when file is changed from outside
 
 " Color column
-set colorcolumn=+1        " highlight column after 'textwidth'
-set colorcolumn=+1,+2,+3  " highlight three columns after 'textwidth'
-highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
-set colorcolumn=80
-set numberwidth=3
-set cpoptions+=n
+#set colorcolumn=+1        " highlight column after 'textwidth'
+#set colorcolumn=+1,+2,+3  " highlight three columns after 'textwidth'
+#highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+#set colorcolumn=80
+#set numberwidth=3
+#set cpoptions+=n
 
 " aesthetics
 set number              " shows line numbers

@@ -118,28 +118,47 @@ fi
 
 # ========================== Set bashrc for elijah ============================
 if [ $HOSTNAME == latitude ]; then
-    # Defines path to CASA start-up
-    PATH='/home/elijah/applications/casapy-40.0.22208-001':$PATH
-    gip_root=/home/elijah/applications/gipsy/;export gip_root
+    PATH=/usr/bin/:/bin/
 
     # Read in astro library for gdl
     export GDL_STARTUP=~/.gdl_startup
     export thunderbird=/usr/local/thunderbird
     export vnc=/usr/local/bin/.VNC-Viewer-5.0.5-Linux-x86
     export PATH=$PATH:/usr/local/bin/casa
-    PATH='/home/elijah/applications/miriad/bin/linux/miriad':$PATH
+    export PATH=$PATH:'/home/elijah/applications/miriad/bin/linux/miriad'
     export PATH=$PATH:/usr/local/bin/miriad
-    #source /usr/local/karma/.karmarc
-    export PYTHONPATH=$PYTHONPATH:/home/elijah/python/myModules/
+    export PYTHONPATH=$PYTHONPATH:/home/ezbc/research/python_modules/
 
+    # KARMA package
+    source /usr/local/karma/.karmarc
+
+    # Set up for Star-link
+    #export STARLINK_DIR="/home/ezbc/opt/star-hawaiki"
+    #source $STARLINK_DIR/etc/profile
+
+    # Set up for cloudy
+    alias cloudy='/home/ezbc/opt/c13.03/source/sys_gcc/cloudy.exe'
+
+    # Kerbel Space program
+    alias kerbel='/home/ezbc/opt/KSP_linux/KSP.x86_64'
+
+    # Switch iraf login command
+    alias iraf='cl'
+    
+    # TOPCAT
+    alias topcat='java -jar /home/ezbc/opt/topcat-lite.jar'
+    
     # Set up aliases
     alias eclipse='/usr/bin/eclipse'
     alias fixinternet='please rm -rf /etc/resolv.conf'
     alias uw='ssh -XY ezbc@uwast.astro.wisc.edu'
     alias screenshot='gnome-screenshot -a'
+    alias sysmon='gnome-system-monitor'
     cosmos='ezbc@uwast.astro.wisc.edu:'
     uw='ezbc@uwast.astro.wisc.edu:'
     LOGIN_ARCH=linux
+    
+
 fi
 
 # ========================== Set bashrc for ezbc ============================
@@ -223,3 +242,8 @@ function start_agent {
 #fi
 
 alias init_ssh='start_agent'
+
+# Add iraf setup commands
+if [ -e /home/ezbc/.iraf/setup.sh ]; then
+    source /home/ezbc/.iraf/setup.sh
+fi
