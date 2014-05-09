@@ -1,7 +1,74 @@
+    \citet{dicintio14} used simulations. The main result is a clear dependence    of the inner slope of the dark matter density profile on the    stellar-to-halo mass ratio. At higher star formation efficiencies dark    matter profiles become flatter.     \citet{dicintio14b} introduce a mass dependent density profile to describe    the distribution of dark matter within galaxies, which takes into account    the stellar-to-halo mass dependence of the response of dark matter to    baryonic processes,V
+,V
+Thus it    stands to reason that the dark matter halo may affect the gas infall rate    or star formation rate.,v
+t,v
+a,v
+h,v
+the second one is,v
+ ,v
+R,v
+ The first possibility is not usually    considered as probable,v
+-,v
+    wtf?,V
+),v
+2,v
+9,v
+1,v
+(,v
+n,v
+e,v
+p,v
+o,v
+K,v
+&,v
+\,v
+z,v
+G,v
+@ARTICLE{1992A&A...262..455G,   author = {{Goetz}, M. and {Koeppen}, J.},    title = "{On abundance gradients in spiral galaxies}",  journal = {\aap}, keywords = {Abundance, Chemical Evolution, Computational Astrophysics, Spiral Galaxies, Astronomical Models, Galactic Mass},     year = 1992,    month = sep,   volume = 262,    pages = {455-467},   adsurl = {http://adsabs.harvard.edu/abs/1992A%26A...262..455G},  adsnote = {Provided by the SAO/NASA Astrophysics Data System}},V
+    Some notes on dark-matter halos:\\    \url{http://bccp.berkeley.edu/beach_program/presentations09/CATBwhite2.pdf}\\    $\Lambda$-CDM halos are not spherical but approximate triaxial ellipsoids.    The halos have cuspy density profiles with outwardly increasing slopes.    The shape of halos is uniform across all masses of halos.  The velocity    dispersion profiles show considerable variation with dark matter halo    profile.,V
+    \url{http://bccp.berkeley.edu/beach_program/presentations09/CATBwhite2.pdf}\\    $\Lambda$-CDM halos are not spherical but approximate triaxial ellipsoids.    The halos have cuspy density profiles with outwardly increasing slopes.    The shape of halos is uniform across all masses of halos.  The velocity    dispersion profiles show considerable variation with dark matter halo    profile.,V
+    \citet{sanchez12} In fact, as explained by Goetz \& Koeppen (1992a),    there are only 4 possible ways to cre- ate a radial abundance gradient:    (1) A radial variation of the ini- tial mass function (IMF); (2) A    variation of the stellar yields with galactocentric radius; (3) A star    formation rate (SFR) changing with the radius; (4) A gas infall rate    variable with radius.  The first possibility is not usually considered as    probable, and the second one is already included in modern models, that    adopt metallicity dependent stellar yields. Thus it stands to reason that    the dark matter halo may affect the gas infall rate or star formation    rate.,v
+    \citet{sanchez12} In fact, as explained by Goetz \& Koeppen (1992a),    there are only 4 possible ways to cre- ate a radial abundance gradient:    (1) A radial variation of the ini- tial mass function (IMF); (2) A    variation of the stellar yields with galactocentric radius; (3) A star    formation rate (SFR) changing with the radius; (4) A gas infall rate    variable with radius.  The first possibility is not usually considered as    probable, and the second one is already included in modern models, that    adopt metallicity dependent stellar yields. Thus it stands to reason that    the dark matter halo may affect the gas infall rate or star formation    rate.,V
+7,v
+4,v
+.,v
+A,v
+5,v
+3,v
+0,v
+@ARTICLE{2013A&A...554A..47G,   author = {{Gibson}, B.~K. and {Pilkington}, K. and {Brook}, C.~B. and 	{Stinson}, G.~S. and {Bailin}, J.},    title = "{Constraining sub-grid physics with high-redshift spatially-resolved metallicity distributions}",  journal = {\aap},archivePrefix = "arXiv",   eprint = {1304.3020}, primaryClass = "astro-ph.GA", keywords = {galaxies: abundances, galaxies: evolution, galaxies: formation, Galaxy: disk},     year = 2013,    month = jun,   volume = 554,      eid = {A47},    pages = {A47},      doi = {10.1051/0004-6361/201321239},   adsurl = {http://adsabs.harvard.edu/abs/2013A%26A...554A..47G},  adsnote = {Provided by the SAO/NASA Astrophysics Data System}},V
+effects of a star formation rate and an infall of gas, both vary-ing with galactocentric radius of galaxies,v
+    \citet{jones12}  find that metallicity gradients and their evolution can be    explained by the inward radial migration of gas together with a radial    variation in the mass loading factor governing the ratio of outflowing gas    to the local star formation rate. Metallicity gradients are caused by    radial variation in the effective mass loading factor.,V
+475 N CHARTER ST,v
+@ARTICLE{2013ApJ...765...48J,   author = {{Jones}, T. and {Ellis}, R.~S. and {Richard}, J. and {Jullo}, E.	},    title = "{The Origin and Evolution of Metallicity Gradients: Probing the Mode of Mass Assembly at z \~{}= 2}",  journal = {\apj},archivePrefix = "arXiv",   eprint = {1207.4489}, primaryClass = "astro-ph.CO", keywords = {galaxies: abundances, galaxies: evolution, galaxies: high-redshift },     year = 2013,    month = mar,   volume = 765,      eid = {48},    pages = {48},      doi = {10.1088/0004-637X/765/1/48},   adsurl = {http://adsabs.harvard.edu/abs/2013ApJ...765...48J},  adsnote = {Provided by the SAO/NASA Astrophysics Data System}},V
+ find that metallicity gradients and their evolution can be explained by the inward radial migration of gas together with a radial variation in the mass loading factor governing the ratio of outflowing gas to the local star formation rate,v
+the disruption of central cusps via the transfer of energy from sinking massive objects,v
+@ARTICLE{2010ApJ...725.1707G,   author = {{Goerdt}, T. and {Moore}, B. and {Read}, J.~I. and {Stadel}, J.	},    title = "{Core Creation in Galaxies and Halos Via Sinking Massive Objects}",  journal = {\apj},archivePrefix = "arXiv",   eprint = {0806.1951}, keywords = {cosmology: theory, dark matter, galaxies: dwarf, galaxies: individual: VCC 128, methods: numerical},     year = 2010,    month = dec,   volume = 725,    pages = {1707-1716},      doi = {10.1088/0004-637X/725/2/1707},   adsurl = {http://adsabs.harvard.edu/abs/2010ApJ...725.1707G},  adsnote = {Provided by the SAO/NASA Astrophysics Data System}},V
+,,v
+c,v
+f,v
+I,v
+},v
+@ARTICLE{2013MNRAS.429.3068T,   author = {{Teyssier}, R. and {Pontzen}, A. and {Dubois}, Y. and {Read}, J.~I.	},    title = "{Cusp-core transformations in dwarf galaxies: observational predictions}",  journal = {\mnras},archivePrefix = "arXiv",   eprint = {1206.4895}, primaryClass = "astro-ph.CO", keywords = {galaxies: dwarf, ISM: structure, methods: numerical, dark matter},     year = 2013,    month = mar,   volume = 429,    pages = {3068-3078},      doi = {10.1093/mnras/sts563},   adsurl = {http://adsabs.harvard.edu/abs/2013MNRAS.429.3068T},  adsnote = {Provided by the SAO/NASA Astrophysics Data System}},V
+L,v
+we show that it is also possible to form a prominent dark matter core within the well-controlled framework of an isolated, initially cuspy, 1010 M⊙ dark matter halo,v
+$,v
+d,v
+m,v
+l,v
+M,v
+∼,v
+S,v
+N,v
+@ARTICLE{2013MNRAS.432.1947M,   author = {{Martizzi}, D. and {Teyssier}, R. and {Moore}, B.},    title = "{Cusp-core transformations induced by AGN feedback in the progenitors of cluster galaxies}",  journal = {\mnras},archivePrefix = "arXiv",   eprint = {1211.2648}, primaryClass = "astro-ph.CO", keywords = {black hole physics, methods: numerical- galaxies: clusters: general, galaxies: formation, cosmology: theory, large-scale structure of Universe},     year = 2013,    month = jul,   volume = 432,    pages = {1947-1954},      doi = {10.1093/mnras/stt297},   adsurl = {http://adsabs.harvard.edu/abs/2013MNRAS.432.1947M},  adsnote = {Provided by the SAO/NASA Astrophysics Data System}},V
+used cosmological simulations to show that active galactic nuclei (AGN) feedback on the gas distribution in clusters of galaxies can be important in determining the spatial distribution of stars and dark matter in the central regions of these systems,v
+−,v
+α,v
+e.bernsteincooper@gmail.com,v
+\usepackage{lipsum} % needed for figures in multicol format\usepackage{capt-of}%%To get the caption in multicol format,V
     \citet{sanchez12} In fact, as explained by Goetz \& Koeppen (1992a), there    are only 4 possible ways to cre- ate a radial abundance gradient: 1) A    radial variation of the ini- tial mass function (IMF); 2) A variation of    the stellar yields with galactocentric radius; 3) A star formation rate    (SFR) changing with the radius; 4) A gas infall rate variable with radius.    The first possibility is not usually considered as probable, and the second    one is already included in modern models, that adopt metallicity dependent    stellar yields. Thus, from the seminal works of Lacey \& Fall (1985a),,V
 The results of this paper show that diskgalaxies in the local Universe present a common or character-istic gradient in the oxygen abundance of α O/H = −0.1 dex/r eup to ∼2 disk effective radii, with a small dispersion compatiblewith being produced by random fluctuations,v
     Before drawing conclusions, we will spatially bin the more resolved    galaxies in our sample so that we can compare the effects of resolution.    Determining the presence and locations of \hii\ regions in a sample of    10,000 galaxies is a daunting task. We will adopt the methods of    \citet{sanchez12} using the code \textsc{HIIexplorer}. The most common    diagnostic diagram in the literature for the optical regime is the one    which makes use of easily- observable strong lines that are less affected    by dust attenuation, i.e., [O\iii]/\,H$\beta$ vs. [N\ii]/H$\alpha$    (Baldwin et al. 1981),V
-,V
 %-------------------------------------------------------------------------------\section{Finding \hii\ Regions and Determining Metallicity}%-------------------------------------------------------------------------------,V
 %-------------------------------------------------------------------------------\section{Deriving Dark Matter Profiles}%-------------------------------------------------------------------------------,V
     text goes here,V
@@ -10,31 +77,16 @@ The results of this paper show that diskgalaxies in the local Universe present 
 \begin{multicols}{2},v
 %% ENTER TEXT, FIGURES AND TABLES BELOW,V
 McCall et al. 1985; Vila-Costas & Edmunds 1992,v
-4,v
-5,v
-3,v
 6,v
-7,v
- ,v
--,v
-1,v
 %,v
 H,v
-},v
 \em{,v
-d,v
-n,v
-e,v
 \end{multicols},V
 *,v
-t,v
 \usepackage{capt-of}%%To get the caption in multicol format,V
 !,v
     \includegraphics[scale=1]{sanchez13_fig9.pdf},V
-p,v
 b,v
-h,v
-\usepackage{lipsum} % needed for figures in multicol format\usepackage{capt-of}%%To get the caption in multicol format,V
 \usepackage{lipsum}\usepackage{capt-of}%%To get the caption,v
     Determining the presence and locations of \hii\ regions in a sample of    10,000 galaxies is a daunting task. We will adopt the methods of    \citet{sanchez12} using the code \textsc{HIIexplorer}. The most common    diagnostic diagram in the literature for the optical regime is the one    which makes use of easily- observable strong lines that are less affected    by dust attenua- tion, i.e., [O\iii]/\,H$\beta$ vs. [N\ii]/H$\alpha$    (Baldwin et al. 1981).,V
     %-----------------------------Figure Start---------------------------\begin{figure}[!htbp]    %\includegraphics[scale=0.3]{figures/sanchez13_fig9.pdf}    \includegraphics[scale=1]{sanchez13_fig9.pdf}    \caption{\em{Figure 9 from \citet{sanchez13}.}\/}\end{figure}%-----------------------------Figure End------------------------------,V
@@ -46,55 +98,3 @@ r,v
 u,v
 g,v
 i,v
-f,v
-.,v
-#,v
-    # Defines path to CASA start-up,V
-    PATH=$PATH:'/home/elijah/applications/casapy-40.0.22208-001',V
-    gip_root=/home/elijah/applications/gipsy/;export gip_root,V
-    PATH=/usr/bin/:/bin/,V
-    #PATH=$PATH:'/home/elijah/applications/casapy-40.0.22208-001',V
-:$PATH,v
-:,v
-$PATH,v
-    #source /usr/local/karma/.karmarc,V
-graphicx,,v
-CONVERT commands are now available -- (Version 1.5-19),v
-    \includegraphics[scale=0.3]{figures/sanchez13_fig9.pdf},V
-    Determining the presence and locations of \hii\ regions in a sample of    10,000 galaxies is a daunting task. We will adopt the methods of    \citet{sanchez12} using the code \textsc{HIIexplorer}. The most common    diagnostic diagram in the literature for the optical regime is the one    which makes use of easily- observable strong lines that are less affected    by dust attenua- tion, i.e., [O\iii]/\,H$\beta$ vs. [N\ii]/H$\alpha$    (Baldwin et al. 1981),V
-\begin{comment},V
-Hey Ben, do you want to join me and Lisa on a D-leagure MUFA team this year?,v
-Finite Volume Methods for Hyperbolic Problems,v
-α,v
-β,v
-],v
-o,v
-\,v
-[,v
-O,v
-The most common diagnostic diagram in the literature forthe optical regime is the one which makes use of easily-observable strong lines that are less affected by dust attenua-tion, i.e., [O iii]/Hβ vs. [N ii]/Hα (Baldwin et al. 1981),v
-effects of a star formation rate and an infall of gas, both vary-ing with galactocentric radius of galaxies. In most recent timeschemical evolution has been included in modern cosmologicalsimulation codes, which already obtain spiral disks as observed,finding radial gradients of abundances which reproduce the data(Pilkington et al. 2012). It has been demonstrated Gibson et al.(2013), that the existence and evolution of these radial gradientsis, as expected, very dependent on the star formation and infallprescriptions included in the simulations.,v
-re.,v
-Of course, this habitable zone, according to the picture seen, will extend as the sun gets brighter. This gives hope to the future where one day where water can potentially exist on planet Mars. The atmosphere, however, is also a factor when it comes to determining if water can exist in its liquid state. Mars is a relatively low atmospheric planet with its lowest pressure occurring at 30 Pa, its highest at 1,155 Pa, and an average of 600 Pa. This is a relatively low atmospheric pressure in comparison to Earth. For example, the highest pressure on Mars is approximately equal to pressure 35 kilometers above earth (Wikipedia). This causes for water to also not be possible in its current state. ,V
-In fact, as explained byGoetz & Koeppen (1992a), there are only 4 possible ways to cre-ate a radial abundance gradient: 1) A radial variation of the ini-tial mass function (IMF); 2) A variation of the stellar yields withgalactocentric radius; 3) A star formation rate (SFR) changingwith the radius; 4) A gas infall rate variable with radius. The firstpossibility is not usually considered as probable, and the secondone is already included in modern models, that adopt metallic-ity dependent stellar yields. Thus, from the seminal works ofLacey & Fall (1985a), Guesten & Mezger (1982) and Clayton(1987), most of numerical chemical evolution models (e.g.Diaz & Tosi 1984; Matteucci & Francois 1989a; Ferrini et al.1992; Carigi 1994; Prantzos & Aubert 1995; Molla et al. 1996;Chiappini et al. 1997; Boissier & Prantzos 1999b) explain theexistence of the radial gradient of abundances by the combined,v
-    In particular     \citet{martel13} found that the global SFR (especially along the bar) and    the large-scale flow of enriched gas play a major role in the metallicity    gradients of spirals.    \citet{portinari10} found by investigating rotation curves in the framework    of variable mass to light ratio of stellar discs, they confirm the scenario    obtained with the constant Mstar/L assumption: a dark matter halo with a    shallow core, an inner baryon-dominated region, and a larger proportion of    dark matter in smaller objects.    \citet{dicintio14} used simulations. The main result is a clear dependence    of the inner slope of the dark matter density profile on the    stellar-to-halo mass ratio.    \citet{dicintio14b} introduce a mass dependent density profile to describe    the distribution of dark matter within galaxies, which takes into account    the stellar-to-halo mass dependence of the response of dark matter to    baryonic processes    \citet{tissera13} investigate the chemical and kinematic properties of the    diffuse stellar haloes of six simulated Milky-Way-like galaxies from the    Aquarius Project. The observed abundance gradients in the inner-halo    regions are influenced by both the level of chemical enrichment and the    relative contributions from each stellar subpopulation. Steeper abundance    gradients in the inner-halo regions are related to contributions from the    disc-heated and endo-debris stars, which tend to be found at lower binding    energies than debris stars.     \citet{martel13} The main result of this work is therefore that the    observed enrichment in the centres of barred galaxies is not dominated by    in situ enrichment by stars formed in the centre. The central metallicity    does not originate exclusively from central stars. Instead, the global SFR    (especially along the bar) and the large-scale flow of enriched gas play a    major role.    \citet{spavone10} We used high resolution spectra in the optical and    near-infrared wavelength range to study the abundance ratios and    metallicities of the HII regions associated with the polar disk in    NGC4650A, in order to put constraints on the formation of the polar disk    through cold gas accretion along a filament; this might be the most    realistic way by which galaxies get their gas. We have compared the    measured metallicities for the polar structure in NGC4650A with those of    different morphological types and we have found that they are similar to    those of late-type galaxies: such results is consistent with a polar disk    formed by accretion from cosmic web filaments of external cold gas.    \citet{mott13} We compute the abundance gradients along the disc of the    Milky Way by means of the two-infall model: in particular, the gradients of    oxygen and iron and their temporal evolution. First, we explore the effects    of several physical processes which influence the formation and evolution    of abundance gradients. They are (i) the inside-out formation of the disc,    (ii) a threshold in the gas density for star formation, (iii) a variable    star formation efficiency along the disc, (iv) radial flows and their speed    and (v) different total surface mass density (gas plus stars) distributions    for the halo.     \citet{fu13} used simulations to show radial gas inflow has little    influence on gas-phase and stellar metallicity gradients, which are    affected much more strongly by the fraction of metals that are directly    injected into the halo gas, rather than mixed with the cold gas. Metals    ejected out of the galaxy in early epochs result in late infall of    pre-enriched gas and flatter present-day gas-phase metallicity gradients.,V
-%\textheight=25cm \voffset=-2cm %,V
-\textwidth=15cm %\hoffset=1.2cm %,V
-\textwidth=15cm \hoffset=1.2cm %,V
-    \begin{comment},V
-    \begin{multicols}{2},V
-\textwidth=15cm \hoffset=-1.2cm %\textheight=25cm \voffset=-2cm %,V
-\textwidth=15cm \hoffset=-1.2cm %\textheight=25cm \voffset=-2cm %,V
-    \end{multicols},V
-\twocolumn[,V
-w,v
-] % end of single column,V
-{,v
-\begin{multicols}{1},V
-2,v
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% How to convert this document to PDF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% If your figures are stored as PostScript files, you can use the % following commands to generate a PDF file of your proposal:%% latex file.tex%% dvips file.dvi%% ps2pdf file.ps file.pdf % If your figures are PDF images or bitmap pictures in PNG, JPG, or GIF format,% you can use the pdflatex command to generate a PDF file from this template% (note, however, that the pdflatex command does not handle PostScript files):% pdflatex file.tex% WARNINGS: %           1. You must make sure that PDF output generated from this%              template is complete both when displayed with a viewer %              (acroread, for example) and when printed on paper.%              LaTeX installations vary greatly and therefore it might %              not be possible to get all proposals to come out %              correctly with a single text page layout. %              In some cases you will have to adjust the %              \topmargin=-7mm command in the template to center the %              text vertically in the page.  %           2. The scientific justification, figures, tables, references,%              and public outreach statement must all fit within the%              4-page limit.%           3. You are free to include colour images in your proposal %              justification. Proposals are distributed to ALMA Review Panels %              in electronic form. However, the scientific content of the %              images should still remain clear when displayed or printed%              in black and white.%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Default format: 12pt single column %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%,V
-THOMAS, CHARLES,v
-c,v
-    ftcs_sim.plot_slice(times, savedir=savedir,                filename='q1_ftcs.pdf',                title = 'FTCS simulation slices',                limits = (-2, 6, -0.5, 1.5),                show=False),V
-    ftcs_sim.run_simulation(),V
-periodic,v
