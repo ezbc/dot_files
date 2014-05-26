@@ -162,7 +162,7 @@ if [ $HOSTNAME == latitude ]; then
 fi
 
 # ========================== Set bashrc for ezbc ============================
-if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ]; then
+if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe]; then
     # IDL
     export IDL_STARTUP=~/.idlstartup
     export IDL_PATH=$IDL_PATH:+/usr/users/ezbc/idl/
@@ -191,8 +191,6 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ]; then
     alias clean='rm -rf #* .*.swp .*.swn .*.swo'
     alias mac='ssh -XY research@141.140.86.26'
     alias screenshot='gnome-screenshot -a'
-    #alias mendeley='/usr/users/ezbc/apps/'\
-    #    'mendeleydesktop-1.10.1-linux-x86_64/bin/mendeleydesktop'
     alias ipython='/usr/users/ezbc/.local/bin/ipython'
     alias screen='~/apps/screen/bin/screen'
     alias sysmon='gnome-system-monitor'

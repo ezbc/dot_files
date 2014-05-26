@@ -13,11 +13,6 @@ map <A-C-s> <Esc>:w<Enter>
 vmap <A-C-s> <Esc>:w<Enter>
 nmap <A-C-s> <Esc>:w<Enter>
 imap <A-C-s> <Esc>:w<Enter>
-imap <C-e> <Esc>$a
-nmap <C-a> <Esc>^i
-
-
-
 
 " Indenting and wrapping
 set textwidth=80
