@@ -162,7 +162,7 @@ if [ $HOSTNAME == latitude ]; then
 fi
 
 # ========================== Set bashrc for ezbc ============================
-if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe]; then
+if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ]; then
     # IDL
     export IDL_STARTUP=~/.idlstartup
     export IDL_PATH=$IDL_PATH:+/usr/users/ezbc/idl/
