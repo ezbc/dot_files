@@ -97,9 +97,9 @@ alias mv "mv -i"
 alias cp "cp -i"
 
 # Aliases
-alias taurus='cd /d/bip3/ezbc/taurus'
-alias please='sudo'
-alias bip='ssh -XY bip'
+alias taurus 'cd /d/bip3/ezbc/taurus'
+alias please 'sudo'
+alias bip 'ssh -XY bip'
 
 # Unalias some non-useful aliases
 unalias l.
@@ -112,7 +112,12 @@ unalias mc
 
 source /usr/local/bin/miriad-carma-setup
 
+# For the latest version of CASA
 source /usr/local/bin/casa-setup
+# For CASA 4.0
+set path = ($path /usr/users/ezbc/opt/casapy-40.1.22889-003-64b/bin)
+alias casa40 '/usr/users/ezbc/opt/casapy-40.1.22889-003-64b/bin/casa'
+alias casa34 '/usr/users/ezbc/opt/casapy-34.0.19988-002-64b/bin/casapy'
 
 source /usr/local/bin/gipsy-setup
 

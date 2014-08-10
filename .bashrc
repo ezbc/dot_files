@@ -175,6 +175,9 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ]; th
     export PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/python/
     export PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/research/python_modules
     export PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/research/python_modules/miriad
+    export \
+        PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/research/python_modules/planckpy
+    export PYTHONPATH=$PYTHONPATH:/.local/lib/python2.7/site-packages/
     export PATH=/usr/users/ezbc/python:$PATH # anaconda
 
     # Aliases

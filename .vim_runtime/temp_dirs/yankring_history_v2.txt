@@ -1,100 +1,100 @@
-    co_vel_axis = make_velocity_axis(co_header),v
-,v
-error_planck_5arcmin,v
-],v
-box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0),v
-box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0),v
-box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0),v
-    ,v
-            #[:, ::-1],v
-            vertices = np.copy(cores[core]['box_vertices_rotated']),v
-myg.get_rectangular_mask,v
-        print xy, box_width, box_height, box_angle,v
-box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0),v
-box(7:32:47.628,+29:56:17.77,895.795",6180.99",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0)box(7:21:23.291,+25:39:40.18,1433.27",5643.51",0),v
-    for core in cores:        print('\nCalculating for core %s' % core)        # Grab the mask from the DS9 regions        xy = cores[core]['box_center_pix']        box_width = cores[core]['box_width']        box_height = cores[core]['box_height']        box_angle = cores[core]['box_angle']        print xy, box_width, box_height, box_angle,v
-        print(cores),v
-1,v
-#,v
-_planck,v
-planck,v
-_lee12_reproduce,v
-    plot_av_image(av_image=av_data, header=av_header,            boxes=True, cores=cores, #limits=[50,37,200,160],            title=r'perseus: A$_V$ map with core boxed-regions.',            savedir=figure_dir,            filename='perseus_av_cores_map.%s' % \                    figure_type,            show=0),v
- + 'panel_cores/',v
-    for figure_type in figure_types:        if hi_co_width:            plot_co_spectrum_grid(co_vel_axis,                    co_image_list,                    vel_range_list=hi_vel_range_list,                    #limits = [0, 80, 10**-3, 10**2],                    savedir = figure_dir + 'panel_cores/',                    scale = ('linear', 'linear'),                    filename = 'perseus_core_co_spectra_grid.%s' % figure_type,                    title = r'Average $^{12}$CO spectra of perseus Cores',                    core_names=core_name_list,                    show = False),v
-    # Write velocity range properties to a file,v
-        ''',v
-    hsd_limits =[0.1,300]    hisd_limits = [2,20]    av_limits =[0.01,100]    nhi_limits = [2,20],v
-    # Determine HI integration velocity by CO or correlation with Av?    hi_co_width = True    hi_av_correlation = True    co_width_scale = 5.0 # for determining N(HI) vel range    # 0.758 is fraction of area of Gaussian between FWHM limits    co_flux_fraction = 0.758 # fraction of flux of average CO spectrum    hi_vel_range_scale = 2.0 # scale hi velocity range for Av/N(HI) correlation,v
-5,v
-http://www.exoplanets.ch/research/transit-search/,v
-Z,v
- from -1.172 to 1.172,v
-http://www.amazon.com/Statistics-Mining-Machine-Learning-Astronomy/dp/0691151687/,v
-PCA methods,v
-https://lh6.googleusercontent.com/-vV5iHdCYGm0/TW7Flc52RII/AAAAAAAAYA0/JfGZk0r3-nA/s640/image001.jpg,v
-4,v
-3,v
-2,v
-            print cores[core]['hi_velocity_range'],v
-        # Write velocity range properties to a file        with open(core_dir + 'california_hi_vel_properties.txt', 'w') as f:            f.write('core\tco_range\tco_high\thi_low\thi_high')            for i, core in enumerate(cores):            	print cores[core]['hi_velocity_range']                f.write('{0:s}\t{1:.1f}\t{2:.1f}\t{3:.1f}\t{4:.1f}'.format(                    core,                    hi_vel_range_list[i][0],                    hi_vel_range_list[i][1],                    cores[core]['hi_velocity_range'][0],                    cores[core]['hi_velocity_range'][1],                    )),v
-                    cores[core]['hi_velocity_range'],,v
-e,v
-            with open(core_dir + 'california_hi_vel_properties.txt', 'w') as f:                f.write('core\tco_range\thi_range'),v
-f,v
-u,v
-http://2.bp.blogspot.com/-0Y40d3eTMik/UOQyHlql1TI/AAAAAAAAAFU/T2sFr_HSGxs/s320/tea.jpg,v
-k,v
-a,v
-_,v
-hi_vel_range,v
-                    hi_velocity_axis=velocity_axis,                    hi_noise_cube=noise_cube,                    av_image=av_data_planck,                    av_image_error=av_error_data_planck,                    velocity_centers=velocity_centers,                    velocity_widths=velocity_widths,                    return_correlations=True),v
-    return ,v
-x,v
-= np.interp(correlations.max(), correlations,            velocity_ranges),v
- ,v
-# & \                #(av_image > 5*av_noise)),v
- & \                (av_image > 1),v
-),v
-SpectralGrid=SpectralGrid,                ,v
-velocity_widths,v
-            hi_vel_range = correlate_hi_av(hi_cube=hi_data,                    hi_velocity_axis=velocity_axis,                    hi_noise_cube=noise_cube,                    av_image=av_data_planck,                    av_image_error=av_error_data_planck,                    velocity_centers=velocity_centers,                    velocity_widths=velocity_widths),v
-    # Determine ,v
-o,v
-https://maps.google.com/maps?saddr=475+N+Charter+St,+Madison,+WI&daddr=Peninsula+State+Park,+Fish+Creek,+WI&hl=en&sll=44.900771,-89.56949&sspn=13.30449,25.795898&geocode=FWxDkQIdKsir-ilzz1lPyKwHiDFnbo1A5UsqdA%3BFRHvsAIdMCrN-iHHtq7kUqwEFSmbPdt7-khNTTHHtq7kUqwEFQ&oq=peninsula+state&t=h&mra=ls&z=8,v
-            print nh2_image_error.max(),v
-(,v
-                    sd_factor=1/0.625),v
-    h_sd_image = hi_sd_image + h2_sd_image,v
-i,v
-6,v
+E,v
+             #'B4':             #   {'center_wcs': [(3, 44, 18), (32, 05, 20)],             #    'map': None,             #    'threshold': None,             #    'box_wcs': None,             #    },,v
+dust gas correlation variation molecular cloud,v
 0,v
-9,v
-        print rh2_image_sub[rh2_image_sub == rh2_image_sub]        print len(indices[0]),v
-        print,v
-        print('rh2 size')        for r in rh2_image_sub:            print(type(r)),v
-*,v
-        print(),v
-    print('nhi_max')    print(nhi_image.max())    print(nhi_image_error.max()),v
-    print(nhi_image.max()),v
-    print(noise_cube.max()),v
-        image[:] = np.NaN,v
-:,v
-        print(len(indices[indices == True])),v
-        print(len(hi_sd_image_sub[hi_sd_image_sub == hi_sd_image_sub])),v
-            print(len(hi_sd_image[hi_sd_image == hi_sd_image])),v
-        indices = np.where(mask == 1),v
-    print rh2,v
-        box_center_pixel = get_pix_coords(ra = region[0],                                          dec = region[1],                                          header = header)        box_center_pixel = (int(box_center_pixel[1]), int(box_center_pixel[0]))        box_height = region[2] / header['CDELT1']        box_width = region[3] / header['CDELT2']        cores[core].update({'box_center_pix': box_center_pixel})        cores[core].update({'box_width': box_width})        cores[core].update({'box_height': box_height})        cores[core].update({'box_angle': region[4]}),v
-    region = pyr.open(filename),v
-7,v
-8,v
-            print(angle)            print(core_pos)            print(box_vertices),v
-    print cores,v
-:%s/taurus/california/g ,v
-        combine='scan',,v
-d,v
-, 1, 2,v
-,        combine='',,v
-applycal(vis = my_vis,        field = '0',        spw = '0',        spwmap = [[1]],        gainfield = ['1'],        gaintable = ['bandpass_source.bcal']),v
-I will try running a calibration without the bandpass. I'll let you know what I find.Thanks,-Elijah,v
+\label{fig:pdfs},v
+,V
+ ,v
+_,v
+    A non-parametric approach to determining the error on the HI velocity range    given that the N(HI) is non-linearly dependent on the HI velocity range. ,v
+http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.rv_discrete.html,v
+n,v
+r,v
+    #vel_error = cores[core]['hi_velocity_range_error'],v
+    print(nhi_error),v
+    nhi_error = np.median(results_dict['nhi errors']),v
+,},v
+        mask = myg.get_polygon_mask(av_data_planck_orig,                cores[core]['box_vertices_rotated']),v
+e,v
+            print hi_vel_range_noise,v
++,v
+            hi_vel_range_list.append(hi_vel_range),v
+,v
+),v
+np.asarray(hi_vel_range),v
+#,v
+    vel_error = cores[core]['hi_velocity_range_error'],v
+    for figure_type in figure_types:        if hi_co_width or hi_av_correlation:            plot_co_spectrum_grid(co_vel_axis,                    co_image_list,                    vel_range_list=hi_vel_range_list,                    vel_range_hiav_list=hi_vel_range_corr_list,                    #limits = [0, 80, 10**-3, 10**2],                    savedir = figure_dir + 'panel_cores/',                    scale = ('linear', 'linear'),                    filename = 'perseus_core_co_spectra_grid.%s' % figure_type,                    title = r'Average $^{12}$CO spectra of perseus Cores',                    core_names=core_name_list,                    show = False),v
+    co_width_scale = 5.0 # for determining N(HI) vel range    # 0.758 is fraction of area of Gaussian between FWHM limits    co_flux_fraction = 0.758 # fraction of flux of average CO spectrum    hi_vel_range_scale = 1.0 # scale hi velocity range for Av/N(HI) correlation,v
+    reproduce_lee12 = True,v
+    cores[core]['hi_velocity_range'],v
+2,v
+Elijah - when doing bootstrapping please check how many iterations should be done so that you are not oversampling the parameter distribution. I also need some more explanation here re exactly what's being done (e.g. difference btw bootstrapping and Monte Carlo - do you use both methods here or just one?).,v
+Orientation,v
+        # Annotations        anno_xpos = 0.95,v
+        if phi_cnm_list is not None:            phi_cnm = phi_cnm_list[i]        if phi_cnm_error_list is not None:            phi_cnm_error = phi_cnm_error_list[i]        if Z_list is not None:            Z = Z_list[i]        if Z_error_list is not None:            Z_error = Z_error_list[i]        if chisq_list is not None:            chisq = chisq_list[i]        if p_value_list is not None:            p_value = p_value_list[i],v
+fit=True, ,v
+,        phi_cnm_list=None, phi_cnm_error_list=None, Z_list=None,        Z_error_list=None, chisq_list=None, p_value_list=None,,v
+$\Sigma_{HI}$ + $\Sigma_{H2}$ (M$_\odot$ / pc$^2$),v
+h,v
+'perseus_NGC1333_phi_cnm_hist.png',v
+http://www.prepressure.com/postscript/troubleshooting/errors/image,v
+B,v
+3,v
+        plt.show(),v
+m,v
+http://xkcd.com/,v
+pl.hist(data, bins=np.logspace(0.1, 1.0, 50))pl.gca().set_xscale("log"),v
+1,v
+5,v
+phi_cnm,v
+g,v
+b,v
+        ax.plot(width_correlations_recreate, 100, alpha=0.3,                label='Widths Reproduced', color='b', normed=True),v
+             label='Reproduced', color='b', normed=True),v
+$\phi_{\rm CNM}$,v
+t,v
+    #plt.hist(center_correlations)    #plt.plot(width_correlations)    #plt.plot(center_correlations)    #plt.show(),v
+x,v
+(,v
+    plt.hist(results_dict['phi_cnm fits'])    plt.save(),v
+        if verbose:            print('HI velocity integration range:')            print('%.0f to %.0f km/s' % (hi_vel_range[0], hi_vel_range[1])),v
+# # # # ,v
+          ,v
+# Bootstrapping using means,v
+    phi_cnm = phi_cnm,v
+    hi_vel_range_sample = (np.median(hi_vel_range_list[:, 0]),                           np.median(hi_vel_range_list[:, 1])),v
+hi_vel_range_sample, ,v
+hi_vel_range, ,v
+np.median(hi_vel_range_list[:, 0]),                                        np.median(hi_vel_range_list[:, 1])),v
+np.median(hi_vel_range_list[:, 0]),                                        np.median(hi_vel_range_list[:, 1]),v
+    import matplotlib.pyplot as plt,v
+    import mystats,v
+    import random,v
+    #center_corrs = [],v
+    #raise ValueError('done'),v
+            #vel_center_random = center_pdf(random_center_sample)            #vel_width_random = width_pdf(random_width_sample),v
+pdf(random_width_sample),v
+    	print(center_rv.rvs()),v
+    #    center = random.uniform(vel_centers[0], vel_centers[-1] )    #    center_correlations_recreate[i] = center_pdf(center)    #for i in range(len(center_correlations_recreate)):    #    center = random.uniform(center_correlations.min(),    #                            center_correlations.max())    #    print center    #    center_correlations_recreate[i] = center_pdf(center)    #for vel_center in vel_centers:    #    center_corrs.append(center_pdf(vel_center))    # plot both    #plt.plot(vel_centers, center_correlations, label='Observed', color='r'),v
+.min().max(),v
+b = numpy.zeros(10000)for i in range(len( b )):    u = random.uniform( x[0], x[-1] )    b[i] = inverse_density_function( u )# plot both        pyplot.hist(a, 100) pyplot.hist(b, 100)pyplot.show(),v
+http://voxcharta.org/,v
+            print(hi_vel_range_noise),v
+hi_vel_range_list[:, 0],v
+[:, 0],v
+],v
+np.toarray(hi_vel_range_list)),v
+s,v
+a,v
+        print('median of data', np.median(hi_data_sub)),v
+4,v
+@,v
+import numpyimport scipy.interpolateimport randomimport matplotlib.pyplot as pyplot# create some normally distributed values and make a histograma = numpy.random.normal(size=10000)counts, bins = numpy.histogram(a, bins=100, density=True)cum_counts = numpy.cumsum(counts)bin_widths = (bins[1:] - bins[:-1])# generate more values with same distributionx = cum_counts*bin_widthsy = bins[1:]inverse_density_function = scipy.interpolate.interp1d(x, y)b = numpy.zeros(10000)for i in range(len( b )):    u = random.uniform( x[0], x[-1] )    b[i] = inverse_density_function( u )# plot both        pyplot.hist(a, 100) pyplot.hist(b, 100)pyplot.show(),v
+    print(help(center_pdf)),v
+    print len(center_correlations), len(vel_centers),v
+.,v
+PYTHONPATH=$PYTHONPATH:,v
+My thinking is that a s,v
+I wrote an algorithm to rotate a box pivoted on the location of the core through many angles from 0 to 360 degrees. For each box I derived the azimuthally-averaged Av values, calculated the gradient of the Av between each azimuthal ring, added the gradient values together, and counted the box with the minimum sum of gradient values as the box with the steepest Av gradient. My thinking is that a steeper Av gradient will correspond to an isolated core vs. a box with multiple cores included. This method seems pretty sound to me and can easily be applied across all clouds in a reproducible manner.,v
+http://stackoverflow.com/questions/13476807/probability-density-function-from-histogram-in-python-to-fit-another-histrogram,v
