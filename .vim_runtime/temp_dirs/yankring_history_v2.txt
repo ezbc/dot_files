@@ -1,10 +1,21 @@
+",v
+,V
+" ----------------------------------------------------------------------------" Vundle" ----------------------------------------------------------------------------set nocompatible              " be iMproved, requiredfiletype off                  " required" set the runtime path to include Vundle and initializeset rtp+=~/.vim/bundle/Vundle.vimcall vundle#begin()" alternatively, pass a path where Vundle should install plugins"call vundle#begin('~/some/path/here')" let Vundle manage Vundle, requiredPlugin 'gmarik/Vundle.vim'" The following are examples of different formats supported." Keep Plugin commands between vundle#begin/end." plugin on GitHub repoPlugin 'tpope/vim-fugitive'" plugin from http://vim-scripts.org/vim/scripts.htmlPlugin 'L9'" Git plugin not hosted on GitHubPlugin 'git://git.wincent.com/command-t.git'" git repos on your local machine (i.e. when working on your own plugin)Plugin 'file:///home/gmarik/path/to/plugin'" The sparkup vim script is in a subdirectory of this repo called vim." Pass the path to set the runtimepath properly.Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}" Avoid a name conflict with L9Plugin 'user/L9', {'name': 'newL9'}" All of your Plugins must be added before the following linecall vundle#end()            " requiredfiletype plugin indent on    " required" To ignore plugin indent changes, instead use:"filetype plugin on"" Brief help" :PluginList          - list configured plugins" :PluginInstall(!)    - install (update) plugins" :PluginSearch(!) foo - search (or refresh cache first) for foo" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins"" see :h vundle for more details or wiki for FAQ" Put your non-Plugin stuff after this line,v
+######,1
+#,v
+8,v
+ ,v
+\,v
+set guioptions-=mset guioptions-=Tset guioptions-=rset guioptions-=Lset guifont=Monospace\ 8,V
+    set guioptions-=T    set guioptions-=e    set t_Co=256    set guitablabel=%M\ %t,V
+if has("gui_running")    set guioptions-=T    set guioptions-=e    set t_Co=256    set guitablabel=%M\ %tendif,V
+    set guifont=Monospace\ m 8,V
+(1) First of all, I noticed that B1E and B1 are switched in perseus_av_cores_map.png.Please make sure that regions in Perseus are B5 - IC348 - B1E - B1 - NGC1333, from east to west (Figure 1 of Lee+12).(2) phi_CNM for B5 in perseus_rh2_vs_hsd_lee12_planck_reproduce.png looks too small compared to Lee+12.Could you please make sure that your phi_CNM is really consistent with Lee+12 within uncertainties?(3) We thought that the box orientation should follow the steepest gradient in Av.-----> I am not so sure if this selection criterion can be well justified.For example, there is some theoretical expectation for a density radial profile (n ~ r^-2) for a self-gravitating, isothermal sphere in hydrostatic equilibrium ("Bonner-Ebert sphere").Although it is not straightforward to convert the observed column density into the density, previous observations have indicated that molecular cores indeed follow this expected radial profile.See Alves et al. (2001) for B68 as an example.-----> However, I do not think that assuming the shape of Av radial profile based on theory to select box orientation is a good one.It would be best to depend on observations only.Actually, I found an interesting reference - Have you seen this?http://adsabs.harvard.edu.ezproxy.library.wisc.edu/abs/2010ApJ...725.1327SThe authors identified cores in L1495 (one of the filaments in Taurus) using Clumpfind2D (basically, two-dimensional thresholding algorithm).They then found core orientations based on the zeroth, first, and second moments.As they mainly focused on small-scale cores, their methodology may not be directly applicable for us.However, using moments to define orientation sounds interesting, and may be useful for us.Have you seen other references using moments?This paper does not provide details how to use moments, we could ask Jounie, who is the 2nd author?(4) I really like your non-parametric approach for estimating N(HI) errors.However, I should admit that I am lost after "I then used the marginal distribution of correlation coefficients for each parameter...".Basically, I think that correlation.png clearly shows that the HI central velocity is relatively well-constrained, while the HI velocity width is not.This is not surprising considering that most of the HI emission in Perseus is contained between 0 km/sec and 15 km/sec, and there is not so much beyond 20 km/sec.So correlation.png actually suggests that the observed uniform HI column density across Perseus is robust against the chosen HI velocity width.Regarding N(HI) errors:As I don't understand exactly how you estimated, I cannot comment on perseus_NGC1333_PDF_hist.png.However, here is my thought.Basically, you can use correlation.png to estimate N(HI) errors.As you considered the measured correlation coefficient as a number count, correlation.png is simply 2D likelihood distribution.In this case, the peak of the distribution ("maximum likelihood") corresponds to the best-fit parameters.In addition, the uncertainty in each parameter can be determined by finding parameter values where the maximum likelihood drops by sqrt(e).The determined uncertainty in each parameter can then be incorporated into a Monte Carlo simulation to estimate final errors in N(HI).I haven't done this kind of calculation by myself, but am pretty sure there are good references.One of the good references is:http://adsabs.harvard.edu/abs/1996QJRAS..37..519WPlease let me know if you have any questions regarding my comments.And Snez, I will get back to your comments early next week - I will be leaving for Seoul tomorrow for my nephew's 1st birthday. :),V
 E,v
              #'B4':             #   {'center_wcs': [(3, 44, 18), (32, 05, 20)],             #    'map': None,             #    'threshold': None,             #    'box_wcs': None,             #    },,v
 dust gas correlation variation molecular cloud,v
 0,v
 \label{fig:pdfs},v
-,V
- ,v
 _,v
     A non-parametric approach to determining the error on the HI velocity range    given that the N(HI) is non-linearly dependent on the HI velocity range. ,v
 http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.rv_discrete.html,v
@@ -22,7 +33,6 @@ e,v
 ,v
 ),v
 np.asarray(hi_vel_range),v
-#,v
     vel_error = cores[core]['hi_velocity_range_error'],v
     for figure_type in figure_types:        if hi_co_width or hi_av_correlation:            plot_co_spectrum_grid(co_vel_axis,                    co_image_list,                    vel_range_list=hi_vel_range_list,                    vel_range_hiav_list=hi_vel_range_corr_list,                    #limits = [0, 80, 10**-3, 10**2],                    savedir = figure_dir + 'panel_cores/',                    scale = ('linear', 'linear'),                    filename = 'perseus_core_co_spectra_grid.%s' % figure_type,                    title = r'Average $^{12}$CO spectra of perseus Cores',                    core_names=core_name_list,                    show = False),v
     co_width_scale = 5.0 # for determining N(HI) vel range    # 0.758 is fraction of area of Gaussian between FWHM limits    co_flux_fraction = 0.758 # fraction of flux of average CO spectrum    hi_vel_range_scale = 1.0 # scale hi velocity range for Av/N(HI) correlation,v
@@ -88,13 +98,3 @@ np.toarray(hi_vel_range_list)),v
 s,v
 a,v
         print('median of data', np.median(hi_data_sub)),v
-4,v
-@,v
-import numpyimport scipy.interpolateimport randomimport matplotlib.pyplot as pyplot# create some normally distributed values and make a histograma = numpy.random.normal(size=10000)counts, bins = numpy.histogram(a, bins=100, density=True)cum_counts = numpy.cumsum(counts)bin_widths = (bins[1:] - bins[:-1])# generate more values with same distributionx = cum_counts*bin_widthsy = bins[1:]inverse_density_function = scipy.interpolate.interp1d(x, y)b = numpy.zeros(10000)for i in range(len( b )):    u = random.uniform( x[0], x[-1] )    b[i] = inverse_density_function( u )# plot both        pyplot.hist(a, 100) pyplot.hist(b, 100)pyplot.show(),v
-    print(help(center_pdf)),v
-    print len(center_correlations), len(vel_centers),v
-.,v
-PYTHONPATH=$PYTHONPATH:,v
-My thinking is that a s,v
-I wrote an algorithm to rotate a box pivoted on the location of the core through many angles from 0 to 360 degrees. For each box I derived the azimuthally-averaged Av values, calculated the gradient of the Av between each azimuthal ring, added the gradient values together, and counted the box with the minimum sum of gradient values as the box with the steepest Av gradient. My thinking is that a steeper Av gradient will correspond to an isolated core vs. a box with multiple cores included. This method seems pretty sound to me and can easily be applied across all clouds in a reproducible manner.,v
-http://stackoverflow.com/questions/13476807/probability-density-function-from-histogram-in-python-to-fit-another-histrogram,v

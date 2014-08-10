@@ -52,21 +52,24 @@ set incsearch		" incremental search
 set autoread		" auto read when file is changed from outside
 
 " Color column
-#set colorcolumn=+1        " highlight column after 'textwidth'
-#set colorcolumn=+1,+2,+3  " highlight three columns after 'textwidth'
-#highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
-#set colorcolumn=80
-#set numberwidth=3
-#set cpoptions+=n
+"set colorcolumn=+1        " highlight column after 'textwidth'
+"set colorcolumn=+1,+2,+3  " highlight three columns after 'textwidth'
+"highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+"set colorcolumn=80
+"set numberwidth=3
+"set cpoptions+=n
 
 " aesthetics
 set number              " shows line numbers
 
 " ----------------- gvim ----------------------------
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
-set guioptions-=L
+if has("gui_running")
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
+    set guifont=Monospace\ 10
+endif
 
 " folding
 autocmd FileType c,cpp set foldmethod=syntax
@@ -77,7 +80,7 @@ vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
-
+vmap n i
 
 filetype on			" Enable filetype detection
 filetype indent on	" Enable filetype-specific indenting
@@ -96,68 +99,15 @@ let g:Tex_MultipleCompileFormats = 'pdf'
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
-
-
-
-
-
-" ----------------------------------------------------------------------------
-" Vundle
-" ----------------------------------------------------------------------------
-
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-Plugin 'user/L9', {'name': 'newL9'}
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-
 " ----------------------------------------------------------------------------
 " Snippets
 " ----------------------------------------------------------------------------
 
 " Track the engine.
-Plugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
+"Plugin 'honza/vim-snippets'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
