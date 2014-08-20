@@ -1,100 +1,100 @@
-",v
-,V
-" ----------------------------------------------------------------------------" Vundle" ----------------------------------------------------------------------------set nocompatible              " be iMproved, requiredfiletype off                  " required" set the runtime path to include Vundle and initializeset rtp+=~/.vim/bundle/Vundle.vimcall vundle#begin()" alternatively, pass a path where Vundle should install plugins"call vundle#begin('~/some/path/here')" let Vundle manage Vundle, requiredPlugin 'gmarik/Vundle.vim'" The following are examples of different formats supported." Keep Plugin commands between vundle#begin/end." plugin on GitHub repoPlugin 'tpope/vim-fugitive'" plugin from http://vim-scripts.org/vim/scripts.htmlPlugin 'L9'" Git plugin not hosted on GitHubPlugin 'git://git.wincent.com/command-t.git'" git repos on your local machine (i.e. when working on your own plugin)Plugin 'file:///home/gmarik/path/to/plugin'" The sparkup vim script is in a subdirectory of this repo called vim." Pass the path to set the runtimepath properly.Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}" Avoid a name conflict with L9Plugin 'user/L9', {'name': 'newL9'}" All of your Plugins must be added before the following linecall vundle#end()            " requiredfiletype plugin indent on    " required" To ignore plugin indent changes, instead use:"filetype plugin on"" Brief help" :PluginList          - list configured plugins" :PluginInstall(!)    - install (update) plugins" :PluginSearch(!) foo - search (or refresh cache first) for foo" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins"" see :h vundle for more details or wiki for FAQ" Put your non-Plugin stuff after this line,v
-######,1
-#,v
-8,v
- ,v
-\,v
-set guioptions-=mset guioptions-=Tset guioptions-=rset guioptions-=Lset guifont=Monospace\ 8,V
-    set guioptions-=T    set guioptions-=e    set t_Co=256    set guitablabel=%M\ %t,V
-if has("gui_running")    set guioptions-=T    set guioptions-=e    set t_Co=256    set guitablabel=%M\ %tendif,V
-    set guifont=Monospace\ m 8,V
-(1) First of all, I noticed that B1E and B1 are switched in perseus_av_cores_map.png.Please make sure that regions in Perseus are B5 - IC348 - B1E - B1 - NGC1333, from east to west (Figure 1 of Lee+12).(2) phi_CNM for B5 in perseus_rh2_vs_hsd_lee12_planck_reproduce.png looks too small compared to Lee+12.Could you please make sure that your phi_CNM is really consistent with Lee+12 within uncertainties?(3) We thought that the box orientation should follow the steepest gradient in Av.-----> I am not so sure if this selection criterion can be well justified.For example, there is some theoretical expectation for a density radial profile (n ~ r^-2) for a self-gravitating, isothermal sphere in hydrostatic equilibrium ("Bonner-Ebert sphere").Although it is not straightforward to convert the observed column density into the density, previous observations have indicated that molecular cores indeed follow this expected radial profile.See Alves et al. (2001) for B68 as an example.-----> However, I do not think that assuming the shape of Av radial profile based on theory to select box orientation is a good one.It would be best to depend on observations only.Actually, I found an interesting reference - Have you seen this?http://adsabs.harvard.edu.ezproxy.library.wisc.edu/abs/2010ApJ...725.1327SThe authors identified cores in L1495 (one of the filaments in Taurus) using Clumpfind2D (basically, two-dimensional thresholding algorithm).They then found core orientations based on the zeroth, first, and second moments.As they mainly focused on small-scale cores, their methodology may not be directly applicable for us.However, using moments to define orientation sounds interesting, and may be useful for us.Have you seen other references using moments?This paper does not provide details how to use moments, we could ask Jounie, who is the 2nd author?(4) I really like your non-parametric approach for estimating N(HI) errors.However, I should admit that I am lost after "I then used the marginal distribution of correlation coefficients for each parameter...".Basically, I think that correlation.png clearly shows that the HI central velocity is relatively well-constrained, while the HI velocity width is not.This is not surprising considering that most of the HI emission in Perseus is contained between 0 km/sec and 15 km/sec, and there is not so much beyond 20 km/sec.So correlation.png actually suggests that the observed uniform HI column density across Perseus is robust against the chosen HI velocity width.Regarding N(HI) errors:As I don't understand exactly how you estimated, I cannot comment on perseus_NGC1333_PDF_hist.png.However, here is my thought.Basically, you can use correlation.png to estimate N(HI) errors.As you considered the measured correlation coefficient as a number count, correlation.png is simply 2D likelihood distribution.In this case, the peak of the distribution ("maximum likelihood") corresponds to the best-fit parameters.In addition, the uncertainty in each parameter can be determined by finding parameter values where the maximum likelihood drops by sqrt(e).The determined uncertainty in each parameter can then be incorporated into a Monte Carlo simulation to estimate final errors in N(HI).I haven't done this kind of calculation by myself, but am pretty sure there are good references.One of the good references is:http://adsabs.harvard.edu/abs/1996QJRAS..37..519WPlease let me know if you have any questions regarding my comments.And Snez, I will get back to your comments early next week - I will be leaving for Seoul tomorrow for my nephew's 1st birthday. :),V
-E,v
-             #'B4':             #   {'center_wcs': [(3, 44, 18), (32, 05, 20)],             #    'map': None,             #    'threshold': None,             #    'box_wcs': None,             #    },,v
-dust gas correlation variation molecular cloud,v
-0,v
-\label{fig:pdfs},v
-_,v
-    A non-parametric approach to determining the error on the HI velocity range    given that the N(HI) is non-linearly dependent on the HI velocity range. ,v
-http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.rv_discrete.html,v
-n,v
-r,v
-    #vel_error = cores[core]['hi_velocity_range_error'],v
-    print(nhi_error),v
-    nhi_error = np.median(results_dict['nhi errors']),v
-,},v
-        mask = myg.get_polygon_mask(av_data_planck_orig,                cores[core]['box_vertices_rotated']),v
-e,v
-            print hi_vel_range_noise,v
-+,v
-            hi_vel_range_list.append(hi_vel_range),v
-,v
-),v
-np.asarray(hi_vel_range),v
-    vel_error = cores[core]['hi_velocity_range_error'],v
-    for figure_type in figure_types:        if hi_co_width or hi_av_correlation:            plot_co_spectrum_grid(co_vel_axis,                    co_image_list,                    vel_range_list=hi_vel_range_list,                    vel_range_hiav_list=hi_vel_range_corr_list,                    #limits = [0, 80, 10**-3, 10**2],                    savedir = figure_dir + 'panel_cores/',                    scale = ('linear', 'linear'),                    filename = 'perseus_core_co_spectra_grid.%s' % figure_type,                    title = r'Average $^{12}$CO spectra of perseus Cores',                    core_names=core_name_list,                    show = False),v
-    co_width_scale = 5.0 # for determining N(HI) vel range    # 0.758 is fraction of area of Gaussian between FWHM limits    co_flux_fraction = 0.758 # fraction of flux of average CO spectrum    hi_vel_range_scale = 1.0 # scale hi velocity range for Av/N(HI) correlation,v
-    reproduce_lee12 = True,v
-    cores[core]['hi_velocity_range'],v
+buckhorn state park,v
+It is deep inside the cold neutral medium clouds that hydrogen and most        other elements are likely to exist in molecular form,v
+        in the intro we cite \citet{lee12},V
+This statement requires citation~\cite{Smith:2012qr}.,V
+Department and University Name,v
 2,v
-Elijah - when doing bootstrapping please check how many iterations should be done so that you are not oversampling the parameter distribution. I also need some more explanation here re exactly what's being done (e.g. difference btw bootstrapping and Monte Carlo - do you use both methods here or just one?).,v
-Orientation,v
-        # Annotations        anno_xpos = 0.95,v
-        if phi_cnm_list is not None:            phi_cnm = phi_cnm_list[i]        if phi_cnm_error_list is not None:            phi_cnm_error = phi_cnm_error_list[i]        if Z_list is not None:            Z = Z_list[i]        if Z_error_list is not None:            Z_error = Z_error_list[i]        if chisq_list is not None:            chisq = chisq_list[i]        if p_value_list is not None:            p_value = p_value_list[i],v
-fit=True, ,v
-,        phi_cnm_list=None, phi_cnm_error_list=None, Z_list=None,        Z_error_list=None, chisq_list=None, p_value_list=None,,v
-$\Sigma_{HI}$ + $\Sigma_{H2}$ (M$_\odot$ / pc$^2$),v
-h,v
-'perseus_NGC1333_phi_cnm_hist.png',v
-http://www.prepressure.com/postscript/troubleshooting/errors/image,v
-B,v
-3,v
-        plt.show(),v
-m,v
-http://xkcd.com/,v
-pl.hist(data, bins=np.logspace(0.1, 1.0, 50))pl.gca().set_xscale("log"),v
-1,v
 5,v
-phi_cnm,v
-g,v
-b,v
-        ax.plot(width_correlations_recreate, 100, alpha=0.3,                label='Widths Reproduced', color='b', normed=True),v
-             label='Reproduced', color='b', normed=True),v
-$\phi_{\rm CNM}$,v
-t,v
-    #plt.hist(center_correlations)    #plt.plot(width_correlations)    #plt.plot(center_correlations)    #plt.show(),v
+    velocity_centers = np.arange(-30, 30, 5)    velocity_widths = np.arange(1, 80, 5),v
+1,v
+0,v
+8,v
+6,v
+3,v
+/,v
+http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2014AJ....148...35B&db_key=AST&link_type=ARTICLE,v
+,,v
+git remote add origin git@bitbucket.org:ezbc/posters.git,v
+http://arxiv.org/pdf/1007.5060,v
+    	print 'plotting',v
+anneal,v
+lbfgsb,v
+Howard Chen <yihaochentw@gmail.com>,v
 x,v
-(,v
-    plt.hist(results_dict['phi_cnm fits'])    plt.save(),v
-        if verbose:            print('HI velocity integration range:')            print('%.0f to %.0f km/s' % (hi_vel_range[0], hi_vel_range[1])),v
-# # # # ,v
-          ,v
-# Bootstrapping using means,v
-    phi_cnm = phi_cnm,v
-    hi_vel_range_sample = (np.median(hi_vel_range_list[:, 0]),                           np.median(hi_vel_range_list[:, 1])),v
-hi_vel_range_sample, ,v
-hi_vel_range, ,v
-np.median(hi_vel_range_list[:, 0]),                                        np.median(hi_vel_range_list[:, 1])),v
-np.median(hi_vel_range_list[:, 0]),                                        np.median(hi_vel_range_list[:, 1]),v
-    import matplotlib.pyplot as plt,v
-    import mystats,v
-    import random,v
-    #center_corrs = [],v
-    #raise ValueError('done'),v
-            #vel_center_random = center_pdf(random_center_sample)            #vel_width_random = width_pdf(random_width_sample),v
-pdf(random_width_sample),v
-    	print(center_rv.rvs()),v
-    #    center = random.uniform(vel_centers[0], vel_centers[-1] )    #    center_correlations_recreate[i] = center_pdf(center)    #for i in range(len(center_correlations_recreate)):    #    center = random.uniform(center_correlations.min(),    #                            center_correlations.max())    #    print center    #    center_correlations_recreate[i] = center_pdf(center)    #for vel_center in vel_centers:    #    center_corrs.append(center_pdf(vel_center))    # plot both    #plt.plot(vel_centers, center_correlations, label='Observed', color='r'),v
-.min().max(),v
-b = numpy.zeros(10000)for i in range(len( b )):    u = random.uniform( x[0], x[-1] )    b[i] = inverse_density_function( u )# plot both        pyplot.hist(a, 100) pyplot.hist(b, 100)pyplot.show(),v
-http://voxcharta.org/,v
-            print(hi_vel_range_noise),v
-hi_vel_range_list[:, 0],v
-[:, 0],v
-],v
-np.toarray(hi_vel_range_list)),v
+_,v
+yy,v
+widthwidth,v
+[0*wmax, 0.5*wmax, 1.0*wmax],v
+c,v
+*wmax,v
+d,v
+4,v
+l,v
+),v
+centercenter,v
+v,v
+h,v
+,v
+        if center_confint is not None:        	ax_pdf_center.axvspan(center_confint[1],        	                      center_confint[2],        	                      color='k',        	                      alpha=0.2),v
+ ,v
+* delta_width    #,v
+$\\$$\\$,v
+n,v
+#,v
 s,v
-a,v
-        print('median of data', np.median(hi_data_sub)),v
+np.arange(0,velocity_widths.shape[0],1)[::5],v
+y,v
+width_pdf,v
+),v
+        ax_pdf_width = divider.append_axes("top", 1.2, pad=0.1, sharex=ax_image)        ax_pdf_center = divider.append_axes("right", 1.2, pad=0.1,                sharey=ax_image),v
+e,v
+    ax_image.set_aspect(1.),v
+gist_stern,v
+    divider = make_axes_locatable(ax_image)    ax_pdf_width = divider.append_axes("top", 1.2, pad=0.1, sharex=ax_image)    ax_pdf_center = divider.append_axes("right", 1.2, pad=0.1, sharey=ax_image)    # make some labels invisible    plt.setp(ax_pdf_width.get_xticklabels() + ax_pdf_center.get_yticklabels(),             visible=False)    ax_pdf_width.plot(velocity_widths, width_pdf)    ax_pdf_width.plot(velocity_centers, center_pdf)    #axHistx.axis["bottom"].major_ticklabels.set_visible(False)    for tl in ax_pdf_width.get_xticklabels():        tl.set_visible(False)    ax_pdf_width.set_yticks([0, 0.5, 1])    for tl in ax_pdf_center.get_xticklabels():        tl.set_visible(False)    ax_pdf_center.set_yticks([0, 0.5, 1]),v
+    #plt.rc('text', usetex=False)    im = ax_image.imshow(image, interpolation='nearest', origin='lower',            extent=[velocity_widths[0],velocity_widths[-1],                    velocity_centers[0],velocity_centers[-1]],            cmap=plt.cm.gist_stern,            #cmap=plt.cm.gray,            #norm=matplotlib.colors.LogNorm(),            ),v
+, orientation='horizontal',v
+import numpy as npimport matplotlib.pyplot as pltfrom matplotlib.ticker import NullFormatterdef makeTempHistogramPlot(xdata,ydata,rexp,filename=None,xlims=-99, ylims =-99 , \nxbins = 50,nybins=50, bw=0, nbins=100,contours=1,sigma=1,line=1):#bw = 0 for color, = 1 for black and white#line = 0 for no line, =1 for line#sigma = 1 for display % below line, =0 for not#contours = 1 for display 1,2,3 sigma contours, = 0 for not.# Define the x and y datax = xdatay = ydata# Set up default x and y limitsif (xlims == -99): xlims = [0,max(x)]if (ylims == -99): ylims = [0,max(y)]# Set up your x and y labelsxlabel = '$\mathrm{Your\\ X\\ Label}$'ylabel = '$\mathrm{Your\\ X\\ Label}$'mtitle = ''# Define the locations for the axesleft, width = 0.12, 0.55bottom, height = 0.12, 0.55bottom_h = left_h = left+width+0.02# Set up the geometry of the three plotsrect_temperature = [left, bottom, width, height] # dimensions of temp plotrect_histx = [left, bottom_h, width, 0.25] # dimensions of x-histogramrect_histy = [left_h, bottom, 0.25, height] # dimensions of y-histogram# Set up the size of the figurefig = plt.figure(1, figsize=(9.5,9))# Make the three plotsaxTemperature = plt.axes(rect_temperature) # temperature plotaxHistx = plt.axes(rect_histx) # x histogramaxHisty = plt.axes(rect_histy) # y histogram# Remove the inner axes numbers of the histogramsnullfmt = NullFormatter()axHistx.xaxis.set_major_formatter(nullfmt)axHisty.yaxis.set_major_formatter(nullfmt)# Find the min/max of the dataxmin = min(xlims)xmax = max(xlims)ymin = min(ylims)ymax = max(y)# Make the 'main' temperature plotxbins = linspace(start = 0, stop = xmax, num = nxbins)ybins = linspace(start = 0, stop = ymax, num = nybins)xcenter = (xbins[0:-1]+xbins[1:])/2.0ycenter = (ybins[0:-1]+ybins[1:])/2.0aspectratio = 1.0*(xmax - 0)/(1.0*ymax - 0)H, xedges,yedges = N.histogram2d(y,x,bins=(ybins,xbins))X = xcenterY = ycenterZ = H# Plot the temperature dataif(bw): cax = axTemperature.imshow(H, extent=[xmin,xmax,ymin,ymax], \ interpolation='nearest', origin='lower',aspect=aspectratio, cmap=cm.gist_yarg)else : cax = axTemperature.imshow(H, extent=[xmin,xmax,ymin,ymax], \interpolation='nearest', origin='lower',aspect=aspectratio)# Plot the temperature plot contoursif(bw): contourcolor = 'black'else: contourcolor = 'white'if (contours==0):print ''elif (contours==1):xcenter = N.mean(x)ycenter = N.mean(y)ra = N.std(x)rb = N.std(y)ang = 0X,Y=ellipse(ra,rb,ang,xcenter,ycenter)axTemperature.plot(X,Y,"k:",ms=1,linewidth=2.0)axTemperature.annotate('$1\\sigma$', xy=(X[15], Y[15]), xycoords='data',xytext=(10, 10), textcoords='offset points',horizontalalignment='right', verticalalignment='bottom',fontsize=25)X,Y=ellipse(2*ra,2*rb,ang,xcenter,ycenter)axTemperature.plot(X,Y,"k:",color = contourcolor,ms=1,linewidth=2.0)axTemperature.annotate('$2\\sigma$', xy=(X[15], Y[15]), xycoords='data',xytext=(10, 10), textcoords='offset points',horizontalalignment='right', verticalalignment='bottom',fontsize=25, color = contourcolor)X,Y=ellipse(3*ra,3*rb,ang,xcenter,ycenter)axTemperature.plot(X,Y,"k:",color = contourcolor, ms=1,linewidth=2.0)axTemperature.annotate('$3\\sigma$', xy=(X[15], Y[15]), xycoords='data',xytext=(10, 10), textcoords='offset points',horizontalalignment='right', verticalalignment='bottom',fontsize=25, color = contourcolor)else:xcenter = N.mean(x)ycenter = N.mean(y)ra = N.std(x)rb = N.std(y)ang = contours*N.pi/180.0X,Y=ellipse(ra,rb,ang,xcenter,ycenter)axTemperature.plot(X,Y,"k:",ms=1,linewidth=2.0)axTemperature.annotate('$1\\sigma$', xy=(X[15], Y[15]), xycoords='data', xytext=(10, 10), textcoords='offset points',horizontalalignment='right', verticalalignment='bottom',fontsize=25)X,Y=ellipse(2*ra,2*rb,ang,xcenter,ycenter)axTemperature.plot(X,Y,"k:",ms=1,linewidth=2.0, color = contourcolor)axTemperature.annotate('$2\\sigma$', xy=(X[15], Y[15]), xycoords='data', xytext=(10, 10), textcoords='offset points',horizontalalignment='right', verticalalignment='bottom',fontsize=25, color = contourcolor)X,Y=ellipse(3*ra,3*rb,ang,xcenter,ycenter)axTemperature.plot(X,Y,"k:",ms=1,linewidth=2.0, color = contourcolor)axTemperature.annotate('$3\\sigma$', xy=(X[15], Y[15]), xycoords='data', xytext=(10, 10), textcoords='offset points',horizontalalignment='right', verticalalignment='bottom',fontsize=25, color = contourcolor)#Plot the % below linebelowline = 1.0*size(where((x - y) > 0.0))/size(x)*1.0*100if(sigma): axTemperature.annotate('$%.2f\%%\mathrm{\\ Below\\ Line}$'%(belowline), xy=(xmax-100, ymin+3),fontsize=20, color = contourcolor)#Plot the axes labelsaxTemperature.set_xlabel(xlabel,fontsize=25)axTemperature.set_ylabel(ylabel,fontsize=25)#Make the tickmarks prettyticklabels = axTemperature.get_xticklabels()for label in ticklabels:label.set_fontsize(18)label.set_family('serif')ticklabels = axTemperature.get_yticklabels()for label in ticklabels:label.set_fontsize(18)label.set_family('serif')#Plot the line on the temperature plotif(line): axTemperature.plot([-1000,1000], [-1000,1000], 'k-', linewidth=2.0, color = contourcolor)#Set up the plot limitsaxTemperature.set_xlim(xlims)axTemperature.set_ylim(ylims)#Set up the histogram binsxbins = N.arange(xmin, xmax, (xmax-xmin)/nbins)ybins = N.arange(ymin, ymax, (ymax-ymin)/nbins)#Plot the histogramsif (bw):axHistx.hist(x, bins=xbins, color = 'silver')axHisty.hist(y, bins=ybins, orientation='horizontal', color = 'dimgray')else:axHistx.hist(x, bins=xbins, color = 'blue')axHisty.hist(y, bins=ybins, orientation='horizontal', color = 'red')#Set up the histogram limitsaxHistx.set_xlim( 0, max(x) )axHisty.set_ylim( 0, max(y))#Make the tickmarks prettyticklabels = axHistx.get_yticklabels()for label in ticklabels:label.set_fontsize(12)label.set_family('serif')#Make the tickmarks prettyticklabels = axHisty.get_xticklabels()for label in ticklabels:label.set_fontsize(12)label.set_family('serif')#Cool trick that changes the number of tickmarks for the histogram axesaxHisty.xaxis.set_major_locator(MaxNLocator(4))axHistx.yaxis.set_major_locator(MaxNLocator(4))if(filename):savefig(filename + '.eps',format = 'eps', transparent=True)savefig(filename + '.pdf',format = 'pdf', transparent=True)savefig(filename + '.png',format = 'png', transparent=True),v
+    pvalues = np.ma.array(pvalues,            mask=np.isnan(pvalues)),v
+-,v
+    correlations = correlations - np.sum(correlations),v
+i,v
+.,v
+    print correlations    print correlations.min()    print correlations.max(),v
+    correlations -= correlations.max(),v
+    	model_error = np.std(model),v
+        av_image_error_corr = av_image_error[indices],v
+    #import matplotlib.pyplot as plt    #plt.imshow(data - model)    #plt.show(),v
+data_error,v
+    print correlations    correlations -= correlations.max(),v
+http://stats.stackexchange.com/questions/66616/converting-normalizing-very-small-likelihood-values-to-probability,v
++,v
+    print correlations.max(),v
+    print correlations.min()    print correlations.max(),v
+ / np.sum(correlations),v
+    correlations = np.exp(correlations / np.sum(correlations)),v
+        ''',v
+>>> from pprint import pprint,v
+options={'gtol': 1e-6, 'disp': True,v
+89.7131,v
+    help(minimize),v
+S,v
+    print(result['low_vel'].value),v
+    from myimage_analysis import calculate_nhi,v
+,               vary=vary[1],v
+guesses, av_image=None, av_image_error=None, hi_cube=None,        hi_velocity_axis=None, hi_noise_cube=None, dgr=None,v
+phi_cnm,v
+par,v
+q,v
+_error,v
+        nhi_image_temp, nhi_image_error = calculate_nhi(cube=hi_cube,                velocity_axis=hi_velocity_axis,                velocity_range=velocity_range,                noise_cube=hi_noise_cube)        nhi_image = np.ma.array(nhi_image_temp,                                mask=np.isnan(nhi_image_temp))        # Select pixels with Av > 1.0 mag and Av_SNR > 5.0.        # Av > 1.0 mag is used to avoid too low Av.        # 1.0 mag corresponds to SNR = 1 / 0.2 ~ 5        # (see Table 2 of Ridge et al. 2006).        indices = np.where((nhi_image_temp == nhi_image_temp) & \                           (av_image == av_image))        nhi_image_corr = nhi_image_temp[indices]        nhi_image_error_corr = nhi_image_error[indices]        av_image_corr = av_image[indices]        av_image_error_corr = av_image_error[indices]        av_image_model = nhi_image_corr * dgr        av_image_model_error = nhi_image_error_corr * dgr,v
+                         model_error=av_image_model_error,,v
+    print logL,v
+*,v
+http://www.physics.utah.edu/~detar/phys6720/handouts/curve_fit/curve_fit/node2.html,v
+norm=matplotlib.colors.LogNorm(),v
+hg clone https://vim.googlecode.com/hg/ vim,v
+hg clone https://vim.googlecode.com/hg/ vim,V
+http://arxiv.org/pdf/1408.3071,v
+        av_image_model = nhi_image_corr * dgr,v
+, pvalues[i] = kendalltau(nhi_image_corr.ravel(),                                                 av_image_corr.ravel()),v
+/ av_error_data_planck > 5),v
