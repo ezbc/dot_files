@@ -3,8 +3,11 @@ set number              " shows line numbers
 setlocal spell spelllang=en_us   " Allows for spellchecking
 
 " mappings
-imap <A-a> <Esc>
-vmap <A-a> <Esc>
+imap jk <Esc>l
+vmap jk <Esc>
+imap kj <Esc>l
+vmap kj <Esc>
+
 " reformat paragraph
 nmap <A-r> gwap
 imap <A-r> <Esc>gwapa
