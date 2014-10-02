@@ -127,7 +127,11 @@ if [ $HOSTNAME == latitude ]; then
     export PATH=$PATH:/usr/local/bin/casa
     export PATH=$PATH:'/home/elijah/applications/miriad/bin/linux/miriad'
     export PATH=$PATH:/usr/local/bin/miriad
+    export PATH=$PATH:/usr/local/bin
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/research/python_modules/
+
+    # Parellel programming
+    export MADSDK_ROOT=~/opt/madsdk
 
     # KARMA package
     source /usr/local/karma/.karmarc
@@ -150,7 +154,12 @@ if [ $HOSTNAME == latitude ]; then
     
     # Set up aliases
     alias eclipse='/usr/bin/eclipse'
-    alias fixinternet='please rm -rf /etc/resolv.conf'
+    alias fixinternet='sudo rm -rf /etc/resolv.conf'
+                      # && ' \
+                      #'sudo service network-manager stop && '\
+                      #'sudo ifconfig eth0 down && '\
+                      #'sudo ifconfig eth0 up && '\
+                      #'sudo service network-manager start'
     alias uw='ssh -XY ezbc@uwast.astro.wisc.edu'
     alias screenshot='gnome-screenshot -a'
     alias sysmon='gnome-system-monitor'

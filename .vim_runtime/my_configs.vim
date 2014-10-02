@@ -8,6 +8,9 @@ vmap jk <Esc>
 imap kj <Esc>l
 vmap kj <Esc>
 
+imap <A-a> <Esc>
+vmap <A-a> <Esc>
+
 " reformat paragraph
 nmap <A-r> gwap
 imap <A-r> <Esc>gwapa

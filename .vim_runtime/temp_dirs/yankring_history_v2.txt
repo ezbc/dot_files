@@ -1,100 +1,100 @@
-buckhorn state park,v
-It is deep inside the cold neutral medium clouds that hydrogen and most        other elements are likely to exist in molecular form,v
-        in the intro we cite \citet{lee12},V
-This statement requires citation~\cite{Smith:2012qr}.,V
-Department and University Name,v
+[scale=0.6],v
+#,v
+l,v
+a,v
+u,v
+n,v
+m,v
+,V
+    \begin{homeworkSection}{1a},V
+ ,v
+    \end{homeworkSection},V
+        \begin{figure}[!ht]                        \begin{centering}            \includegraphics{manual_fit.ps}            \end{centering}        \end{figure},V
+            \caption,V
+i,v
+g,v
+b,v
+e,v
+            \begin{centering},V
+    \clearpage    \end{homeworkSection},v
+    \begin{homeworkSection}{1b}            We again want to show that $\bm{A} \circ \bm{B}$ (where $\bm{A}$ and        $\bm{B}$ have the same size) is positive definite by showing that the        product is Hermitian and has positive eigenvalues. The Shur product of        $\bm{A}$ and $\bm{B}$ can be represented as a principle submatrix of        the Kronecker product of $\bm{A}$ and $\bm{B}$ where                \begin{equation*}            \bm{A} \circ \bm{B} = \bm{A} (\otimes \bm{B})(\alpha, \beta)        \end{equation*}        \begin{equation*}            \alpha : {1, m+2, \dots, m^2} \qquad            \beta : {1, n+2, \dots, n^2} \qquad \alpha = \beta, m = n        \end{equation*}                A principle submatrix        of a Hermitian matrix will be Hermitian itself. Finally we know that        the eigenvalues of the principle submatrix of the Kronecker product        will be greater than the eigenvalues of the Kronecker product due to        the Eigenvalue Interlacing for Principal Submatrices theorem. The Shur        product of positive definite matrices is therefore positive definite.        % eigenvalue interlacing        % http://www.math.uh.edu/~bgb/biostats/Math6304/MatrixTheory-20121025a.pdf,v
+  A positive definite matrix requires that the matrix is Hermitian and        its eigenvalues are positive. Our problem is then reduced to, given        positive definite matrices $\bm{A}$ and $\bm{B}$, show that the        Kronecker product of the matrices is Hermitian and has positive        eigenvalues.\\        A property of the Kronecker product goes as follows: given $\bm{A} \in        \mathbb{R}^{m,n}$ and $\bm{B} \in \mathbb{R}^{p,q}$, then $(\bm{A}        \otimes \bm{B})^* = \bm{A}^* \otimes \bm{B}^*$, which shows that a        Kronecker product will be Hermitian if the two matrices in the product        are Hermitian.\\        Next given, $\bm{u} \in \mathbb{R}^m$ and $\bm{v} \in \mathbb{R}^p$        and             \begin{equation*}            \bm{Au}_i = \lambda_i \bm{u}_i \qquad i = 1, \dots, m \qquad             \bm{Bv}_j = \mu_j \bm{v}_j \qquad j = 1, \dots, p         \end{equation*}        \noindent where $\lambda$ and $\mu$ are the eigenvalues for $\bm{A}$        and $\bm{B}$ respectively. For $i = 1, \dots, m, j = 1, \dots, p$        \begin{equation*}            (\bm{A} \otimes \bm{B})(\bm{u}_i \otimes \bm{v}_j) =             \lambda_i \mu_j (\bm{u}_i \otimes \bm{v}_j)        \end{equation*}        \noindent thus if the eigenvalues for $\bm{A}$ and $\bm{B}$ are        positive, the eigenvalue of $\bm{A} \otimes \bm{B}$ will be positive.\\        We are now able to assert that the Kronecker product of two positive        definite matrices will be positive definite.,v
 2,v
+### first you should check your working directory buy using the following command:###getwd()### then copy the hw6.dat into your working directory.#######load your data into R.  Remember to put data in the working directory!!!##data.hw6 <- read.table("hw6.dat", header=TRUE)attach(data.hw6)####now you can use x, y#######LET'S START!###### install the packages "pspline" ###install.packages("pspline")### choose a minor, say 80 ###### you should be able to see messages telling you R is installing the package ######load the package### (Make sure you install the package before loading) ###library(pspline)###Method 1:  EYE BALL METHOD######Let's start from big lambda.######In the function of smooth.Pspline, spar corresponds to lambda###fit1 <- smooth.Pspline(x, y, spar=1, method=1)### to check out how the plot looks like, type in: ###name.pic <- paste("lambda =",as.character(fit1$spar))plot(x,y,xlab="x",ylab="y",main=name.pic)lines(fit1$x, fit1$y)### then create a ps file for LaTeX: ###postscript("fit1.ps", height=6, width=6, horizo=F)name.pic <- paste("lambda =",as.character(fit1$spar))plot(x,y,xlab="x",ylab="y",main=name.pic)lines(fit1$x, fit1$y)graphics.off()###Try smaller lambda###fit2 <- smooth.Pspline(x, y, spar=0.1, method=1)### to check out how the plot looks like, type in: ###name.pic <- paste("lambda=",as.character(fit2$spar))plot(x,y,xlab="x",ylab="y",main=name.pic)lines(fit2$x, fit2$y)### then create a ps file for LaTeX: ###postscript("fit2.ps", height=6, width=6, horizo=F)name.pic <- paste("lambda=",as.character(fit2$spar))plot(x,y,xlab="x",ylab="y",main=name.pic)lines(fit2$x, fit2$y)graphics.off()###repeat trying different lambda (0.01,0.001,0.0001,0.00001) see the difference######Don't forget to change name 'fitx' at each run ######my best pic is of lambda=0.002######Method 2:   GCV Method######We can use GCV method by setting the argument: method=3###GCVfit <- smooth.Pspline(x, y, method=3)### to check out how the plot looks like, type in: ###name.pic <- paste("lambda.GCV=",as.character(round(GCVfit$spar,digits=8)))plot(x,y,xlab="x",ylab="y",main=name.pic)lines(GCVfit$x, GCVfit$y)### then create a ps file for LaTeX: ###postscript("GCVfit.ps", height=6, width=6, horizo=F)name.pic <- paste("lambda.GCV=",as.character(round(GCVfit$spar,digits=8)))plot(x,y,xlab="x",ylab="y",main=name.pic)lines(GCVfit$x, GCVfit$y)graphics.off()###lambda by GCV###GCVfit$spar###FINISH!####This demo is made by Xiwen Ma. Edited by Zhigeng Geng. ##Questions, comment?  Please send email to zgeng@stat.wisc.edu##HAVE FUN!#,V
 5,v
-    velocity_centers = np.arange(-30, 30, 5)    velocity_widths = np.arange(1, 80, 5),v
-1,v
-0,v
-8,v
 6,v
 3,v
-/,v
-http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2014AJ....148...35B&db_key=AST&link_type=ARTICLE,v
-,,v
-git remote add origin git@bitbucket.org:ezbc/posters.git,v
-http://arxiv.org/pdf/1007.5060,v
-    	print 'plotting',v
-anneal,v
-lbfgsb,v
-Howard Chen <yihaochentw@gmail.com>,v
-x,v
-_,v
-yy,v
-widthwidth,v
-[0*wmax, 0.5*wmax, 1.0*wmax],v
-c,v
-*wmax,v
-d,v
-4,v
-l,v
-),v
-centercenter,v
-v,v
-h,v
-,v
-        if center_confint is not None:        	ax_pdf_center.axvspan(center_confint[1],        	                      center_confint[2],        	                      color='k',        	                      alpha=0.2),v
- ,v
-* delta_width    #,v
-$\\$$\\$,v
-n,v
-#,v
-s,v
-np.arange(0,velocity_widths.shape[0],1)[::5],v
+    lams = (1, 2, 3, ),V
+k,v
+},v
+\begin{homeworkProblem}\end{homeworkProblem},v
 y,v
-width_pdf,v
-),v
-        ax_pdf_width = divider.append_axes("top", 1.2, pad=0.1, sharex=ax_image)        ax_pdf_center = divider.append_axes("right", 1.2, pad=0.1,                sharey=ax_image),v
-e,v
-    ax_image.set_aspect(1.),v
-gist_stern,v
-    divider = make_axes_locatable(ax_image)    ax_pdf_width = divider.append_axes("top", 1.2, pad=0.1, sharex=ax_image)    ax_pdf_center = divider.append_axes("right", 1.2, pad=0.1, sharey=ax_image)    # make some labels invisible    plt.setp(ax_pdf_width.get_xticklabels() + ax_pdf_center.get_yticklabels(),             visible=False)    ax_pdf_width.plot(velocity_widths, width_pdf)    ax_pdf_width.plot(velocity_centers, center_pdf)    #axHistx.axis["bottom"].major_ticklabels.set_visible(False)    for tl in ax_pdf_width.get_xticklabels():        tl.set_visible(False)    ax_pdf_width.set_yticks([0, 0.5, 1])    for tl in ax_pdf_center.get_xticklabels():        tl.set_visible(False)    ax_pdf_center.set_yticks([0, 0.5, 1]),v
-    #plt.rc('text', usetex=False)    im = ax_image.imshow(image, interpolation='nearest', origin='lower',            extent=[velocity_widths[0],velocity_widths[-1],                    velocity_centers[0],velocity_centers[-1]],            cmap=plt.cm.gist_stern,            #cmap=plt.cm.gray,            #norm=matplotlib.colors.LogNorm(),            ),v
-, orientation='horizontal',v
-import numpy as npimport matplotlib.pyplot as pltfrom matplotlib.ticker import NullFormatterdef makeTempHistogramPlot(xdata,ydata,rexp,filename=None,xlims=-99, ylims =-99 , \nxbins = 50,nybins=50, bw=0, nbins=100,contours=1,sigma=1,line=1):#bw = 0 for color, = 1 for black and white#line = 0 for no line, =1 for line#sigma = 1 for display % below line, =0 for not#contours = 1 for display 1,2,3 sigma contours, = 0 for not.# Define the x and y datax = xdatay = ydata# Set up default x and y limitsif (xlims == -99): xlims = [0,max(x)]if (ylims == -99): ylims = [0,max(y)]# Set up your x and y labelsxlabel = '$\mathrm{Your\\ X\\ Label}$'ylabel = '$\mathrm{Your\\ X\\ Label}$'mtitle = ''# Define the locations for the axesleft, width = 0.12, 0.55bottom, height = 0.12, 0.55bottom_h = left_h = left+width+0.02# Set up the geometry of the three plotsrect_temperature = [left, bottom, width, height] # dimensions of temp plotrect_histx = [left, bottom_h, width, 0.25] # dimensions of x-histogramrect_histy = [left_h, bottom, 0.25, height] # dimensions of y-histogram# Set up the size of the figurefig = plt.figure(1, figsize=(9.5,9))# Make the three plotsaxTemperature = plt.axes(rect_temperature) # temperature plotaxHistx = plt.axes(rect_histx) # x histogramaxHisty = plt.axes(rect_histy) # y histogram# Remove the inner axes numbers of the histogramsnullfmt = NullFormatter()axHistx.xaxis.set_major_formatter(nullfmt)axHisty.yaxis.set_major_formatter(nullfmt)# Find the min/max of the dataxmin = min(xlims)xmax = max(xlims)ymin = min(ylims)ymax = max(y)# Make the 'main' temperature plotxbins = linspace(start = 0, stop = xmax, num = nxbins)ybins = linspace(start = 0, stop = ymax, num = nybins)xcenter = (xbins[0:-1]+xbins[1:])/2.0ycenter = (ybins[0:-1]+ybins[1:])/2.0aspectratio = 1.0*(xmax - 0)/(1.0*ymax - 0)H, xedges,yedges = N.histogram2d(y,x,bins=(ybins,xbins))X = xcenterY = ycenterZ = H# Plot the temperature dataif(bw): cax = axTemperature.imshow(H, extent=[xmin,xmax,ymin,ymax], \ interpolation='nearest', origin='lower',aspect=aspectratio, cmap=cm.gist_yarg)else : cax = axTemperature.imshow(H, extent=[xmin,xmax,ymin,ymax], \interpolation='nearest', origin='lower',aspect=aspectratio)# Plot the temperature plot contoursif(bw): contourcolor = 'black'else: contourcolor = 'white'if (contours==0):print ''elif (contours==1):xcenter = N.mean(x)ycenter = N.mean(y)ra = N.std(x)rb = N.std(y)ang = 0X,Y=ellipse(ra,rb,ang,xcenter,ycenter)axTemperature.plot(X,Y,"k:",ms=1,linewidth=2.0)axTemperature.annotate('$1\\sigma$', xy=(X[15], Y[15]), xycoords='data',xytext=(10, 10), textcoords='offset points',horizontalalignment='right', verticalalignment='bottom',fontsize=25)X,Y=ellipse(2*ra,2*rb,ang,xcenter,ycenter)axTemperature.plot(X,Y,"k:",color = contourcolor,ms=1,linewidth=2.0)axTemperature.annotate('$2\\sigma$', xy=(X[15], Y[15]), xycoords='data',xytext=(10, 10), textcoords='offset points',horizontalalignment='right', verticalalignment='bottom',fontsize=25, color = contourcolor)X,Y=ellipse(3*ra,3*rb,ang,xcenter,ycenter)axTemperature.plot(X,Y,"k:",color = contourcolor, ms=1,linewidth=2.0)axTemperature.annotate('$3\\sigma$', xy=(X[15], Y[15]), xycoords='data',xytext=(10, 10), textcoords='offset points',horizontalalignment='right', verticalalignment='bottom',fontsize=25, color = contourcolor)else:xcenter = N.mean(x)ycenter = N.mean(y)ra = N.std(x)rb = N.std(y)ang = contours*N.pi/180.0X,Y=ellipse(ra,rb,ang,xcenter,ycenter)axTemperature.plot(X,Y,"k:",ms=1,linewidth=2.0)axTemperature.annotate('$1\\sigma$', xy=(X[15], Y[15]), xycoords='data', xytext=(10, 10), textcoords='offset points',horizontalalignment='right', verticalalignment='bottom',fontsize=25)X,Y=ellipse(2*ra,2*rb,ang,xcenter,ycenter)axTemperature.plot(X,Y,"k:",ms=1,linewidth=2.0, color = contourcolor)axTemperature.annotate('$2\\sigma$', xy=(X[15], Y[15]), xycoords='data', xytext=(10, 10), textcoords='offset points',horizontalalignment='right', verticalalignment='bottom',fontsize=25, color = contourcolor)X,Y=ellipse(3*ra,3*rb,ang,xcenter,ycenter)axTemperature.plot(X,Y,"k:",ms=1,linewidth=2.0, color = contourcolor)axTemperature.annotate('$3\\sigma$', xy=(X[15], Y[15]), xycoords='data', xytext=(10, 10), textcoords='offset points',horizontalalignment='right', verticalalignment='bottom',fontsize=25, color = contourcolor)#Plot the % below linebelowline = 1.0*size(where((x - y) > 0.0))/size(x)*1.0*100if(sigma): axTemperature.annotate('$%.2f\%%\mathrm{\\ Below\\ Line}$'%(belowline), xy=(xmax-100, ymin+3),fontsize=20, color = contourcolor)#Plot the axes labelsaxTemperature.set_xlabel(xlabel,fontsize=25)axTemperature.set_ylabel(ylabel,fontsize=25)#Make the tickmarks prettyticklabels = axTemperature.get_xticklabels()for label in ticklabels:label.set_fontsize(18)label.set_family('serif')ticklabels = axTemperature.get_yticklabels()for label in ticklabels:label.set_fontsize(18)label.set_family('serif')#Plot the line on the temperature plotif(line): axTemperature.plot([-1000,1000], [-1000,1000], 'k-', linewidth=2.0, color = contourcolor)#Set up the plot limitsaxTemperature.set_xlim(xlims)axTemperature.set_ylim(ylims)#Set up the histogram binsxbins = N.arange(xmin, xmax, (xmax-xmin)/nbins)ybins = N.arange(ymin, ymax, (ymax-ymin)/nbins)#Plot the histogramsif (bw):axHistx.hist(x, bins=xbins, color = 'silver')axHisty.hist(y, bins=ybins, orientation='horizontal', color = 'dimgray')else:axHistx.hist(x, bins=xbins, color = 'blue')axHisty.hist(y, bins=ybins, orientation='horizontal', color = 'red')#Set up the histogram limitsaxHistx.set_xlim( 0, max(x) )axHisty.set_ylim( 0, max(y))#Make the tickmarks prettyticklabels = axHistx.get_yticklabels()for label in ticklabels:label.set_fontsize(12)label.set_family('serif')#Make the tickmarks prettyticklabels = axHisty.get_xticklabels()for label in ticklabels:label.set_fontsize(12)label.set_family('serif')#Cool trick that changes the number of tickmarks for the histogram axesaxHisty.xaxis.set_major_locator(MaxNLocator(4))axHistx.yaxis.set_major_locator(MaxNLocator(4))if(filename):savefig(filename + '.eps',format = 'eps', transparent=True)savefig(filename + '.pdf',format = 'pdf', transparent=True)savefig(filename + '.png',format = 'png', transparent=True),v
-    pvalues = np.ma.array(pvalues,            mask=np.isnan(pvalues)),v
--,v
-    correlations = correlations - np.sum(correlations),v
-i,v
+p,v
+^,v
+        \pythonexternal{hw3.py},V
+%,v
+8,v
 .,v
-    print correlations    print correlations.min()    print correlations.max(),v
-    correlations -= correlations.max(),v
-    	model_error = np.std(model),v
-        av_image_error_corr = av_image_error[indices],v
-    #import matplotlib.pyplot as plt    #plt.imshow(data - model)    #plt.show(),v
-data_error,v
-    print correlations    correlations -= correlations.max(),v
-http://stats.stackexchange.com/questions/66616/converting-normalizing-very-small-likelihood-values-to-probability,v
-+,v
-    print correlations.max(),v
-    print correlations.min()    print correlations.max(),v
- / np.sum(correlations),v
-    correlations = np.exp(correlations / np.sum(correlations)),v
-        ''',v
->>> from pprint import pprint,v
-options={'gtol': 1e-6, 'disp': True,v
-89.7131,v
-    help(minimize),v
-S,v
-    print(result['low_vel'].value),v
-    from myimage_analysis import calculate_nhi,v
-,               vary=vary[1],v
-guesses, av_image=None, av_image_error=None, hi_cube=None,        hi_velocity_axis=None, hi_noise_cube=None, dgr=None,v
-phi_cnm,v
-par,v
-q,v
-_error,v
-        nhi_image_temp, nhi_image_error = calculate_nhi(cube=hi_cube,                velocity_axis=hi_velocity_axis,                velocity_range=velocity_range,                noise_cube=hi_noise_cube)        nhi_image = np.ma.array(nhi_image_temp,                                mask=np.isnan(nhi_image_temp))        # Select pixels with Av > 1.0 mag and Av_SNR > 5.0.        # Av > 1.0 mag is used to avoid too low Av.        # 1.0 mag corresponds to SNR = 1 / 0.2 ~ 5        # (see Table 2 of Ridge et al. 2006).        indices = np.where((nhi_image_temp == nhi_image_temp) & \                           (av_image == av_image))        nhi_image_corr = nhi_image_temp[indices]        nhi_image_error_corr = nhi_image_error[indices]        av_image_corr = av_image[indices]        av_image_error_corr = av_image_error[indices]        av_image_model = nhi_image_corr * dgr        av_image_model_error = nhi_image_error_corr * dgr,v
-                         model_error=av_image_model_error,,v
-    print logL,v
-*,v
-http://www.physics.utah.edu/~detar/phys6720/handouts/curve_fit/curve_fit/node2.html,v
-norm=matplotlib.colors.LogNorm(),v
-hg clone https://vim.googlecode.com/hg/ vim,v
-hg clone https://vim.googlecode.com/hg/ vim,V
-http://arxiv.org/pdf/1408.3071,v
-        av_image_model = nhi_image_corr * dgr,v
-, pvalues[i] = kendalltau(nhi_image_corr.ravel(),                                                 av_image_corr.ravel()),v
-/ av_error_data_planck > 5),v
+0,v
+        \begin{equation*}            \bm{q}_2 = \left(\begin{matrix} 0\\0.6\\0.8\\\end{matrix}\right)        \end{equation*},V
+        \begin{figure}[!ht]        \begin{centering}            \includegraphics[scale=0.07]{problem1b_fig.png}            \caption{\label{fig:2d} Sketch of spans of $\bm{Q}$ and $\bm{A}$.}        \end{centering}        \end{figure},V
+1,v
+$\bm{A}$ and $\bm{b}$.,v
+        %\begin{matrix} 3 \\ 0 \\ 0 \end{matrix},V
+\right),v
+\|\bm{a}_2^\prime\|,v
+4,v
+                       \begin{matrix} 1\\3\\4\\ \end{matrix}\right),V
+\,v
+                       \begin{matrix} 1\\3\\4\\ \end{matrix},V
+ \begin{matrix} 1\\3\\4\\ \end{matrix},v
+        \begin{equation*}            \bm{q}_1 = \begin{matrix} 1\\0\\0\\ \end{matrix}        \end{equation*},V
+\bm{a}^\prime,v
+2\frac{<\bm{x}_1,            \bm{a}_1>}{<\bm{x}_1,\bm{x}_1>} \bm{a}_1,v
+_,v
+x,v
+{<\bm{x}_1,            \bm{a}_1>},v
+\bm{x_1} = \bm{a1},v
+\begin{matrix} 3 \\ 0 \\ 0 \end{matrix},v
+$\bm{x_1}$,v
+        \begin{figure}[!ht]        \begin{centering}            %\includegraphics[scale=1]{problem2d_fig.png}            \caption{\label{fig:2d} $\bm{A}$ and $\bm{b}$.}        \end{centering}        \end{figure},V
+    \begin{homeworkSection}{1a}        \begin{figure}[!ht]        \begin{centering}            %\includegraphics[scale=1]{problem2d_fig.png}            \caption{\label{fig:2d} $\bm{A}$ and $\bm{b}$.}        \end{centering}        \end{figure}    \end{homeworkSection},V
+    \pythonexternal{hw3.py},V
+    \begin{homeworkSection}{4c}        Feature 1 best determines a happy face because it has the largest        positive weight, while feature 4 best determines a mad face because it        has the smallest negative weight.     \end{homeworkSection}    \begin{homeworkSection}{4d}                To build a classifier out of just three features we will use the        features with the largest absolute value weight, at least one feature        for happy and mad (positive and negative weights) and attempt to        minimize the difference between the sum of the absolute values of        weights for happy and mad features. The final criterion allows us to        compromise our accuracy for determining a happy face or a mad face. \\        These criteria lead us to choose features 1, 4, and 9 as the three most        important features for determining a happy or a mad face. We would        build a classifier in the same way as in Problem \S 4b, except using        only features 1, 4, and 9.    \end{homeworkSection}        \begin{homeworkSection}{4e}                Please see the code under the function 4e at the end of the homework.    \end{homeworkSection}        \begin{homeworkSection}{4f}        Errors with 9 features: \\            False positives = 0.507 \\            False negatives = 0.492 \\ \\        Errors with 3 features: \\            False positives = 0.507 \\            False negatives = 0.492 \\ \\        We can see that using three features works just as well as using the        nine features.    \end{homeworkSection}\end{homeworkProblem},V
+        To classify a new face as happy or mad we would multiply the new data        matrix $\bm{a}_i$ by the weights. If the product is greater than 0,        then the face is happy, if the product is less than 0, the face is        mad.,V
+        By solving the linear equation        \begin{equation*}            \bm{A x} = \bm{b}        \end{equation*}        \noindent we obtain a set of weights $\bm{x}$ where        \begin{equation*}            \bm{x} = \left(\begin{matrix}                             0.943 \\                             0.213 \\                             0.266 \\                            -0.392 \\                            -0.005 \\                            -0.017 \\                            -0.166 \\                            -0.082 \\                            -0.166 \\          \end{matrix}\right)               \end{equation*},V
+    \begin{homeworkSection}{3a}        To find min$_{\bm{x}} \|\tilde{\bm{A}}\bm{x} - \tilde{\bm{b}}\|_2$ we        know that the expression will be smallest when the difference inside        the norm is equal to 0. Thus our problem becomes solving the linear        equation        \begin{equation*}            \tilde{\bm{A}}\bm{x} = \tilde{\bm{b}}        \end{equation*}        \noindent for $\bm{x}$ for which there is the well-known solution        \begin{equation*}             (\tilde{\bm{A}}^T \tilde{\bm{A}})^{-1}            \tilde{\bm{A}}^T \tilde{\bm{b}} = \bm{x}        \end{equation*}    \end{homeworkSection}    \begin{homeworkSection}{3b}               See Figure~\ref{fig:3b} and the following code        \pythonexternal{hw3.m}        \begin{figure}[!ht]        \begin{centering}            \includegraphics[scale=1]{problem3c_fig.png}            \caption{\label{fig:3b} Plot of data with fitted 9th degree            polynomial with varying values of $\epsilon$.}        \end{centering}        \end{figure}    \end{homeworkSection}    \begin{homeworkSection}{3c}        See Figure~\ref{fig:3b}.    \end{homeworkSection},V
+    \begin{homeworkSection}{2a}            \end{homeworkSection}    \begin{homeworkSection}{2c}                See Figure~\ref{fig:2c}.        \begin{figure}[!ht]            \begin{centering}            \includegraphics[scale=1]{problem2c_fig.png}            \caption{\label{fig:2c} $\bm{A}$ and $\bm{b}$.}                        \end{centering}        \end{figure}    \end{homeworkSection}    \begin{homeworkSection}{2d}                See Figure~\ref{fig:2d}.        \begin{figure}[!ht]        \begin{centering}            \includegraphics[scale=1]{problem2d_fig.png}            \caption{\label{fig:2d} $\bm{A}$ and $\bm{b}$.}        \end{centering}        \end{figure}    \end{homeworkSection},V
+        The matrix A will be a $m \times 2$ matrix consisting of the measured        responses for each condition in $m$ experiments.,V
+        \begin{figure}[!ht]        \begin{centering}            \includegraphics[scale=1]{problem2d_fig.png}            \caption{\label{fig:2d} $\bm{A}$ and $\bm{b}$.}        \end{centering}        \end{figure},V
+        ,V
+        We know that for an overdetermined system, the least squares solution        to the matrix $\bm{\hat{x}}$ will be         \begin{equation*}            {(\bm{A}^T \bm{A})}^{-1}\bm{A}^T\bm{b}        \end{equation*}        \noindent which gives us        \begin{equation*}            \bm{\hat{x}} =                 0.75 \left(\begin{matrix} 1 \\ 1 \\ 1 \end{matrix}\right) +                 0.25 \left(\begin{matrix} 1 \\ -1 \\ 1 \end{matrix}\right)        \end{equation*}    \end{homeworkSection}    \begin{homeworkSection}{1b}                See Figure~\ref{fig:1b} for a sketch of the problem.        \begin{figure}[!ht]            \begin{centering}            \includegraphics[scale=0.08]{problem1b_fig.png}            \caption{\label{fig:1b} Sketch of $\bm{A}$ and $\bm{b}$.}            \end{centering}        \end{figure}    \end{homeworkSection},V
+    #print spline.__dict__,V
+    lam_gcv = spline._data[6],V
+),v
+,,v
+    print spline.__dict__,V
+    print x,V
+np.exp((-2, 3, 5, 6)),v
+    lams = np.exp((-2, 3, 5, 6)),V
+7,v
+    lams = (0.1, , 10e10),V
+%This program determines whether a set of column vectors is linearly independent%or linearly dependent. It accepts a Matrix%"B" and returns a scalar "d" which equals "1" if%the columns of "A" are Linearly Independent and "0" if they are %Linearly Dependent.function [d]=Dependence(B)C=rref(B);m=length(diag(B(:,1)));n=length(B(1,:));if n>m d=0;elses=sum(diag(C));if n>sd=0;elsed=1;endend,v
+ dot(u,v)*v/norm(v),V
+import scipy.interpolate as interimport numpy as npimport pylab as pltx = np.array([13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1])y = np.array([2.404070, 1.588134, 1.760112, 1.771360, 1.860087,          1.955789, 1.910408, 1.655911, 1.778952, 2.624719,          1.698099, 3.022607, 3.303135])xx = np.arange(1,13.01,0.1)s1 = inter.InterpolatedUnivariateSpline (x, y)s1rev = inter.InterpolatedUnivariateSpline (x[::-1], y[::-1])# Use a smallish value for ss2 = inter.UnivariateSpline (x[::-1], y[::-1], s=0.1)s2crazy = inter.UnivariateSpline (x[::-1], y[::-1], s=5e8)plt.plot (x, y, 'bo', label='Data')plt.plot (xx, s1(xx), 'k-', label='Spline, wrong order')plt.plot (xx, s1rev(xx), 'k--', label='Spline, correct order')plt.plot (xx, s2(xx), 'r-', label='Spline, fit')# Uncomment to get the poor fit.#plt.plot (xx, s2crazy(xx), 'r--', label='Spline, fit, s=5e8')plt.minorticks_on()plt.legend()plt.xlabel('x')plt.ylabel('y')plt.show(),v
+    lams = np.linspace(1, 10e8),V
+smooth.Pspline,v
+        print y_fit.max(),V
+    from scipy.interpolate import LSQUnivariateSpline as fit_spline,V
+        spline = fit_spline(x, y, k=3, s=lam),V
+    print lams,V
+        ax.plot(x_fit, y_fit, color='r', label=r'$\lambda$ = {0:.0f}'.format(i)),V
+        spline = fit_spline(x, y, k=3, s=lam)        x_fit = np.linspace(x.min(), x.max(), 1000)        y_fit = spline(x_fit),V
+    y_fit),V
+t,v
+f,v
+    import matplotlib.pyplot as plt,V
+def plot_splines():,V
+def plot_splines():    import matplotlib.pyplot as plt    # Plot!    # Set up plot aesthetics    plt.clf()    plt.rcdefaults()    colormap = plt.cm.gist_ncar    #color_cycle = [colormap(i) for i in np.linspace(0, 0.9, len(flux_list))]    font_scale = 10    params = {#'backend': .pdf',              'axes.labelsize': font_scale,              'axes.titlesize': font_scale,              'text.fontsize': font_scale,              'legend.fontsize': font_scale * 3 / 4.0,              'xtick.labelsize': font_scale,              'ytick.labelsize': font_scale,              'font.weight': 500,              'axes.labelweight': 500,              'text.usetex': False,              #'figure.figsize': (8, 8 * y_scaling),              #'axes.color_cycle': color_cycle # colors of different plots             }    plt.rcParams.update(params)    fig = plt.figure(figsize=(3,2))    ax = fig.add_subplot(111)    ax.plot(a, b, linestyle='', marker='^', alpha=0.4)    ax.plot(a_fit, b_fit, color='r')    ax.set_xlabel(r'$a_i$')    ax.set_ylabel(r'$b_i$')    plt.savefig('problem2c_fig.png', bbox_inches='tight'),V
+    m = 1000    a = np.random.uniform(0, 1, size=m)    A = np.matrix([np.ones((m)), a]).T    b = a**2 + np.random.normal(0, 1, size=m)    B = np.matrix(b).T    # Fit x    x = np.linalg.inv(A.T * A) * A.T * B    # create b_fit    a_fit = np.arange(0,1,0.01)    b_fit = x[0, 0] + x[1, 0] * a_fit**2,V
+def problem_2c():    import matplotlib.pyplot as plt    m = 1000    a = np.random.uniform(0, 1, size=m)    A = np.matrix([np.ones((m)), a]).T    b = a**2 + np.random.normal(0, 1, size=m)    B = np.matrix(b).T    # Fit x    x = np.linalg.inv(A.T * A) * A.T * B    # create b_fit    a_fit = np.arange(0,1,0.01)    b_fit = x[0, 0] + x[1, 0] * a_fit**2    # Plot!    # Set up plot aesthetics    plt.clf()    plt.rcdefaults()    colormap = plt.cm.gist_ncar    #color_cycle = [colormap(i) for i in np.linspace(0, 0.9, len(flux_list))]    font_scale = 10    params = {#'backend': .pdf',              'axes.labelsize': font_scale,              'axes.titlesize': font_scale,              'text.fontsize': font_scale,              'legend.fontsize': font_scale * 3 / 4.0,              'xtick.labelsize': font_scale,              'ytick.labelsize': font_scale,              'font.weight': 500,              'axes.labelweight': 500,              'text.usetex': False,              #'figure.figsize': (8, 8 * y_scaling),              #'axes.color_cycle': color_cycle # colors of different plots             }    plt.rcParams.update(params)    fig = plt.figure(figsize=(3,2))    ax = fig.add_subplot(111)    ax.plot(a, b, linestyle='', marker='^', alpha=0.4)    ax.plot(a_fit, b_fit, color='r')    ax.set_xlabel(r'$a_i$')    ax.set_ylabel(r'$b_i$')    plt.savefig('problem2c_fig.png', bbox_inches='tight'),V
