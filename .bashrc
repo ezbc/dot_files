@@ -128,7 +128,14 @@ if [ $HOSTNAME == latitude ]; then
     export PATH=$PATH:'/home/elijah/applications/miriad/bin/linux/miriad'
     export PATH=$PATH:/usr/local/bin/miriad
     export PATH=$PATH:/usr/local/bin
+    export PATH=$PATH:/sbin/
+    export PATH=$PATH:/usr/games/
+    export PATH=$PATH:/home/ezbc/opt/hdf5-1.8.13/hdf5/bin
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/research/python_modules/
+    export PYTHONPATH=$PYTHONPATH:/home/ezbc/brewing/modules/
+    export GAUSSPY=/home/ezbc/classes/machine_learning/project/gausspy_module/gausspy/
+    export PYTHONPATH=$PYTHONPATH:/home/ezbc/classes/machine_learning/project/gausspy_module/gausspy
+
 
     # Parellel programming
     export MADSDK_ROOT=~/opt/madsdk
@@ -254,6 +261,6 @@ function start_agent {
 alias init_ssh='start_agent'
 
 # Add iraf setup commands
-if [ -e /home/ezbc/.iraf/setup.sh ]; then
-    source /home/ezbc/.iraf/setup.sh
-fi
+#if [ -e /home/ezbc/.iraf/setup.sh ]; then
+#    source /home/ezbc/.iraf/setup.sh
+#fi

@@ -1,100 +1,100 @@
-[scale=0.6],v
-#,v
-l,v
-a,v
-u,v
-n,v
-m,v
-,V
-    \begin{homeworkSection}{1a},V
  ,v
-    \end{homeworkSection},V
-        \begin{figure}[!ht]                        \begin{centering}            \includegraphics{manual_fit.ps}            \end{centering}        \end{figure},V
-            \caption,V
-i,v
-g,v
-b,v
-e,v
-            \begin{centering},V
-    \clearpage    \end{homeworkSection},v
-    \begin{homeworkSection}{1b}            We again want to show that $\bm{A} \circ \bm{B}$ (where $\bm{A}$ and        $\bm{B}$ have the same size) is positive definite by showing that the        product is Hermitian and has positive eigenvalues. The Shur product of        $\bm{A}$ and $\bm{B}$ can be represented as a principle submatrix of        the Kronecker product of $\bm{A}$ and $\bm{B}$ where                \begin{equation*}            \bm{A} \circ \bm{B} = \bm{A} (\otimes \bm{B})(\alpha, \beta)        \end{equation*}        \begin{equation*}            \alpha : {1, m+2, \dots, m^2} \qquad            \beta : {1, n+2, \dots, n^2} \qquad \alpha = \beta, m = n        \end{equation*}                A principle submatrix        of a Hermitian matrix will be Hermitian itself. Finally we know that        the eigenvalues of the principle submatrix of the Kronecker product        will be greater than the eigenvalues of the Kronecker product due to        the Eigenvalue Interlacing for Principal Submatrices theorem. The Shur        product of positive definite matrices is therefore positive definite.        % eigenvalue interlacing        % http://www.math.uh.edu/~bgb/biostats/Math6304/MatrixTheory-20121025a.pdf,v
-  A positive definite matrix requires that the matrix is Hermitian and        its eigenvalues are positive. Our problem is then reduced to, given        positive definite matrices $\bm{A}$ and $\bm{B}$, show that the        Kronecker product of the matrices is Hermitian and has positive        eigenvalues.\\        A property of the Kronecker product goes as follows: given $\bm{A} \in        \mathbb{R}^{m,n}$ and $\bm{B} \in \mathbb{R}^{p,q}$, then $(\bm{A}        \otimes \bm{B})^* = \bm{A}^* \otimes \bm{B}^*$, which shows that a        Kronecker product will be Hermitian if the two matrices in the product        are Hermitian.\\        Next given, $\bm{u} \in \mathbb{R}^m$ and $\bm{v} \in \mathbb{R}^p$        and             \begin{equation*}            \bm{Au}_i = \lambda_i \bm{u}_i \qquad i = 1, \dots, m \qquad             \bm{Bv}_j = \mu_j \bm{v}_j \qquad j = 1, \dots, p         \end{equation*}        \noindent where $\lambda$ and $\mu$ are the eigenvalues for $\bm{A}$        and $\bm{B}$ respectively. For $i = 1, \dots, m, j = 1, \dots, p$        \begin{equation*}            (\bm{A} \otimes \bm{B})(\bm{u}_i \otimes \bm{v}_j) =             \lambda_i \mu_j (\bm{u}_i \otimes \bm{v}_j)        \end{equation*}        \noindent thus if the eigenvalues for $\bm{A}$ and $\bm{B}$ are        positive, the eigenvalue of $\bm{A} \otimes \bm{B}$ will be positive.\\        We are now able to assert that the Kronecker product of two positive        definite matrices will be positive definite.,v
-2,v
-### first you should check your working directory buy using the following command:###getwd()### then copy the hw6.dat into your working directory.#######load your data into R.  Remember to put data in the working directory!!!##data.hw6 <- read.table("hw6.dat", header=TRUE)attach(data.hw6)####now you can use x, y#######LET'S START!###### install the packages "pspline" ###install.packages("pspline")### choose a minor, say 80 ###### you should be able to see messages telling you R is installing the package ######load the package### (Make sure you install the package before loading) ###library(pspline)###Method 1:  EYE BALL METHOD######Let's start from big lambda.######In the function of smooth.Pspline, spar corresponds to lambda###fit1 <- smooth.Pspline(x, y, spar=1, method=1)### to check out how the plot looks like, type in: ###name.pic <- paste("lambda =",as.character(fit1$spar))plot(x,y,xlab="x",ylab="y",main=name.pic)lines(fit1$x, fit1$y)### then create a ps file for LaTeX: ###postscript("fit1.ps", height=6, width=6, horizo=F)name.pic <- paste("lambda =",as.character(fit1$spar))plot(x,y,xlab="x",ylab="y",main=name.pic)lines(fit1$x, fit1$y)graphics.off()###Try smaller lambda###fit2 <- smooth.Pspline(x, y, spar=0.1, method=1)### to check out how the plot looks like, type in: ###name.pic <- paste("lambda=",as.character(fit2$spar))plot(x,y,xlab="x",ylab="y",main=name.pic)lines(fit2$x, fit2$y)### then create a ps file for LaTeX: ###postscript("fit2.ps", height=6, width=6, horizo=F)name.pic <- paste("lambda=",as.character(fit2$spar))plot(x,y,xlab="x",ylab="y",main=name.pic)lines(fit2$x, fit2$y)graphics.off()###repeat trying different lambda (0.01,0.001,0.0001,0.00001) see the difference######Don't forget to change name 'fitx' at each run ######my best pic is of lambda=0.002######Method 2:   GCV Method######We can use GCV method by setting the argument: method=3###GCVfit <- smooth.Pspline(x, y, method=3)### to check out how the plot looks like, type in: ###name.pic <- paste("lambda.GCV=",as.character(round(GCVfit$spar,digits=8)))plot(x,y,xlab="x",ylab="y",main=name.pic)lines(GCVfit$x, GCVfit$y)### then create a ps file for LaTeX: ###postscript("GCVfit.ps", height=6, width=6, horizo=F)name.pic <- paste("lambda.GCV=",as.character(round(GCVfit$spar,digits=8)))plot(x,y,xlab="x",ylab="y",main=name.pic)lines(GCVfit$x, GCVfit$y)graphics.off()###lambda by GCV###GCVfit$spar###FINISH!####This demo is made by Xiwen Ma. Edited by Zhigeng Geng. ##Questions, comment?  Please send email to zgeng@stat.wisc.edu##HAVE FUN!#,V
-5,v
-6,v
-3,v
-    lams = (1, 2, 3, ),V
-k,v
-},v
-\begin{homeworkProblem}\end{homeworkProblem},v
-y,v
-p,v
-^,v
-        \pythonexternal{hw3.py},V
-%,v
-8,v
-.,v
-0,v
-        \begin{equation*}            \bm{q}_2 = \left(\begin{matrix} 0\\0.6\\0.8\\\end{matrix}\right)        \end{equation*},V
-        \begin{figure}[!ht]        \begin{centering}            \includegraphics[scale=0.07]{problem1b_fig.png}            \caption{\label{fig:2d} Sketch of spans of $\bm{Q}$ and $\bm{A}$.}        \end{centering}        \end{figure},V
-1,v
-$\bm{A}$ and $\bm{b}$.,v
-        %\begin{matrix} 3 \\ 0 \\ 0 \end{matrix},V
-\right),v
-\|\bm{a}_2^\prime\|,v
-4,v
-                       \begin{matrix} 1\\3\\4\\ \end{matrix}\right),V
-\,v
-                       \begin{matrix} 1\\3\\4\\ \end{matrix},V
- \begin{matrix} 1\\3\\4\\ \end{matrix},v
-        \begin{equation*}            \bm{q}_1 = \begin{matrix} 1\\0\\0\\ \end{matrix}        \end{equation*},V
-\bm{a}^\prime,v
-2\frac{<\bm{x}_1,            \bm{a}_1>}{<\bm{x}_1,\bm{x}_1>} \bm{a}_1,v
-_,v
-x,v
-{<\bm{x}_1,            \bm{a}_1>},v
-\bm{x_1} = \bm{a1},v
-\begin{matrix} 3 \\ 0 \\ 0 \end{matrix},v
-$\bm{x_1}$,v
-        \begin{figure}[!ht]        \begin{centering}            %\includegraphics[scale=1]{problem2d_fig.png}            \caption{\label{fig:2d} $\bm{A}$ and $\bm{b}$.}        \end{centering}        \end{figure},V
-    \begin{homeworkSection}{1a}        \begin{figure}[!ht]        \begin{centering}            %\includegraphics[scale=1]{problem2d_fig.png}            \caption{\label{fig:2d} $\bm{A}$ and $\bm{b}$.}        \end{centering}        \end{figure}    \end{homeworkSection},V
-    \pythonexternal{hw3.py},V
-    \begin{homeworkSection}{4c}        Feature 1 best determines a happy face because it has the largest        positive weight, while feature 4 best determines a mad face because it        has the smallest negative weight.     \end{homeworkSection}    \begin{homeworkSection}{4d}                To build a classifier out of just three features we will use the        features with the largest absolute value weight, at least one feature        for happy and mad (positive and negative weights) and attempt to        minimize the difference between the sum of the absolute values of        weights for happy and mad features. The final criterion allows us to        compromise our accuracy for determining a happy face or a mad face. \\        These criteria lead us to choose features 1, 4, and 9 as the three most        important features for determining a happy or a mad face. We would        build a classifier in the same way as in Problem \S 4b, except using        only features 1, 4, and 9.    \end{homeworkSection}        \begin{homeworkSection}{4e}                Please see the code under the function 4e at the end of the homework.    \end{homeworkSection}        \begin{homeworkSection}{4f}        Errors with 9 features: \\            False positives = 0.507 \\            False negatives = 0.492 \\ \\        Errors with 3 features: \\            False positives = 0.507 \\            False negatives = 0.492 \\ \\        We can see that using three features works just as well as using the        nine features.    \end{homeworkSection}\end{homeworkProblem},V
-        To classify a new face as happy or mad we would multiply the new data        matrix $\bm{a}_i$ by the weights. If the product is greater than 0,        then the face is happy, if the product is less than 0, the face is        mad.,V
-        By solving the linear equation        \begin{equation*}            \bm{A x} = \bm{b}        \end{equation*}        \noindent we obtain a set of weights $\bm{x}$ where        \begin{equation*}            \bm{x} = \left(\begin{matrix}                             0.943 \\                             0.213 \\                             0.266 \\                            -0.392 \\                            -0.005 \\                            -0.017 \\                            -0.166 \\                            -0.082 \\                            -0.166 \\          \end{matrix}\right)               \end{equation*},V
-    \begin{homeworkSection}{3a}        To find min$_{\bm{x}} \|\tilde{\bm{A}}\bm{x} - \tilde{\bm{b}}\|_2$ we        know that the expression will be smallest when the difference inside        the norm is equal to 0. Thus our problem becomes solving the linear        equation        \begin{equation*}            \tilde{\bm{A}}\bm{x} = \tilde{\bm{b}}        \end{equation*}        \noindent for $\bm{x}$ for which there is the well-known solution        \begin{equation*}             (\tilde{\bm{A}}^T \tilde{\bm{A}})^{-1}            \tilde{\bm{A}}^T \tilde{\bm{b}} = \bm{x}        \end{equation*}    \end{homeworkSection}    \begin{homeworkSection}{3b}               See Figure~\ref{fig:3b} and the following code        \pythonexternal{hw3.m}        \begin{figure}[!ht]        \begin{centering}            \includegraphics[scale=1]{problem3c_fig.png}            \caption{\label{fig:3b} Plot of data with fitted 9th degree            polynomial with varying values of $\epsilon$.}        \end{centering}        \end{figure}    \end{homeworkSection}    \begin{homeworkSection}{3c}        See Figure~\ref{fig:3b}.    \end{homeworkSection},V
-    \begin{homeworkSection}{2a}            \end{homeworkSection}    \begin{homeworkSection}{2c}                See Figure~\ref{fig:2c}.        \begin{figure}[!ht]            \begin{centering}            \includegraphics[scale=1]{problem2c_fig.png}            \caption{\label{fig:2c} $\bm{A}$ and $\bm{b}$.}                        \end{centering}        \end{figure}    \end{homeworkSection}    \begin{homeworkSection}{2d}                See Figure~\ref{fig:2d}.        \begin{figure}[!ht]        \begin{centering}            \includegraphics[scale=1]{problem2d_fig.png}            \caption{\label{fig:2d} $\bm{A}$ and $\bm{b}$.}        \end{centering}        \end{figure}    \end{homeworkSection},V
-        The matrix A will be a $m \times 2$ matrix consisting of the measured        responses for each condition in $m$ experiments.,V
-        \begin{figure}[!ht]        \begin{centering}            \includegraphics[scale=1]{problem2d_fig.png}            \caption{\label{fig:2d} $\bm{A}$ and $\bm{b}$.}        \end{centering}        \end{figure},V
-        ,V
-        We know that for an overdetermined system, the least squares solution        to the matrix $\bm{\hat{x}}$ will be         \begin{equation*}            {(\bm{A}^T \bm{A})}^{-1}\bm{A}^T\bm{b}        \end{equation*}        \noindent which gives us        \begin{equation*}            \bm{\hat{x}} =                 0.75 \left(\begin{matrix} 1 \\ 1 \\ 1 \end{matrix}\right) +                 0.25 \left(\begin{matrix} 1 \\ -1 \\ 1 \end{matrix}\right)        \end{equation*}    \end{homeworkSection}    \begin{homeworkSection}{1b}                See Figure~\ref{fig:1b} for a sketch of the problem.        \begin{figure}[!ht]            \begin{centering}            \includegraphics[scale=0.08]{problem1b_fig.png}            \caption{\label{fig:1b} Sketch of $\bm{A}$ and $\bm{b}$.}            \end{centering}        \end{figure}    \end{homeworkSection},V
-    #print spline.__dict__,V
-    lam_gcv = spline._data[6],V
+syn region markdownItalic start="\S\@<=\*\|\*\S\@=" end="\S\@<=\*\|\*\S\@=" keepend contains=markdownLineStartsyn region markdownItalic start="\S\@<=_\|_\S\@=" end="\S\@<=_\|_\S\@=" keepend contains=markdownLineStartsyn region markdownBold start="\S\@<=\*\*\|\*\*\S\@=" end="\S\@<=\*\*\|\*\*\S\@=" keepend contains=markdownLineStart,markdownItalicsyn region markdownBold start="\S\@<=__\|__\S\@=" end="\S\@<=__\|__\S\@=" keepend contains=markdownLineStart,markdownItalic,v
+syn region markdownItalic start="\S\@<=\*\|\*\S\@=" end="\S\@<=\*\|\*\S\@=" keepend contains=markdownLineStartsyn region markdownItalic start="\S\@<=_\|_\S\@=" end="\S\@<=_\|_\S\@=" keepend contains=markdownLineStartsyn region markdownBold start="\S\@<=\*\*\|\*\*\S\@=" end="\S\@<=\*\*\|\*\*\S\@=" keepend contains=markdownLineStart,markdownItalicsyn region markdownBold start="\S\@<=__\|__\S\@=" end="\S\@<=__\|__\S\@=" keepend contains=markdownLineStart,markdownItalic,V
+syn region markdownItalic start="\s_\S\@=" end="\S\@<=_\|_\S\@=" keepend contains=markdownLineStart,V
+syn region markdownItalic start="\s_\S\@=" end="\S\@<=_\|_\S\@=" keepend contains=markdownLineStart,v
+1. Normalize UV radiation field with $H_2$ dissociation rate. Define   derivative of dissociation bandwidth as the $H_2$ self-shielding function.2. Define FUV opacity of dust grains and $H_2$ formation rate on dust.   Dust-to-gass mass ratio scales linearly with metallicity.3. Define differentiable EQ of depth-dependent steady-state $HI / H_2$   formation/destruction. $H_2$-dust-limited dissociated bandwidth defined.4. Integrate diff EQ to get HI column density. ##### ,V
 ),v
-,,v
-    print spline.__dict__,V
-    print x,V
-np.exp((-2, 3, 5, 6)),v
-    lams = np.exp((-2, 3, 5, 6)),V
-7,v
-    lams = (0.1, , 10e10),V
-%This program determines whether a set of column vectors is linearly independent%or linearly dependent. It accepts a Matrix%"B" and returns a scalar "d" which equals "1" if%the columns of "A" are Linearly Independent and "0" if they are %Linearly Dependent.function [d]=Dependence(B)C=rref(B);m=length(diag(B(:,1)));n=length(B(1,:));if n>m d=0;elses=sum(diag(C));if n>sd=0;elsed=1;endend,v
- dot(u,v)*v/norm(v),V
-import scipy.interpolate as interimport numpy as npimport pylab as pltx = np.array([13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1])y = np.array([2.404070, 1.588134, 1.760112, 1.771360, 1.860087,          1.955789, 1.910408, 1.655911, 1.778952, 2.624719,          1.698099, 3.022607, 3.303135])xx = np.arange(1,13.01,0.1)s1 = inter.InterpolatedUnivariateSpline (x, y)s1rev = inter.InterpolatedUnivariateSpline (x[::-1], y[::-1])# Use a smallish value for ss2 = inter.UnivariateSpline (x[::-1], y[::-1], s=0.1)s2crazy = inter.UnivariateSpline (x[::-1], y[::-1], s=5e8)plt.plot (x, y, 'bo', label='Data')plt.plot (xx, s1(xx), 'k-', label='Spline, wrong order')plt.plot (xx, s1rev(xx), 'k--', label='Spline, correct order')plt.plot (xx, s2(xx), 'r-', label='Spline, fit')# Uncomment to get the poor fit.#plt.plot (xx, s2crazy(xx), 'r--', label='Spline, fit, s=5e8')plt.minorticks_on()plt.legend()plt.xlabel('x')plt.ylabel('y')plt.show(),v
-    lams = np.linspace(1, 10e8),V
-smooth.Pspline,v
-        print y_fit.max(),V
-    from scipy.interpolate import LSQUnivariateSpline as fit_spline,V
-        spline = fit_spline(x, y, k=3, s=lam),V
-    print lams,V
-        ax.plot(x_fit, y_fit, color='r', label=r'$\lambda$ = {0:.0f}'.format(i)),V
-        spline = fit_spline(x, y, k=3, s=lam)        x_fit = np.linspace(x.min(), x.max(), 1000)        y_fit = spline(x_fit),V
-    y_fit),V
-t,v
-f,v
-    import matplotlib.pyplot as plt,V
-def plot_splines():,V
-def plot_splines():    import matplotlib.pyplot as plt    # Plot!    # Set up plot aesthetics    plt.clf()    plt.rcdefaults()    colormap = plt.cm.gist_ncar    #color_cycle = [colormap(i) for i in np.linspace(0, 0.9, len(flux_list))]    font_scale = 10    params = {#'backend': .pdf',              'axes.labelsize': font_scale,              'axes.titlesize': font_scale,              'text.fontsize': font_scale,              'legend.fontsize': font_scale * 3 / 4.0,              'xtick.labelsize': font_scale,              'ytick.labelsize': font_scale,              'font.weight': 500,              'axes.labelweight': 500,              'text.usetex': False,              #'figure.figsize': (8, 8 * y_scaling),              #'axes.color_cycle': color_cycle # colors of different plots             }    plt.rcParams.update(params)    fig = plt.figure(figsize=(3,2))    ax = fig.add_subplot(111)    ax.plot(a, b, linestyle='', marker='^', alpha=0.4)    ax.plot(a_fit, b_fit, color='r')    ax.set_xlabel(r'$a_i$')    ax.set_ylabel(r'$b_i$')    plt.savefig('problem2c_fig.png', bbox_inches='tight'),V
-    m = 1000    a = np.random.uniform(0, 1, size=m)    A = np.matrix([np.ones((m)), a]).T    b = a**2 + np.random.normal(0, 1, size=m)    B = np.matrix(b).T    # Fit x    x = np.linalg.inv(A.T * A) * A.T * B    # create b_fit    a_fit = np.arange(0,1,0.01)    b_fit = x[0, 0] + x[1, 0] * a_fit**2,V
-def problem_2c():    import matplotlib.pyplot as plt    m = 1000    a = np.random.uniform(0, 1, size=m)    A = np.matrix([np.ones((m)), a]).T    b = a**2 + np.random.normal(0, 1, size=m)    B = np.matrix(b).T    # Fit x    x = np.linalg.inv(A.T * A) * A.T * B    # create b_fit    a_fit = np.arange(0,1,0.01)    b_fit = x[0, 0] + x[1, 0] * a_fit**2    # Plot!    # Set up plot aesthetics    plt.clf()    plt.rcdefaults()    colormap = plt.cm.gist_ncar    #color_cycle = [colormap(i) for i in np.linspace(0, 0.9, len(flux_list))]    font_scale = 10    params = {#'backend': .pdf',              'axes.labelsize': font_scale,              'axes.titlesize': font_scale,              'text.fontsize': font_scale,              'legend.fontsize': font_scale * 3 / 4.0,              'xtick.labelsize': font_scale,              'ytick.labelsize': font_scale,              'font.weight': 500,              'axes.labelweight': 500,              'text.usetex': False,              #'figure.figsize': (8, 8 * y_scaling),              #'axes.color_cycle': color_cycle # colors of different plots             }    plt.rcParams.update(params)    fig = plt.figure(figsize=(3,2))    ax = fig.add_subplot(111)    ax.plot(a, b, linestyle='', marker='^', alpha=0.4)    ax.plot(a_fit, b_fit, color='r')    ax.set_xlabel(r'$a_i$')    ax.set_ylabel(r'$b_i$')    plt.savefig('problem2c_fig.png', bbox_inches='tight'),V
+\,v
+http://ezbc.github.io/website/posts/notes/2015/02/20/Krumholz-Fitting/,v
+\\[ \Sigma_{test} \\],V
+“Okay, this is the wisdom. First, time spent on reconnaissanse is never wasted. Second, almost anything can be improved with the addition of bacon. And finally, there is no problem on Earth that can't be ameliorated by a hot bath and a cup of tea.” ― Jasper Fforde, Shades of Grey: The Road to High Saffron,v
+0,v
+            \vspace{1cm},V
+|,v
+%,v
+,V
+                   ,v
+555500,1
+500050,1
+            \vspace{0.3cm},V
+1,v
+l,v
+            \vspace{0.1cm},V
+      ,1
+8.000000e-018.000000e-01,12
+2.000000e-01,v
+ 4.440892e-15 4.440892e-15,13
+4.440892e-154.440892e-15,12
+342867603430678633703366,4
+4.440892e-15,v
+2.000000e-012.000000e-012.000000e-012.000000e-012.000000e-01,12
+010066823348001433460012,4
+335633546686002066866684,4
+008834220086675200886748,4
+351666766680667800103344,4
+ 4.440892e-15 4.440892e-15 4.440892e-15 4.440892e-15 4.440892e-15 4.440892e-15,13
+4.440892e-15 4.440892e-15 4.440892e-15 4.440892e-15 4.440892e-15 4.440892e-15 ,13
+4.440892e-154.440892e-154.440892e-154.440892e-154.440892e-154.440892e-15,12
+     ,1
+d,v
+i,v
+m,v
+  ,V
+\bottomrule\end{tabular},V
+\midrule,V
+            \midrule,V
+                                      ,2
+                                                                                                                                                                                              ,10
+                                                                                                                                                                                                                                                                                                                ,16
+                                                                                                                                                                                                                                                                                                                                   ,17
+                 1.5                 2.0                 2.5                 3.0                 3.5                 4.0                 1.5                 2.0                 2.5                 3.0                 3.5                 4.0                  1.5                 2.0                 2.5                 3.0                 3.5                 4.0,20
+0.065 0.195 0.160 0.180 0.195 0.200 0.095 0.130 0.120 0.120 0.130 0.140       0.115 0.095 0.095 0.095 0.195 0.200 ,6
+0.065 &0.195 &0.160 &0.180 &0.195 &0.200 &0.095 &0.130 &0.120 &0.120 &0.130 &0.140 &       0.115 &0.095 &0.095 &0.095 &0.195 &0.200 &,7
+\bottomrule\end{tabular}\begin{tabular}{rrrr}\toprule dust2gas\_ratio &  hi\_velocity\_width &     intercept &  residual\_width\_scale \\\midrule,V
+\end{tabular}\begin{tabular}{rrrr}\toprule dust2gas\_ratio &  hi\_velocity\_width &     intercept &  residual\_width\_scale \\\midrule,V
+\bottomrule,V
+0.065 &0.195 &0.160 &0.180 &0.195 &0.200 &,7
+\begin{tabular}{rrrr}\toprule dust2gas\_ratio &  hi\_velocity\_width &     intercept &  residual\_width\_scale \\,V
+Taurus 2 0.115 &           48.33428 & -2.000000e-01 &                   1.5 \\          0.095 &           47.66760 &  4.440892e-15 &                   2.0 \\          0.095 &           49.33430 &  4.440892e-15 &                   2.5 \\          0.095 &           60.66786 & -2.000000e-01 &                   3.0 \\          0.195 &           19.33370 &  8.000000e-01 &                   3.5 \\          0.200 &           17.33366 &  8.000000e-01 &                   4.0 \\    ,V
+          ,v
+\begin{tabular}{rrrr}\toprule dust2gas\_ratio &  hi\_velocity\_width &     intercept &  residual\_width\_scale \\\midrule          0.095 &           51.00100 &  4.440892e-15 &                   1.5 \\          0.130 &            8.66682 &  2.000000e-01 &                   2.0 \\          0.120 &            8.33348 &  2.000000e-01 &                   2.5 \\          0.120 &            8.00014 &  2.000000e-01 &                   3.0 \\          0.130 &            7.33346 &  2.000000e-01 &                   3.5 \\          0.140 &            7.00012 &  2.000000e-01 &                   4.0 \\\bottomrule\end{tabular},v
+\begin{tabular}{rrrr}\toprule dust2gas\_ratio &  hi\_velocity\_width &     intercept &  residual\_width\_scale \\\midrule          0.065 &           92.33516 &  4.440892e-15 &                   1.5 \\          0.195 &            5.66676 &  4.440892e-15 &                   2.0 \\          0.160 &            7.66680 &  4.440892e-15 &                   2.5 \\          0.180 &            6.66678 &  4.440892e-15 &                   3.0 \\          0.195 &            6.00010 &  4.440892e-15 &                   3.5 \\          0.200 &            6.33344 &  4.440892e-15 &                   4.0 \\\bottomrule\end{tabular},v
+\begin{tabular}{rrrr}\toprule dust2gas\_ratio &  hi\_velocity\_width &     intercept &  residual\_width\_scale \\\midrule          0.115 &           48.33428 & -2.000000e-01 &                   1.5 \\          0.095 &           47.66760 &  4.440892e-15 &                   2.0 \\          0.095 &           49.33430 &  4.440892e-15 &                   2.5 \\          0.095 &           60.66786 & -2.000000e-01 &                   3.0 \\          0.195 &           19.33370 &  8.000000e-01 &                   3.5 \\          0.200 &           17.33366 &  8.000000e-01 &                   4.0 \\\bottomrule\end{tabular},v
+            \hline,V
+\colhead{[\kms]},v
+                   \colhead{[\kms, \kms]} &,V
+                   \colhead{\hi\ width} \\,V
+c,v
+                   \colhead{} & ,V
+                   \colhead{$N_{\rm pix}$} & ,V
+                                    ,6
+                                                            ,10
+                              ,5
+            California & & & \\,V
+            Perseus & & & \\,V
+                   \colhead{} &,V
+Residual Scale,v
+                   \colhead{Residual Scale} &,V
+\begin{tabular}{rrrr}\toprule dust2gas\_ratio &  hi\_velocity\_width &  intercept &  residual\_width\_scale \\\midrule\bottomrule\end{tabular},v
+California,v
+        California & & & \\,V
+                                                                              ,13
+ 0.125  0.125  0.135  0.135  0.140  0.160 ,7
+                 1.5                  2.0                  2.5                  3.0                  3.5                  4.0 ,21
+          0.125 &           45.00088 &       -0.8 &                   1.5 \\          0.125 &           45.33422 &       -0.8 &                   2.0 \\          0.135 &           44.00086 &       -0.9 &                   2.5 \\          0.135 &           43.66752 &       -0.9 &                   3.0 \\          0.140 &           45.00088 &       -1.0 &                   3.5 \\          0.160 &           41.66748 &       -1.2 &                   4.0 \\,V
+                                                                                          ,15
+0.135 0.140 0.140 0.140 0.135 0.150 ,6
+                  1.5                  2.0                  2.5                  3.0                  3.5                  4.0,21
+          0.135 &           12.33356 &       -0.2 &                   1.5 \\          0.140 &           11.33354 &       -0.2 &                   2.0 \\          0.140 &           10.66686 &       -0.1 &                   2.5 \\          0.140 &           11.00020 &       -0.2 &                   3.0 \\          0.135 &           10.66686 &       -0.1 &                   3.5 \\          0.150 &            9.66684 &       -0.1 &                   4.0 \\,V
+            2.0     &      -10, 10  &  8627   & 0.08  & 16 \\            3.0     &      -10, 10  &  10231  & 0.09  & 14 \\            4.0     &      -10, 10  &  10424  & 0.09  & 14 \\            3.0     &      -20, 20  &  9760   & 0.08  & 17 \\            3.0     &      -5, 5    &  10915  & 0.09  & 14 \\            3.0     &      -40, 20  &  8498   & 0.08  & 16 \\,V
+\begin{tabular}{rrrr}\toprule dust2gas\_ratio &  hi\_velocity\_width &  intercept &  residual\_width\_scale \\\midrule          0.135 &           12.33356 &       -0.2 &                   1.5 \\          0.140 &           11.33354 &       -0.2 &                   2.0 \\          0.140 &           10.66686 &       -0.1 &                   2.5 \\          0.140 &           11.00020 &       -0.2 &                   3.0 \\          0.135 &           10.66686 &       -0.1 &                   3.5 \\          0.150 &            9.66684 &       -0.1 &                   4.0 \\\bottomrule\end{tabular},v
+Josh Weber <jjweber3@wisc.edu>,Lynn Weisberg <lynnpweisberg@gmail.com>,Marty Lichtman <marty.lichtman@gmail.com>,Meghan McGarry <mbmcgarry@gmail.com>,Joseph Triana <jtriana@wisc.edu>,Kendra Haight <KendraHaight@gmail.com>,Jenna Ryon <jryon8@gmail.com>,Claire Murray <clairemurray56@gmail.com>,Jared Miles <jaredm192@gmail.com>,Zach Simmons <zjsimmons@gmail.com>,Dan Fiorino <danielfiorino@gmail.com>,Christopher Wilen <cwilen@wisc.edu>,JD Lee <johnl@cs.wisc.edu>,Alev Kelter <lperusse@wisc.edu>,Dave Weisberg <dweisberg@gmail.com>,Daniel Crow <dcrow0@gmail.com>,James Titus <jtitus.cepast@gmail.com>,David French <frenchd24@gmail.com>,Guilhem Ribeill <ribeill@wisc.edu>,Adam Levine <admlvn@gmail.com>,Katrina Lease <katrina.lease@gmail.com>,Julia Sheahan <jcsheahan@gmail.com>,Leon Maurer <leon.maurer@gmail.com>,David Long <d.machlinlong@gmail.com>,Danny Dhokarh <dhokarh@uwalumni.com>,Ethan Peterson <eepeterson4@wisc.edu>,W Mayner <Wmayner@gmail.com>,Ross Frey <rfrey17@gmail.com>,Elijah Bernstein-Cooper <ezbc@astro.wisc.edu>,Tyler Ruggles <tylerhruggles@gmail.com>,Julian Irwin <julian.irwin@gmail.com>,Ryan Foote <rhfoote@wisc.edu>,Rob Necklen <robert.necklen@gmail.com>,Elizabeth Buschert <ebuschert@gmail.com>,Corinne Coburn <corinnehilarycoburn13@gmail.com>,Erika Brownlee <eebrownl@gmail.com>,Jacqueline Goldstein <jacqueline.goldstein@gmail.com>,Victor Desangles <desangles@wisc.edu>,v
+            how fast does ,V
+if [ -f ~/.bashrc ]; then  . ~/.bashrcfi,v
+# Load bashrc upon SSHingif [ -f ~/.bashrc ]; then  . ~/.bashrcfi,V
+# Add iraf setup commandsif [ -e /home/ezbc/.iraf/setup.sh ]; then    source /home/ezbc/.iraf/setup.shfi,V
+ This is the ssh client system-wide configuration file.  See# ssh_config(5) for more information.  This file provides defaults for# users, and the values can be changed in per-user configuration files# or on the command line.# Configuration data is parsed as follows:#  1. command line options#  2. user-specific file#  3. system-wide file# Any configuration value is only changed the first time it is set.# Thus, host-specific definitions should be at the beginning of the# configuration file, and defaults at the end.# Site-wide defaults for some commonly used options.  For a comprehensive# list of available options, their meanings and defaults, please see the# ssh_config(5) man page.Host *#   ForwardAgent no   ForwardX11 yes   ForwardX11Trusted yes#   RhostsRSAAuthentication no#   RSAAuthentication yes#   PasswordAuthentication yes#   HostbasedAuthentication no#   GSSAPIAuthentication no#   GSSAPIDelegateCredentials no#   GSSAPIKeyExchange no#   GSSAPITrustDNS no#   BatchMode no#   CheckHostIP yes#   AddressFamily any#   ConnectTimeout 0#   StrictHostKeyChecking ask#   IdentityFile ~/.ssh/identity#   IdentityFile ~/.ssh/id_rsa#   IdentityFile ~/.ssh/id_dsa   Port 22#   Protocol 2,1#   Cipher 3des#   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc#   MACs hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160#   EscapeChar ~#   Tunnel no#   TunnelDevice any:any#   PermitLocalCommand no#   VisualHostKey no#   ProxyCommand ssh -q -W %h:%p gateway.example.com#   RekeyLimit 1G 1h    SendEnv LANG LC_*    HashKnownHosts yes    GSSAPIAuthentication yes    GSSAPIDelegateCredentials no,V
+#,v
+sudo restart ssh,v
+echo "Helllloooo!  Is anyone home?" | festival --tts,v
