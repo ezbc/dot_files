@@ -4,9 +4,9 @@ setlocal spell spelllang=en_us   " Allows for spellchecking
 
 " mappings
 imap jk <Esc>l
-vmap jk <Esc>
+"vmap jk <Esc>
 imap kj <Esc>l
-vmap kj <Esc>
+"vmap kj <Esc>
 
 imap <A-a> <Esc>
 vmap <A-a> <Esc>
@@ -29,20 +29,20 @@ set nolist          " list disables linebreak
 set tabstop=4		" use # of chars to display a <TAB> 
 set shiftwidth=4	" insert # of chars in autoindent
 set softtabstop=4	" insert # of chars when pressing <TAB>
-set autoindent		" auto indentation
-set copyindent		" copy the previous indentation on autoindenting
-set smartindent	" smart indentation for C-like language
-"set cindent		" smart indentation especially for C language
 set smarttab		" insert tabs on the start of a line according to 
                         " context
 set expandtab 		" will convert tabs to spaces
-set autoindent 		" will keep indentation level from previous line
 set shiftwidth=4 	" will affect block indentation with >> and <<
 set softtabstop=4 	" sets the length of soft tab in spaces
+"set copyindent		" copy the previous indentation on autoindenting
+"set smartindent	" smart indentation for C-like language
+"set cindent		" smart indentation especially for C language
+"set autoindent 		" will keep indentation level from previous line
+set nosmartindent
 
 " Clipboard options
 set clipboard=unnamed	" yank to the system register (*) by default
-set clipboard=unnamedplus  " yank to the X11 system register (+) by default, 
+"set clipboard=unnamedplus  " yank to the X11 system register (+) by default, 
                         " works only if '+xterm_clipboard' shows up in 
                         " 'vim --version'
 
@@ -74,7 +74,7 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=r
     set guioptions-=L
-    set guifont=Monospace\ 10
+    set guifont=Monospace\ 9
 endif
 
 " folding
@@ -89,7 +89,7 @@ imap <C-v> <ESC>"+pa
 vmap n i
 
 filetype on			" Enable filetype detection
-filetype indent on	" Enable filetype-specific indenting
+"filetype indent on	" Enable filetype-specific indenting
 filetype plugin on	" Enable filetype-specific plugins
 
 " ----------------------------------------------------------------------------
@@ -116,12 +116,12 @@ let g:tex_flavor='latex'
 "Plugin 'honza/vim-snippets'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsEditSplit="vertical"
 
 
 
