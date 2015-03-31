@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xsl:stylesheet [<!ENTITY mdash "&#x2014;">]>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text" xml:lang="en">Elijah's Webpage</title>
+  <link type="application/atom+xml" href="/feed.xml" rel="self"/>
+  <link type="text/html" href="" rel="alternate"/>
+  <updated>2015-03-31T04:04:44+00:00</updated>
+  <id>/all_feed</id>
+  <author>
+    <name>Elijah Bernstein-Cooper</name>
+  </author>
+
+  
+  <entry>
+    <title>First Blog Post</title>
+    <link href="/posts/blog/2015/03/26/First-Blog-Post/"/>
+    <updated>2015-03-26T00:00:00+00:00</updated>
+    <id>/posts/blog/2015/03/26/First-Blog-Post</id>
+    <content type="html">&lt;h3 id=&quot;first-blog-post&quot;&gt;First blog post&lt;/h3&gt;
+
+&lt;p&gt;This is my first blog post. &lt;a href=&quot;https://github.com/astropy/astropy/wiki/Elijah-Bernstein-Cooper:-Adding-Distribution-Capability-to-Quantity&quot;&gt;Here&lt;/a&gt; is my application to GSoC 2015.&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Additional Cores</title>
+    <link href="/posts/notes/2015/03/23/Adding-More-Cores/"/>
+    <updated>2015-03-23T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/03/23/Adding-More-Cores</id>
+    <content type="html">&lt;h3 id=&quot;adding-cores&quot;&gt;Adding Cores&lt;/h3&gt;
+
+&lt;p&gt;I have added additional cores to the analysis, because why not? Below are the
+regions selected for each core region. Regions were chosen to include a diffuse
+part and separate from other structures. The identified regions are from
+Lombardi et al. (2010), described in &lt;a href=&quot;http://ezbc.github.io/website/posts/notes/2015/03/19/Model-Analysis/&quot;&gt;this
+post&lt;/a&gt;. I
+included additional regions besides the ones listed by Lombardi 2010, by
+labeling the new region as a second part of the nearest region.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-23/multicloud_av_cores_map.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Below are the results for each cloud. The contours represent binned counts in
+logarithmic points. Cores contain a few hundred points each. &lt;/p&gt;
+
+&lt;p&gt;Perseus:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-23/perseus_hi_vs_h_panels_planck_linear.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Taurus:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-23/taurus_hi_vs_h_panels_planck_linear.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;California:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-23/california_hi_vs_h_panels_planck_linear.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;distance-from-galactic-plane&quot;&gt;Distance from galactic plane&lt;/h3&gt;
+
+&lt;p&gt;Next result is furthering the result from the latter half of &lt;a href=&quot;http://ezbc.github.io/website/posts/notes/2015/03/17/Model-Analysis/&quot;&gt;this
+post&lt;/a&gt;,
+which discusses the predicted &lt;script type=&quot;math/tex&quot;&gt;T_{\rm CNM}&lt;/script&gt; from the K+09 model vs. galactic
+latitude. Here we take it a step further and consider the core region
+&lt;strong&gt;distance&lt;/strong&gt; from the galactic plane. To calculate the distance from the
+galactic plane take the following geometry&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-23/geometry.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;z_\odot&lt;/script&gt; is the scale height of the sun wrt the galactic plane,
+&lt;script type=&quot;math/tex&quot;&gt;z_c&lt;/script&gt; is the scale height of the cloud wrt the galactic plane, &lt;script type=&quot;math/tex&quot;&gt;d_c&lt;/script&gt; is the
+cloud distance from the galactic plane along the LOS from the sun, &lt;script type=&quot;math/tex&quot;&gt;d_\odot&lt;/script&gt;
+is the distance between the sun and the galactic plane along the LOS, and &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;
+is the distance to the cloud. Given&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}
+\frac{z_c}{d_c} = \sin[\theta]
+\end{equation}
+&lt;/script&gt;
+
+&lt;p&gt;we can solve for &lt;script type=&quot;math/tex&quot;&gt;z_c&lt;/script&gt; as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}
+z_c = D \sin[\theta] - z_\odot
+\end{equation}
+&lt;/script&gt;
+
+&lt;p&gt;This gives us the following trend between &lt;script type=&quot;math/tex&quot;&gt;T_{\rm CNM}&lt;/script&gt; and distance from the
+galactic plane (not much of a trend)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-23/multicloud_T_cnm_vs_gdist.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Sternberg and Krumholz Model Fitting</title>
+    <link href="/posts/notes/2015/03/19/Model-Analysis/"/>
+    <updated>2015-03-19T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/03/19/Model-Analysis</id>
+    <content type="html">&lt;p&gt;The K+09 derived their column density calculations from the analytic model
+from krumholz08 of &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; formation and
+photodissociation of a spherical cloud bathed in a uniform ISRF.\@ See
+krumholz09 and krumholz08 for details in the derivation,
+and a summary of the results in lee12. Here we quickly summarize
+the important assumptions and results.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}
+    R_{\rm H_2} = \frac{4 \tau_c}{3 \psi} \left[1 +
+        \frac{0.8 \psi \phi_{\rm mol}}{4 \tau_c + 3(\phi_{\rm mol} -
+    1)\psi}\right]
+\end{equation}
+&lt;/script&gt;
+
+&lt;p&gt;\noindent where &lt;script type=&quot;math/tex&quot;&gt;\tau_c&lt;/script&gt; is the dust optical depth of the cloud if &lt;script type=&quot;math/tex&quot;&gt;HI&lt;/script&gt; and
+&lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; dust is well-mixed, &lt;script type=&quot;math/tex&quot;&gt;\psi&lt;/script&gt; is the dust-to-molecule absorption ratio,
+and &lt;script type=&quot;math/tex&quot;&gt;\phi_{\rm mol}&lt;/script&gt; is the ratio of number densities between the cloud
+molecular component and CNM component. They modeled &lt;script type=&quot;math/tex&quot;&gt;\psi&lt;/script&gt; using empircal
+results from PDR models as a function of the ratio of the rate at which
+Lyman-Werner photons are absorbed by dust grains to the rate at which LW
+photons are absorbed by &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\chi&lt;/script&gt;. K+09 relates &lt;script type=&quot;math/tex&quot;&gt;\chi&lt;/script&gt; to the CNM and
+WNM  properties. They define&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}
+    \phi_{\rm CNM} = \frac{n_{\rm CNM}}{n_{\min}}
+\end{equation}
+&lt;/script&gt;
+
+&lt;p&gt;\noindent where &lt;script type=&quot;math/tex&quot;&gt;n_{\rm CNM}&lt;/script&gt; is the CNM number density, and &lt;script type=&quot;math/tex&quot;&gt;n_{\min}&lt;/script&gt;
+is the minimum CNM number density required for the CNM to remain in
+pressure equilibrium with the WNM.\@ Written in terms of &lt;script type=&quot;math/tex&quot;&gt;\phi_{\rm CNM}&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}
+    \chi = 2.3 \frac{1 + 3.1 Z^{\prime\ 0.365}}{\phi_{\rm CNM}}
+\end{equation}
+&lt;/script&gt;
+
+&lt;p&gt;We can calculate the CNM temperature, &lt;script type=&quot;math/tex&quot;&gt;T_{\rm CNM}&lt;/script&gt; from EQ (19) in K+09. See
+&lt;a href=&quot;https://bitbucket.org/ezbc/python_modules/src/3a5a4ecee558df6683f15c638f76a0f13d571850/myscience/krumholz09.py?at=master&quot;&gt;this
+module&lt;/a&gt;
+for the solution of &lt;script type=&quot;math/tex&quot;&gt;T_{\rm CNM}&lt;/script&gt; given a &lt;script type=&quot;math/tex&quot;&gt;\phi_{\rm CNM}&lt;/script&gt; value. We can
+plot &lt;script type=&quot;math/tex&quot;&gt;T_{\rm CNM}&lt;/script&gt; as a function of galactic longitude:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-17/multicloud_T_cnm_vs_glat.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where we can see that Perseus and Taurus have much lower predicted &lt;script type=&quot;math/tex&quot;&gt;T_{\rm
+CNM}&lt;/script&gt; values than California. This is expected given the low &lt;a href=&quot;http://ezbc.github.io/website/posts/notes/2015/03/12/Sternberg-Fitting/&quot;&gt;HI surface density thresholds&lt;/a&gt; seen in Perseus and Taurus. The locations of cores in galactic coordinates is shown here (taken from &lt;a href=&quot;http://esoads.eso.org/abs/2010A%26A...512A..67L&quot;&gt;Lombardi et al. (2007)&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-17/tcp_lombardi07.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Sternberg and Krumholz Model Fitting</title>
+    <link href="/posts/notes/2015/03/17/Model-Analysis/"/>
+    <updated>2015-03-17T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/03/17/Model-Analysis</id>
+    <content type="html">&lt;h3 id=&quot;k09-model-discussion&quot;&gt;K+09 Model Discussion&lt;/h3&gt;
+
+&lt;p&gt;The K+09 derived their column density calculations from the analytic model
+from krumholz08 of &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; formation and
+photodissociation of a spherical cloud bathed in a uniform ISRF.\@ See
+krumholz09 and krumholz08 for details in the derivation,
+and a summary of the results in lee12. Here we quickly summarize
+the important assumptions and results.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}
+    R_{\rm H_2} = \frac{4 \tau_c}{3 \psi} \left[1 +
+        \frac{0.8 \psi \phi_{\rm mol}}{4 \tau_c + 3(\phi_{\rm mol} -
+    1)\psi}\right]
+\end{equation}
+&lt;/script&gt;
+
+&lt;p&gt;\noindent where &lt;script type=&quot;math/tex&quot;&gt;\tau_c&lt;/script&gt; is the dust optical depth of the cloud if &lt;script type=&quot;math/tex&quot;&gt;HI&lt;/script&gt; and
+&lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; dust is well-mixed, &lt;script type=&quot;math/tex&quot;&gt;\psi&lt;/script&gt; is the dust-to-molecule absorption ratio,
+and &lt;script type=&quot;math/tex&quot;&gt;\phi_{\rm mol}&lt;/script&gt; is the ratio of number densities between the cloud
+molecular component and CNM component. They modeled &lt;script type=&quot;math/tex&quot;&gt;\psi&lt;/script&gt; using empircal
+results from PDR models as a function of the ratio of the rate at which
+Lyman-Werner photons are absorbed by dust grains to the rate at which LW
+photons are absorbed by &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\chi&lt;/script&gt;. K+09 relates &lt;script type=&quot;math/tex&quot;&gt;\chi&lt;/script&gt; to the CNM and
+WNM  properties. They define&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}
+    \phi_{\rm CNM} = \frac{n_{\rm CNM}}{n_{\min}}
+\end{equation}
+&lt;/script&gt;
+
+&lt;p&gt;\noindent where &lt;script type=&quot;math/tex&quot;&gt;n_{\rm CNM}&lt;/script&gt; is the CNM number density, and &lt;script type=&quot;math/tex&quot;&gt;n_{\min}&lt;/script&gt;
+is the minimum CNM number density required for the CNM to remain in
+pressure equilibrium with the WNM.\@ Written in terms of &lt;script type=&quot;math/tex&quot;&gt;\phi_{\rm CNM}&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}
+    \chi = 2.3 \frac{1 + 3.1 Z^{\prime\ 0.365}}{\phi_{\rm CNM}}
+\end{equation}
+&lt;/script&gt;
+
+&lt;h3 id=&quot;predicted-trm-cnm-with-galactic-latitude&quot;&gt;Predicted &lt;script type=&quot;math/tex&quot;&gt;T_{\rm CNM}&lt;/script&gt; with galactic latitude&lt;/h3&gt;
+
+&lt;p&gt;We can calculate the CNM temperature, &lt;script type=&quot;math/tex&quot;&gt;T_{\rm CNM}&lt;/script&gt; from EQ (19) in K+09. See
+&lt;a href=&quot;https://bitbucket.org/ezbc/python_modules/src/3a5a4ecee558df6683f15c638f76a0f13d571850/myscience/krumholz09.py?at=master&quot;&gt;this
+module&lt;/a&gt;
+for the solution of &lt;script type=&quot;math/tex&quot;&gt;T_{\rm CNM}&lt;/script&gt; given a &lt;script type=&quot;math/tex&quot;&gt;\phi_{\rm CNM}&lt;/script&gt; value. We can
+plot &lt;script type=&quot;math/tex&quot;&gt;T_{\rm CNM}&lt;/script&gt; as a function of galactic longitude:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-17/multicloud_T_cnm_vs_glat.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where we can see that Perseus and Taurus have much lower predicted &lt;script type=&quot;math/tex&quot;&gt;T_{\rm
+CNM}&lt;/script&gt; values than California. This is expected given the low &lt;a href=&quot;http://ezbc.github.io/website/posts/notes/2015/03/12/Sternberg-Fitting/&quot;&gt;HI surface density thresholds&lt;/a&gt; seen in Perseus and Taurus. The locations of cores in galactic coordinates is shown here (taken from &lt;a href=&quot;http://esoads.eso.org/abs/2010A%26A...512A..67L&quot;&gt;Lombardi et al. (2007)&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-17/tcp_lombardi07.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Sternberg Model Fitting</title>
+    <link href="/posts/notes/2015/03/12/Sternberg-Fitting/"/>
+    <updated>2015-03-12T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/03/12/Sternberg-Fitting</id>
+    <content type="html">&lt;p&gt;I successfully fit the Sternberg model to the &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{HI}&lt;/script&gt; vs. &lt;script type=&quot;math/tex&quot;&gt;\Sigma_H&lt;/script&gt;
+relationship. I assumed that our case is a two-sided irradiation by an
+isotropic field, where they predict an &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{HI}&lt;/script&gt; threshold given by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation*}
+\Sigma_{HI} = \frac{9.5}{Z^\prime \phi_g} ln\left[\frac{\alpha G}{3.2} +
+1 \right] \,\, M_\odot pc^{-2}
+\end{equation*}
+&lt;/script&gt;
+
+&lt;p&gt;where the variables are described in the &lt;a href=&quot;http://ezbc.github.io/website/posts/notes/2015/03/06/Sternberg-Discussion/&quot;&gt;previous
+post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I am fitting the &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; / &lt;script type=&quot;math/tex&quot;&gt;HI&lt;/script&gt; ratio as a function of total gas surface
+density, &lt;script type=&quot;math/tex&quot;&gt;R_{H2}&lt;/script&gt; = &lt;script type=&quot;math/tex&quot;&gt;f_{H2} / f_{HI}&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;f_{H2}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;f_{HI}&lt;/script&gt; are
+the &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;HI&lt;/script&gt; gas fraction to the total. I solve for &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{HI}&lt;/script&gt;
+as a function of &lt;script type=&quot;math/tex&quot;&gt;\Sigma_H&lt;/script&gt; with&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation*}
+f_{H2} = 1 - f_{HI} = 1 - \frac{\Sigma_{HI}}{\Sigma_H}
+\end{equation*}
+&lt;/script&gt;
+
+&lt;p&gt;Below are the fits to Taurus cores. Where only the &lt;script type=&quot;math/tex&quot;&gt;\alpha G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\phi_{\rm
+CNM}&lt;/script&gt; parameters were allowed to vary in the Sternberg+14 and Krumholz+09
+models, respectively. A metallicity of &lt;script type=&quot;math/tex&quot;&gt;Z^\prime = Z_\odot&lt;/script&gt; was assumed. I
+also assumed &lt;script type=&quot;math/tex&quot;&gt;\phi_g = 1&lt;/script&gt; for the S+14 model, and &lt;script type=&quot;math/tex&quot;&gt;\phi_{\rm mol} = 10.0&lt;/script&gt;
+for the K+09 model.&lt;/p&gt;
+
+&lt;p&gt;Below are Taurus fits. Find the locations of the cores in &lt;a href=&quot;http://ezbc.github.io/website/posts/notes/2015/03/02/Perseus-HI-Threshold/&quot;&gt;this post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-11/taurus_hi_vs_h_panels_planck_linear.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Below are Perseus fits&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-11/perseus_hi_vs_h_panels_planck_linear.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Sternberg Model Fitting</title>
+    <link href="/posts/notes/2015/03/11/Sternberg-Fitting/"/>
+    <updated>2015-03-11T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/03/11/Sternberg-Fitting</id>
+    <content type="html">&lt;p&gt;I successfully fit the Sternberg model to the &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{HI}&lt;/script&gt; vs. &lt;script type=&quot;math/tex&quot;&gt;\Sigma_H&lt;/script&gt;
+relationship. I assumed that our case is a two-sided irradiation by an
+isotropic field, where they predict an &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{HI}&lt;/script&gt; threshold given by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation*}
+\Sigma_{HI} = \frac{9.5}{Z^\prime \phi_g} ln\left[\frac{\alpha G}{3.2} +
+1 \right] \,\, M_\odot pc^{-2}
+\end{equation*}
+&lt;/script&gt;
+
+&lt;p&gt;where the variables are described in the &lt;a href=&quot;http://ezbc.github.io/website/posts/notes/2015/03/06/Sternberg-Discussion/&quot;&gt;previous
+post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I am fitting the &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; / &lt;script type=&quot;math/tex&quot;&gt;HI&lt;/script&gt; ratio as a function of total gas surface
+density, &lt;script type=&quot;math/tex&quot;&gt;R_{H2}&lt;/script&gt; = &lt;script type=&quot;math/tex&quot;&gt;f_{H2} / f_{HI}&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;f_{H2}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;f_{HI}&lt;/script&gt; are
+the &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;HI&lt;/script&gt; gas fraction to the total. I solve for &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{HI}&lt;/script&gt;
+as a function of &lt;script type=&quot;math/tex&quot;&gt;\Sigma_H&lt;/script&gt; with&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation*}
+f_{H2} = 1 - f_{HI} = 1 - \frac{\Sigma_{HI}}{\Sigma_H}
+\end{equation*}
+&lt;/script&gt;
+
+&lt;p&gt;Below are the fits to Taurus cores. Where only the &lt;script type=&quot;math/tex&quot;&gt;\alpha G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\phi_{\rm
+CNM}&lt;/script&gt; parameters were allowed to vary in the Sternberg+14 and Krumholz+09
+models, respectively. A metallicity of &lt;script type=&quot;math/tex&quot;&gt;Z^\prime = Z_\odot&lt;/script&gt; was assumed. I
+also assumed &lt;script type=&quot;math/tex&quot;&gt;\phi_g = 1&lt;/script&gt; for the S+14 model, and &lt;script type=&quot;math/tex&quot;&gt;\phi_{\rm mol} = 10.0&lt;/script&gt;
+for the K+09 model.&lt;/p&gt;
+
+&lt;p&gt;Below are Taurus fits. Find the locations of the cores in &lt;a href=&quot;http://ezbc.github.io/website/posts/notes/2015/03/02/Perseus-HI-Threshold/&quot;&gt;this post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-11/taurus_hi_vs_h_panels_planck_linear.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Below are Perseus fits&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-11/perseus_hi_vs_h_panels_planck_linear.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Sternberg Summary</title>
+    <link href="/posts/notes/2015/03/08/Sternberg-Model-Application/"/>
+    <updated>2015-03-08T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/03/08/Sternberg-Model-Application</id>
+    <content type="html">&lt;p&gt;This post is a continuation of &lt;a href=&quot;http://ezbc.github.io/website/posts/notes/2015/02/20/Krumholz-Fitting/&quot;&gt;this post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Sternberg Summary</title>
+    <link href="/posts/notes/2015/03/06/Sternberg-Discussion/"/>
+    <updated>2015-03-06T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/03/06/Sternberg-Discussion</id>
+    <content type="html">&lt;p&gt;This post is a continuation of &lt;a href=&quot;http://ezbc.github.io/website/posts/notes/2015/02/20/Krumholz-Fitting/&quot;&gt;this
+post&lt;/a&gt;,
+but don’t bother with the previous post, it’s a poor, short, summary.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary-of-sternberg-et-al-2014&quot;&gt;Summary of Sternberg et al. (2014)&lt;/h2&gt;
+
+&lt;p&gt;The main predictor of &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{HI}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{\rm H_2}&lt;/script&gt; is the ratio
+of the free space FUV field intensity to the gas density, i.e. dissociation
+rate / &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; formation rate. Next predictors are metallicity and dust-to-gas
+mass ratio. &lt;/p&gt;
+
+&lt;h5 id=&quot;breakdown&quot;&gt;Breakdown:&lt;/h5&gt;
+
+&lt;p&gt;The HI to &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; transition profiles and column densities are controlled by the
+dimensionless parameter &lt;script type=&quot;math/tex&quot;&gt;\alpha G&lt;/script&gt;. &lt;script type=&quot;math/tex&quot;&gt;\alpha G&lt;/script&gt; determines the Lyman-Werner
+optical depth due to dust associated with HI (described as HI-dust). They
+derive this optical depth as&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+    \tau_{1,{\rm tot}} = {\rm log}[\frac{\alpha G}{2} + 1]
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; is the ratio of free space dissociation rate to the &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; formation
+rate. G is the cloud-averaged self-shielding factor. Together &lt;script type=&quot;math/tex&quot;&gt;\alpha G&lt;/script&gt; is a
+measure of the dust-absorption efficiency of the &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt;-dissociating photons. G
+depends on the competition of &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; line absorption and &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; dust absorption.&lt;/p&gt;
+
+&lt;h5 id=&quot;h2-dissociation&quot;&gt;&lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; dissociation&lt;/h5&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; absorbs LW photons, excites from ground electronic state to excited state.
+Rapid decays occur to either ro-vibrational or continuum state. Decays to
+continuum state result in dissociation. In the end, the mean dissociation
+probability is dependent on the total incident LW flux, the dissociation
+bandwidth, and the mean flux density weighted by dissociation transitions.&lt;/p&gt;
+
+&lt;h5 id=&quot;absorption&quot;&gt;Absorption&lt;/h5&gt;
+
+&lt;p&gt;The local dissociation rate &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; at any cloud depth is &lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}\label{eq:diss_rate}
+    D = \frac{1}{2} D_0 f_{shield}(N_2) e^{\tau_g}
+\end{equation}
+&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;f_{sheild}&lt;/script&gt; is the &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; self_shielding function which quantifies the
+reduction of the total dissociation rate due to opacity in all of the
+absorption lines. &lt;script type=&quot;math/tex&quot;&gt;D_0&lt;/script&gt; is the free-space dissociation rate. &lt;script type=&quot;math/tex&quot;&gt;N_2&lt;/script&gt; is the
+column density of H. &lt;script type=&quot;math/tex&quot;&gt;\tau_g = \sigma_g N&lt;/script&gt; is the dust optical depth, where
+&lt;script type=&quot;math/tex&quot;&gt;\sigma_g&lt;/script&gt; is the dust-gran LW-photon absorption cross section per H nucleon. &lt;/p&gt;
+
+&lt;p&gt;Assuming that the DGR mass ratio is proportional to metallicity&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}
+    \sigma_g \propto \phi_g Z^\prime
+\end{equation}
+&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;\phi_g&lt;/script&gt; depends on the grain composition, &lt;script type=&quot;math/tex&quot;&gt;\sim 1&lt;/script&gt;. &lt;script type=&quot;math/tex&quot;&gt;Z^\prime&lt;/script&gt;
+is the metallicity relative to solar. &lt;/p&gt;
+
+&lt;h5 id=&quot;balancing-absorption--dissociation--hi--h2-column-densities&quot;&gt;Balancing Absorption + Dissociation = HI + &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; column densities&lt;/h5&gt;
+
+&lt;p&gt;They assume a formation rate coefficient &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; per volume for &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; formation
+on grains, which depends on gas temperature and metallicity. They pair &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;
+with the dissociation rate from Equation \ref{eq:diss_rate}. The volume density
+of &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;, can be written in terms of the &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; volume density,
+&lt;script type=&quot;math/tex&quot;&gt;n_2&lt;/script&gt; and HI volume density, &lt;script type=&quot;math/tex&quot;&gt;n_1&lt;/script&gt; as &lt;script type=&quot;math/tex&quot;&gt;n = n_1 + 2 n_2&lt;/script&gt;. Balancing
+absorption with dissociation we get &lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}
+    R n n_1 = D n_2
+\end{equation}
+&lt;/script&gt;
+
+&lt;p&gt;The relationship between the volume densities does not make sense to me. If we
+plug in &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;, we get this&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+
+\begin{eqnarray*}
+    R (n_1 + 2 n_2) n_1 &amp; = &amp; D n_2 \\
+    R (\frac{n_1}{n_2} + 2) n_1 &amp; = &amp; D \\
+\end{eqnarray*}
+ %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;so the dissociation rate is scaled by $n_1$? They integrate over the volume
+densities to get&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}
+Rn e^{\sigma_g N_1} dN_1= \frac{1}{2} D_0 f_{shield}(N_2) e^{\sigma_g N_2} dN_2
+\end{equation}
+&lt;/script&gt;
+
+&lt;p&gt;This shows a key insight that the dust opacities associated with the atomic and
+molecular columns can be considered separately, despite the mixing of &lt;script type=&quot;math/tex&quot;&gt;HI&lt;/script&gt;
+and &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;They define the dimensionless parameter&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation}
+    \alpha \equiv \frac{D_0}{Rn} = \frac{\sigma_d^{\rm tot} F_\nu}{Rn}
+\end{equation}
+&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;F_\nu&lt;/script&gt; mean flux density weighted by dissociation transitions of
+&lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\sigma_d^{\rm tot}&lt;/script&gt; is the total dust cross section. Then they
+define the dimensionless “G-integral”&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{eqnarray}
+    G(N_2) &amp; = &amp; \sigma_g \int^{N_2}_0 f_{shield}(N_2^\prime) e^{-2\sigma_g N_2^\prime} dN_2^\prime \\
+    G(N_2) &amp; = &amp; \frac{\sigma_g}{\sigma_d^{\rm tot}} W_g(N_2)
+\end{eqnarray}
+ %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;W_g&lt;/script&gt; is the &lt;script type=&quot;math/tex&quot;&gt;H_2&lt;/script&gt;-dust dissociating bandwidth. We can relate this to
+the formation rate of &lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Low Perseus HI Surface Density Thresholds</title>
+    <link href="/posts/notes/2015/03/03/Perseus-HI-Threshold/"/>
+    <updated>2015-03-03T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/03/03/Perseus-HI-Threshold</id>
+    <content type="html">&lt;p&gt;Below are results from using different &lt;script type=&quot;math/tex&quot;&gt;A_V&lt;/script&gt; maps. See &lt;a href=&quot;http://ezbc.github.io/website/posts/notes/2015/03/02/Perseus-HI-Threshold/&quot;&gt;yesterday’s
+post&lt;/a&gt;
+for how regions are chosen and comparison with Lee+12. Each &lt;script type=&quot;math/tex&quot;&gt;A_V&lt;/script&gt; map leads
+to similar DGRs, however the K+09 map yields a slightly larger HI width. This
+leads to &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{HI}&lt;/script&gt; thresholds similar to Lee+12.&lt;/p&gt;
+
+&lt;p&gt;Planck:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-03/perseus_likelihood_planck_bin_scaled_wd.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-03/perseus_hi_vs_h_panels_planck_linear.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kainulain et al. (2009)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-03/perseus_likelihood_k09_bin_scaled_wd.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-03/perseus_hi_vs_h_panels_k09_linear.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lee et al. (2012) IRIS&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-03/perseus_hi_vs_h_panels_iris_linear.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-03/perseus_likelihood_iris_bin_scaled_wd.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Low Perseus HI Surface Density Thresholds</title>
+    <link href="/posts/notes/2015/03/02/Perseus-HI-Threshold/"/>
+    <updated>2015-03-02T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/03/02/Perseus-HI-Threshold</id>
+    <content type="html">&lt;p&gt;Below are results from Planck &lt;script type=&quot;math/tex&quot;&gt;A_V&lt;/script&gt;. We can see that the &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{HI}&lt;/script&gt;
+thresholds are quite low compared to those found in Lee+12.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-02/perseus_hi_vs_h_panels_planck_linear.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some examples from Lee+12&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-02/lee12_hi_vs_h.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The locations of each of the cores and their regions are shown here:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-02/multicloud_av_cores_map.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And here is the corresponding likelihood space.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-03-02/perseus_likelihood_planck_bin_scaled_wd.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Irregular California Data - Model Residuals</title>
+    <link href="/posts/notes/2015/02/27/California-Residuals/"/>
+    <updated>2015-02-27T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/02/27/California-Residuals</id>
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-27/california_residual_pdf.png&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-27/taurus_residual_pdf.png&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-27/perseus_residual_pdf.png&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Negative H2 surface Densities</title>
+    <link href="/posts/notes/2015/02/26/Krumholz-Fitting/"/>
+    <updated>2015-02-26T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/02/26/Krumholz-Fitting</id>
+    <content type="html">&lt;p&gt;I have found systematically negative &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{H2}&lt;/script&gt; in California. Below is
+an example histogram of the &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{H2}&lt;/script&gt; calculated during a monte carlo
+simulation for a single core. These values are obviously unphysical.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-26/california_h2_hist.png&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Below is a screenshot of the HI spectrum at (ra, dec) ~ (4:34:00, 36:30:00)
+with the Planck Av 4 and 8 mag contours. The median velocity range from the
+monte carlo simulation is ~ -8 to 4 km/s.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-26/california_hi_spectrum.png&quot; alt=&quot;K09 Av&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To double check the column densities, N(H2) is given by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;N(H2) = 0.5 (\frac{A_V}{\rm DGR} - N(HI)) \qquad (1)&lt;/script&gt;
+
+&lt;p&gt;For the spectrum below, we will integrate from -10 to 5, i.e. across 15 km/s
+with an average of &lt;script type=&quot;math/tex&quot;&gt;T_B = 40 K&lt;/script&gt;. So &lt;script type=&quot;math/tex&quot;&gt;N(HI) = 1.8 * 15 [km/s] * 40 [K]
+[\frac{10^{18} cm^{-2}}{K km/s}] = 10.8 \times\ 10^{20} cm^{-2}&lt;/script&gt;. A typical
+DGR = &lt;script type=&quot;math/tex&quot;&gt;0.3 \times\ 10^{-20} cm^{2}&lt;/script&gt; mag. &lt;script type=&quot;math/tex&quot;&gt;A_V&lt;/script&gt; = 3.7 mag at this pixel.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;N(H2) = 0.5 (\frac{3.7 [mag]}{0.3 \times 10^{-20} [cm^{2}\ mag]} - 10.8 * 10^{20} [cm^{-2}])&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;N(H2) = 0.76 * 10^{20} cm^{-2}&lt;/script&gt;
+
+&lt;p&gt;This seems quite low. The high DGR value is the culprit.&lt;/p&gt;
+
+&lt;p&gt;To calculate &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{HI}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{H2}&lt;/script&gt; I first calculate &lt;script type=&quot;math/tex&quot;&gt;N(H2)&lt;/script&gt;
+using equation (1), compute the surface densities individually by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Sigma_{HI} = \frac{N(HI) [10^{20} cm^{-2}]}{1.25} [M_\odot pc^{-2}]&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Sigma_{H2} = \frac{N(H2) [10^{20} cm^{-2}]}{0.625} [M_\odot pc^{-2}]&lt;/script&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\Sigma_{H}&lt;/script&gt; is then the sum of &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{HI}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{H2}&lt;/script&gt;._&lt;/p&gt;
+
+&lt;p&gt;Likely the source of this problem is the residuals during the masking procedure
+are not trivial for California. See below. I’m interpreting the large negative
+residuals to mean that there is excess HI which is not traced by any dust.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-26/california_residual_pdf.png&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>2MASS Av of TCP</title>
+    <link href="/posts/notes/2015/02/25/Krumholz-Fitting/"/>
+    <updated>2015-02-25T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/02/25/Krumholz-Fitting</id>
+    <content type="html">&lt;p&gt;Jouni Kainulainen shared 2MASS Av image with us today. He provided the
+following warning:&lt;/p&gt;
+
+&lt;p&gt;Attached is a near-IR-derived visual extinction map (A_V) that more-or-less
+stitches together the maps of California, Taurus, and Perseus from Kainulainen
+et al. (2009). It is not quite a perfect coverage, but you can have a look and
+decide if it is adequate.&lt;/p&gt;
+
+&lt;p&gt;I did not quite get the full picture of what you are planning to do… But in any
+case, I think I should emphasise that maps such as these are derived by
+comparing stellar colours to some reference field. In other words, the maps
+measure the relative extinction compared to that reference field, not absolute
+extinction (this is, to my knowledge, true for all near-IR maps out there).&lt;/p&gt;
+
+&lt;p&gt;Since this kind of large maps span several degrees on the sky, the reference
+field colours are likely to change within the map. Therefore, I have used
+several reference fields and interpolated between them to compute the
+“zero-point” of the extinction in the map. &lt;/p&gt;
+
+&lt;p&gt;Whether the above affects your analysis or not, I don’t now, but I think it is
+an important point to remember when considering the ability of the map to trace
+various gas components.&lt;/p&gt;
+
+&lt;p&gt;Below is a screenshot of the Av image with the Planck Av 4 and 8 mag contours.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-25/tcp_k09_av.png&quot; alt=&quot;K09 Av&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Krumholz Fitting</title>
+    <link href="/posts/notes/2015/02/23/Krumholz-Fitting/"/>
+    <updated>2015-02-23T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/02/23/Krumholz-Fitting</id>
+    <content type="html">&lt;p&gt;test&lt;/p&gt;
+
+&lt;h2 id=&quot;summary-of-krumholz-2009-fitting&quot;&gt;Summary of Krumholz 2009 fitting&lt;/h2&gt;
+
+&lt;p&gt;Performed fitting of K+09 model to TCP complex. Included only cores from Taurus
+1 region.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-23/multicloud_av_cores_map.png&quot; alt=&quot;Core Locations&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-23/perseus_hi_vs_h_panels_planck_linear.png&quot; alt=&quot;Perseus Cores&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-23/california_hi_vs_h_panels_planck_linear.png&quot; alt=&quot;California Cores&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-23/taurus_hi_vs_h_panels_planck_linear.png&quot; alt=&quot;Taurus Cores&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Sternberg Summary</title>
+    <link href="/posts/notes/2015/02/20/Krumholz-Fitting/"/>
+    <updated>2015-02-20T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/02/20/Krumholz-Fitting</id>
+    <content type="html">&lt;p&gt;test&lt;/p&gt;
+
+&lt;h2 id=&quot;summary-of-sternberg-et-al-2014&quot;&gt;Summary of Sternberg et al. (2014)&lt;/h2&gt;
+
+&lt;p&gt;The main predictor of \( \Sigma_{HI} \) and &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{\rm H2}&lt;/script&gt; is the ratio
+of the free space FUV field intensity to the gas density, i.e. dissociation
+rate / $H_2$ formation rate. Next predictors are metallicity and dust-to-gas
+mass ratio. &lt;/p&gt;
+
+&lt;p&gt;\[ \Sigma_{test} \]&lt;/p&gt;
+
+&lt;h5 id=&quot;breakdown&quot;&gt;Breakdown:&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Normalize UV radiation field with $H_2$ dissociation rate. Define
+derivative of dissociation bandwidth as the $H_2$ self-shielding function.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Define FUV opacity of dust grains and $H_2$ formation rate on dust.
+Dust-to-gass mass ratio scales linearly with metallicity.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Define differentiable EQ of depth-dependent steady-state $HI / H_2$
+formation/destruction. $H_2$-dust-limited dissociated bandwidth defined.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Integrate diff EQ to get HI column density. &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>MLE Iterative Application to TCP</title>
+    <link href="/posts/notes/2015/02/16/MLE-Iterative-Application-to-TCP/"/>
+    <updated>2015-02-16T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/02/16/MLE-Iterative-Application-to-TCP</id>
+    <content type="html">&lt;h2 id=&quot;summary-of-sternberg-et-al-2014&quot;&gt;Summary of Sternberg et al. (2014)&lt;/h2&gt;
+
+&lt;p&gt;The main predictor of &lt;script type=&quot;math/tex&quot;&gt;\Sigma_{\rm HI}&lt;/script&gt; HI and H2 surface densities &lt;/p&gt;
+
+&lt;h2 id=&quot;iterative-mle-binning&quot;&gt;Iterative MLE binning&lt;/h2&gt;
+
+&lt;p&gt;Created systematic approach to determine affect of residual scale width on the
+output. &lt;/p&gt;
+
+&lt;h4 id=&quot;perseus&quot;&gt;Perseus&lt;/h4&gt;
+
+&lt;table border=&quot;2&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;dust2gas_ratio&lt;/th&gt;
+      &lt;th&gt;hi_velocity_width&lt;/th&gt;
+      &lt;th&gt;intercept&lt;/th&gt;
+      &lt;th&gt;residual_width_scale&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.120&lt;/td&gt;
+      &lt;td&gt; 9.00016&lt;/td&gt;
+      &lt;td&gt; 0.01&lt;/td&gt;
+      &lt;td&gt; 1.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.120&lt;/td&gt;
+      &lt;td&gt; 9.00016&lt;/td&gt;
+      &lt;td&gt; 0.02&lt;/td&gt;
+      &lt;td&gt; 2.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.120&lt;/td&gt;
+      &lt;td&gt; 9.00016&lt;/td&gt;
+      &lt;td&gt; 0.03&lt;/td&gt;
+      &lt;td&gt; 2.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.125&lt;/td&gt;
+      &lt;td&gt; 8.66682&lt;/td&gt;
+      &lt;td&gt; 0.06&lt;/td&gt;
+      &lt;td&gt; 3.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.125&lt;/td&gt;
+      &lt;td&gt; 8.66682&lt;/td&gt;
+      &lt;td&gt; 0.06&lt;/td&gt;
+      &lt;td&gt; 3.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.125&lt;/td&gt;
+      &lt;td&gt; 8.33348&lt;/td&gt;
+      &lt;td&gt; 0.08&lt;/td&gt;
+      &lt;td&gt; 4.0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;california&quot;&gt;California&lt;/h4&gt;
+
+&lt;table border=&quot;2&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;dust2gas_ratio&lt;/th&gt;
+      &lt;th&gt;hi_velocity_width&lt;/th&gt;
+      &lt;th&gt;intercept&lt;/th&gt;
+      &lt;th&gt;residual_width_scale&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.280&lt;/td&gt;
+      &lt;td&gt; 17.66700&lt;/td&gt;
+      &lt;td&gt;-0.92&lt;/td&gt;
+      &lt;td&gt; 1.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.300&lt;/td&gt;
+      &lt;td&gt; 16.66698&lt;/td&gt;
+      &lt;td&gt;-0.91&lt;/td&gt;
+      &lt;td&gt; 2.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.335&lt;/td&gt;
+      &lt;td&gt; 15.00028&lt;/td&gt;
+      &lt;td&gt;-0.89&lt;/td&gt;
+      &lt;td&gt; 2.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.355&lt;/td&gt;
+      &lt;td&gt; 14.33360&lt;/td&gt;
+      &lt;td&gt;-0.87&lt;/td&gt;
+      &lt;td&gt; 3.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.365&lt;/td&gt;
+      &lt;td&gt; 13.66692&lt;/td&gt;
+      &lt;td&gt;-0.87&lt;/td&gt;
+      &lt;td&gt; 3.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.375&lt;/td&gt;
+      &lt;td&gt; 13.33358&lt;/td&gt;
+      &lt;td&gt;-0.86&lt;/td&gt;
+      &lt;td&gt; 4.0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>MLE Iterative Application to TCP</title>
+    <link href="/posts/notes/2015/02/06/MLE-Iterative-Application-to-TCP/"/>
+    <updated>2015-02-06T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/02/06/MLE-Iterative-Application-to-TCP</id>
+    <content type="html">&lt;h2 id=&quot;iterative-mle-binning&quot;&gt;Iterative MLE binning&lt;/h2&gt;
+
+&lt;p&gt;Created systematic approach to determine affect of residual scale width on the
+output. Below is an example table for the results to expect for tomorrow. Note
+these results are not real!&lt;/p&gt;
+
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;dust2gas_ratio&lt;/th&gt;
+      &lt;th&gt;hi_velocity_width&lt;/th&gt;
+      &lt;th&gt;intercept&lt;/th&gt;
+      &lt;th&gt;residual_width_scale&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.15&lt;/td&gt;
+      &lt;td&gt; 7.6668&lt;/td&gt;
+      &lt;td&gt;-2.220446e-16&lt;/td&gt;
+      &lt;td&gt; 1.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.15&lt;/td&gt;
+      &lt;td&gt; 7.6668&lt;/td&gt;
+      &lt;td&gt;-2.220446e-16&lt;/td&gt;
+      &lt;td&gt; 2.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.15&lt;/td&gt;
+      &lt;td&gt; 7.6668&lt;/td&gt;
+      &lt;td&gt;-2.220446e-16&lt;/td&gt;
+      &lt;td&gt; 2.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; 0.15&lt;/td&gt;
+      &lt;td&gt; 7.6668&lt;/td&gt;
+      &lt;td&gt;-2.220446e-16&lt;/td&gt;
+      &lt;td&gt; 3.0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>MLE Iterative Application to TCP</title>
+    <link href="/posts/notes/2015/02/05/MLE-Iterative-Application-to-TCP/"/>
+    <updated>2015-02-05T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/02/05/MLE-Iterative-Application-to-TCP</id>
+    <content type="html">&lt;h2 id=&quot;iterative-mle-binning&quot;&gt;Iterative MLE binning&lt;/h2&gt;
+
+&lt;p&gt;Today I performed an automated approach to iteratively creating a mask, solving
+for the bests HI width, and using that best HI width to create the mask until
+the derived HI width converged. Below are the resulting likelihood spaces&lt;/p&gt;
+
+&lt;h3 id=&quot;perseus&quot;&gt;Perseus&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-05/perseus_likelihood_planck_bin_scaled_wd.png&quot; alt=&quot;Perseus Likelihood&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;taurus&quot;&gt;Taurus&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-05/taurus_likelihood_planck_bin_scaled_wd.png&quot; alt=&quot;Taurus Likelihood&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;california&quot;&gt;California&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-05/california_likelihood_planck_bin_scaled_wd.png&quot; alt=&quot;California Likelihood&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>MLE Iterative Application to TCP</title>
+    <link href="/posts/notes/2015/02/04/MLE-Iterative-Application-to-TCP/"/>
+    <updated>2015-02-04T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/02/04/MLE-Iterative-Application-to-TCP</id>
+    <content type="html">&lt;h2 id=&quot;application-of-iterative-mle-binning&quot;&gt;Application of Iterative MLE binning&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-04/perseus_likelihood_planck_bin_scaled_wd.png =400x400&quot; alt=&quot;Perseus Likelihood&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-04/california_likelihood_planck_bin_scaled_wd.png =400x400&quot; alt=&quot;California Likelihood&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Initial post</title>
+    <link href="/posts/notes/2015/02/02/initial-notes/"/>
+    <updated>2015-02-02T00:00:00+00:00</updated>
+    <id>/posts/notes/2015/02/02/initial-notes</id>
+    <content type="html">&lt;h2 id=&quot;here-is-my-first-image&quot;&gt;Here is my first image&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://ezbc.github.io/website/images/2015-02-02/taurus_likelihood_planck_bin_scaled_wd.png =400x400&quot; alt=&quot;Likelihood space&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[thw-wi-repo]: 
+[code]: /tree/master/topic&lt;/p&gt;
+</content>
+  </entry>
+  
+</feed>
