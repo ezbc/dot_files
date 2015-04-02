@@ -92,18 +92,19 @@ prompt_command () {
     local __last_color="\[\033[00m\]"
 
     # Capture the output of the "git status" command.
-    git_status="$(git status 2> /dev/null)"
+    #git_status="$(git status 2> /dev/null)"
 
     # Set color based on clean/staged/dirty.
-    if [[ ${git_status} =~ "working directory clean" ]]; then
-        state="${GREEN}"
-    elif [[ ${git_status} =~ "Changes to be committed" ]]; then
-        state="${YELLOW}"
-    else
-        state="${RED}"
-    fi
+    #if [[ ${git_status} =~ "working directory clean" ]]; then
+    #    state="${GREEN}"
+    #elif [[ ${git_status} =~ "Changes to be committed" ]]; then
+    #    state="${YELLOW}"
+    #else
+    #    state="${RED}"
+    #fi
 
-    export PS1="\n\[$YELLOW\] <\#> \[$LIGHTGREEN\]$PWD\n      \[$LIGHTRED\]\d \t \[$LIGHTPURPLE\]\u\[$NC\]@\[$LIGHTCYAN\]\h\[$NC\] ${state}$__git_branch$__prompt_tail$__last_color\n $ERRPROMPT"
+    #export PS1="\n\[$YELLOW\] <\#> \[$LIGHTGREEN\]$PWD\n      \[$LIGHTRED\]\d \t \[$LIGHTPURPLE\]\u\[$NC\]@\[$LIGHTCYAN\]\h\[$NC\] ${state}$__git_branch$__prompt_tail$__last_color\n $ERRPROMPT"
+    export PS1="\n\[$YELLOW\] <\#> \[$LIGHTGREEN\]$PWD\n      \[$LIGHTRED\]\d \t \[$LIGHTPURPLE\]\u\[$NC\]@\[$LIGHTCYAN\]\h\[$NC\] $__git_branch$__prompt_tail$__last_color\n $ERRPROMPT"
 }
 
 # Tell bash to execute this function just before displaying its prompt.
@@ -178,7 +179,7 @@ if [ $HOSTNAME == latitude ]; then
 fi
 
 # ========================== Set bashrc for ezbc ============================
-if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ]; then
+if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || [ $HOSTNAME == uwast]; then
     # IDL
     export IDL_STARTUP=~/.idlstartup
     export IDL_PATH=$IDL_PATH:+/usr/users/ezbc/idl/
@@ -195,6 +196,21 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ]; th
         PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/research/python_modules/planckpy
     export PYTHONPATH=$PYTHONPATH:/.local/lib/python2.7/site-packages/
     export PATH=/usr/users/ezbc/python:$PATH # anaconda
+    
+    # Texlive
+	export PATH=/usr/users/ezbc/.local/lib/texlive/bin/x86_64-linux:$PATH
+
+    # Google-chrome
+    export PATH=/usr/users/ezbc/opt/usr/bin:$PATH
+
+    # Local bin
+    export PATH=/usr/users/ezbc/.local/bin:$PATH
+
+    # Nodejs
+    export PATH=/usr/users/ezbc/opt/node-v0.12.0/~/.local/lib/bin:$PATH
+
+    # Ruby
+    export PATH=/usr/users/ezbc/.gem/ruby/2.0.0/bin:$PATH
 
     # Aliases
     alias taurus='cd /d/bip3/ezbc/taurus'
@@ -202,6 +218,8 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ]; th
     alias please='sudo'
     alias engels='cd /d/engels2/ezbc/'
     alias bip='ssh -XY bip'
+    alias latitude='ezbc@144.92.179.191'
+    alias sshlatitude='ssh -XY ezbc@144.92.179.191'
     alias miriad='tcsh -c miriad'
     alias kvis='tcsh -c kvis'
     alias kpvslice='tcsh -c kpvslice'
@@ -216,6 +234,7 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ]; th
     alias view='eog'
     alias xflux='/usr/users/ezbc/apps/xflux -z 53703'
     alias dropbox='/usr/users/ezbc/apps/dropbox.py start -i'
+    alias mendeley='/usr/users/ezbc/opt/mendeleydesktop-1.12.4-linux-x86_64/bin/mendeleydesktop'
 
     #/usr/users/ezbc/apps/dropbox.py autostart y'
     # Deine user variables 
