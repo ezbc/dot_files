@@ -264,3 +264,5 @@ alias init_ssh='start_agent'
 #if [ -e /home/ezbc/.iraf/setup.sh ]; then
 #    source /home/ezbc/.iraf/setup.sh
 #fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
