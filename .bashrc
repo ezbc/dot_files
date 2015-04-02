@@ -129,7 +129,14 @@ if [ $HOSTNAME == latitude ]; then
     export PATH=$PATH:'/home/elijah/applications/miriad/bin/linux/miriad'
     export PATH=$PATH:/usr/local/bin/miriad
     export PATH=$PATH:/usr/local/bin
+    export PATH=$PATH:/sbin/
+    export PATH=$PATH:/usr/games/
+    export PATH=$PATH:/home/ezbc/opt/hdf5-1.8.13/hdf5/bin
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/research/python_modules/
+    export PYTHONPATH=$PYTHONPATH:/home/ezbc/brewing/modules/
+    export GAUSSPY=/home/ezbc/classes/machine_learning/project/gausspy_module/gausspy/
+    export PYTHONPATH=$PYTHONPATH:/home/ezbc/classes/machine_learning/project/gausspy_module/gausspy
+
 
     # Parellel programming
     export MADSDK_ROOT=~/opt/madsdk
@@ -199,6 +206,9 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     # Local bin
     export PATH=/usr/users/ezbc/.local/bin:$PATH
 
+    # Nodejs
+    export PATH=/usr/users/ezbc/opt/node-v0.12.0/~/.local/lib/bin:$PATH
+
     # Ruby
     export PATH=/usr/users/ezbc/.gem/ruby/2.0.0/bin:$PATH
 
@@ -208,7 +218,8 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     alias please='sudo'
     alias engels='cd /d/engels2/ezbc/'
     alias bip='ssh -XY bip'
-    alias latitude='ssh -XY ezbc@144.92.179.191'
+    alias latitude='ezbc@144.92.179.191'
+    alias sshlatitude='ssh -XY ezbc@144.92.179.191'
     alias miriad='tcsh -c miriad'
     alias kvis='tcsh -c kvis'
     alias kpvslice='tcsh -c kpvslice'
@@ -269,6 +280,6 @@ function start_agent {
 alias init_ssh='start_agent'
 
 # Add iraf setup commands
-if [ -e /home/ezbc/.iraf/setup.sh ]; then
-    source /home/ezbc/.iraf/setup.sh
-fi
+#if [ -e /home/ezbc/.iraf/setup.sh ]; then
+#    source /home/ezbc/.iraf/setup.sh
+#fi

@@ -1,12 +1,12 @@
 
-set number              " shows line numbers
 setlocal spell spelllang=en_us   " Allows for spellchecking
 
 " mappings
-imap jk <Esc>l
+"imap jk <Esc>l
 "vmap jk <Esc>
-imap kj <Esc>l
+"imap kj <Esc>l
 "vmap kj <Esc>
+"imap kj <Esc>l
 
 imap <A-a> <Esc>
 vmap <A-a> <Esc>
@@ -104,6 +104,10 @@ let g:Tex_MultipleCompileFormats = 'pdf'
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+" The following toggles syntastic
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['py'],'passive_filetypes': [] }
+nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
 
 " ----------------------------------------------------------------------------
 " Snippets
