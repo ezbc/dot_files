@@ -152,7 +152,7 @@ if [ $HOSTNAME == latitude ]; then
     alias cloudy='/home/ezbc/opt/c13.03/source/sys_gcc/cloudy.exe'
 
     # Kerbel Space program
-    alias kerbel='/home/ezbc/opt/KSP_linux/KSP.x86_64'
+    alias kerbal='cd /home/ezbc/opt/KSP_linux/ && /home/ezbc/opt/KSP_linux/KSP.x86_64'
 
     # Switch iraf login command
     alias iraf='cl'
@@ -162,7 +162,7 @@ if [ $HOSTNAME == latitude ]; then
     
     # Set up aliases
     alias eclipse='/usr/bin/eclipse'
-    alias fixinternet='sudo rm -rf /etc/resolv.conf'
+    alias fixinternet='sudo rm -rf /etc/resolv.conf && ln -s /run/resolvconf/resolv.conf /etc/resolv.conf'
                       # && ' \
                       #'sudo service network-manager stop && '\
                       #'sudo ifconfig eth0 down && '\
@@ -179,7 +179,7 @@ if [ $HOSTNAME == latitude ]; then
 fi
 
 # ========================== Set bashrc for ezbc ============================
-if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || [ $HOSTNAME == uwast]; then
+if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || [ $HOSTNAME == uwast ]; then
     # IDL
     export IDL_STARTUP=~/.idlstartup
     export IDL_PATH=$IDL_PATH:+/usr/users/ezbc/idl/
