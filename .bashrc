@@ -235,6 +235,7 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     alias xflux='/usr/users/ezbc/apps/xflux -z 53703'
     alias dropbox='/usr/users/ezbc/apps/dropbox.py start -i'
     alias mendeley='/usr/users/ezbc/opt/mendeleydesktop-1.12.4-linux-x86_64/bin/mendeleydesktop'
+    alias bundle='bundle2.0'
 
     #/usr/users/ezbc/apps/dropbox.py autostart y'
     # Deine user variables 
