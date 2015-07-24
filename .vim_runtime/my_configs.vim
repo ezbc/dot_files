@@ -11,6 +11,10 @@ setlocal spell spelllang=en_us   " Allows for spellchecking
 imap <A-a> <Esc>
 vmap <A-a> <Esc>
 
+" Tab switching
+map <S-space> :tabn<Enter>
+map <C-space> :tabp<Enter>
+
 " reformat paragraph
 nmap <A-r> gwap
 imap <A-r> <Esc>gwapa
