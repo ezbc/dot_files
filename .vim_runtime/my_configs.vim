@@ -15,6 +15,9 @@ vmap <A-a> <Esc>
 map <S-space> :tabn<Enter>
 map <C-space> :tabp<Enter>
 
+" Command mode autocomplete
+set wildmode=longest:full,list:full
+
 " reformat paragraph
 nmap <A-r> gwap
 imap <A-r> <Esc>gwapa
