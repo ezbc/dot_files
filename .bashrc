@@ -116,6 +116,15 @@ PROMPT_COMMAND=prompt_command
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+    
+# get big files
+bigfiles () { 
+    NUM_FILES=10;
+    if [ $1 ]; then
+        NUM_FILES=$1;
+    fi;
+    du * | sort -nr | head -n $NUM_FILES
+}
 
 # ========================== Set bashrc for elijah ============================
 if [ $HOSTNAME == latitude ]; then
