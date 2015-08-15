@@ -136,6 +136,7 @@ if [ $HOSTNAME == latitude ]; then
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/brewing/modules/
     export GAUSSPY=/home/ezbc/classes/machine_learning/project/gausspy_module/gausspy/
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/classes/machine_learning/project/gausspy_module/gausspy
+    export PYTHONPATH=$PYTHONPATH:/home/ezbc/python/galactus
 
 
     # Parellel programming
@@ -162,17 +163,19 @@ if [ $HOSTNAME == latitude ]; then
     
     # Set up aliases
     alias eclipse='/usr/bin/eclipse'
-    alias fixinternet='sudo rm -rf /etc/resolv.conf && ln -s /run/resolvconf/resolv.conf /etc/resolv.conf'
+    alias fixinternet='sudo rm -rf /etc/resolv.conf && sudo ln -s /run/resolvconf/resolv.conf /etc/resolv.conf'
                       # && ' \
                       #'sudo service network-manager stop && '\
                       #'sudo ifconfig eth0 down && '\
                       #'sudo ifconfig eth0 up && '\
                       #'sudo service network-manager start'
-    alias uw='ssh -XY ezbc@uwast.astro.wisc.edu'
+    alias sshbip='ssh -XY ezbc@bip.astro.wisc.edu'
     alias screenshot='gnome-screenshot -a'
     alias sysmon='gnome-system-monitor'
-    cosmos='ezbc@uwast.astro.wisc.edu:'
-    uw='ezbc@uwast.astro.wisc.edu:'
+    alias testinternet='/home/ezbc/opt/speedtest-cli'
+
+    cosmos='ezbc@cosmos.astro.wisc.edu:'
+    bip='ezbc@bip.astro.wisc.edu:'
     LOGIN_ARCH=linux
     
 

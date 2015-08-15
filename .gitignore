@@ -2,4 +2,6 @@
 *~
 *.pyc
 .nfs*
+*.pdf
+*.out
 
