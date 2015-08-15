@@ -169,6 +169,9 @@ if [ $HOSTNAME == latitude ]; then
     
     # TOPCAT
     alias topcat='java -jar /home/ezbc/opt/topcat-lite.jar'
+
+    # Bbarolo
+    alias bbarolo='/home/ezbc/opt/Bbarolo_Linux_x64/Bbarolo'
     
     # Set up aliases
     alias eclipse='/usr/bin/eclipse'
