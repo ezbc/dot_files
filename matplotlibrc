@@ -388,7 +388,7 @@ figure.dpi       : 100      # figure dots per inch
 # the default savefig params can be different from the display params
 # e.g., you may want a higher resolution, or to make the figure
 # background white
-savefig.dpi         : 400      # figure dots per inch
+savefig.dpi         : 100      # figure dots per inch
 #savefig.facecolor   : white    # figure facecolor when saving
 #savefig.edgecolor   : white    # figure edgecolor when saving
 #savefig.format      : png      # png, ps, pdf, svg

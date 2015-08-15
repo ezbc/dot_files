@@ -116,6 +116,15 @@ PROMPT_COMMAND=prompt_command
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+    
+# get big files
+bigfiles () { 
+    NUM_FILES=10;
+    if [ $1 ]; then
+        NUM_FILES=$1;
+    fi;
+    du * | sort -nr | head -n $NUM_FILES
+}
 
 # ========================== Set bashrc for elijah ============================
 if [ $HOSTNAME == latitude ]; then
@@ -197,7 +206,8 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     export PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/research/python_modules/miriad
     export \
         PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/research/python_modules/planckpy
-    export PYTHONPATH=$PYTHONPATH:/.local/lib/python2.7/site-packages/
+    #export PYTHONPATH=$PYTHONPATH:/.local/lib/python2.7/site-packages/scipy
+    #export PYTHONPATH=$PYTHONPATH:/.local/lib/python2.7/site-packages/
     export PATH=/usr/users/ezbc/python:$PATH # anaconda
     
     # Texlive
