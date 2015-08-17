@@ -182,6 +182,7 @@ if [ $HOSTNAME == latitude ]; then
                       #'sudo ifconfig eth0 up && '\
                       #'sudo service network-manager start'
     alias sshbip='ssh -XY ezbc@bip.astro.wisc.edu'
+    alias sshcosmos='ssh -XY ezbc@cosmos.astro.wisc.edu'
     alias screenshot='gnome-screenshot -a'
     alias sysmon='gnome-system-monitor'
     alias testinternet='/home/ezbc/opt/speedtest-cli'
