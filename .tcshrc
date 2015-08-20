@@ -96,7 +96,7 @@ alias rm "rm -i"
 alias mv "mv -i"
 alias cp "cp -i"
 
-# Aliases
+# Aliasesh
 alias taurus 'cd /d/bip3/ezbc/taurus'
 alias please 'sudo'
 alias bip 'ssh -XY bip'
@@ -120,6 +120,9 @@ alias casa40 '/usr/users/ezbc/opt/casapy-40.1.22889-003-64b/bin/casa'
 alias casa34 '/usr/users/ezbc/opt/casapy-34.0.19988-002-64b/bin/casapy'
 
 source /usr/local/bin/gipsy-setup
+
+setenv gip_root /usr/users/ezbc/opt/gipsy 
+source $gip_root/sys/gipenv.csh
 
 ################################################################################
 #------------------------------------------------------------------------------#
