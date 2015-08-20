@@ -145,6 +145,7 @@ if [ $HOSTNAME == latitude ]; then
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/brewing/modules/
     export GAUSSPY=/home/ezbc/classes/machine_learning/project/gausspy_module/gausspy/
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/classes/machine_learning/project/gausspy_module/gausspy
+    export PYTHONPATH=$PYTHONPATH:/home/ezbc/python/galactus
 
 
     # Parellel programming
@@ -161,34 +162,40 @@ if [ $HOSTNAME == latitude ]; then
     alias cloudy='/home/ezbc/opt/c13.03/source/sys_gcc/cloudy.exe'
 
     # Kerbel Space program
-    alias kerbel='/home/ezbc/opt/KSP_linux/KSP.x86_64'
+    alias kerbal='cd /home/ezbc/opt/KSP_linux/ && /home/ezbc/opt/KSP_linux/KSP.x86_64'
 
     # Switch iraf login command
     alias iraf='cl'
     
     # TOPCAT
     alias topcat='java -jar /home/ezbc/opt/topcat-lite.jar'
+
+    # Bbarolo
+    alias bbarolo='/home/ezbc/opt/Bbarolo_Linux_x64/Bbarolo'
     
     # Set up aliases
     alias eclipse='/usr/bin/eclipse'
-    alias fixinternet='sudo rm -rf /etc/resolv.conf'
+    alias fixinternet='sudo rm -rf /etc/resolv.conf && sudo ln -s /run/resolvconf/resolv.conf /etc/resolv.conf'
                       # && ' \
                       #'sudo service network-manager stop && '\
                       #'sudo ifconfig eth0 down && '\
                       #'sudo ifconfig eth0 up && '\
                       #'sudo service network-manager start'
-    alias uw='ssh -XY ezbc@uwast.astro.wisc.edu'
+    alias sshbip='ssh -XY ezbc@bip.astro.wisc.edu'
+    alias sshcosmos='ssh -XY ezbc@cosmos.astro.wisc.edu'
     alias screenshot='gnome-screenshot -a'
     alias sysmon='gnome-system-monitor'
-    cosmos='ezbc@uwast.astro.wisc.edu:'
-    uw='ezbc@uwast.astro.wisc.edu:'
+    alias testinternet='/home/ezbc/opt/speedtest-cli'
+
+    cosmos='ezbc@cosmos.astro.wisc.edu:'
+    bip='ezbc@bip.astro.wisc.edu:'
     LOGIN_ARCH=linux
     
 
 fi
 
 # ========================== Set bashrc for ezbc ============================
-if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || [ $HOSTNAME == uwast]; then
+if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || [ $HOSTNAME == uwast ]; then
     # IDL
     export IDL_STARTUP=~/.idlstartup
     export IDL_PATH=$IDL_PATH:+/usr/users/ezbc/idl/
@@ -297,3 +304,5 @@ alias init_ssh='start_agent'
 #if [ -e /home/ezbc/.iraf/setup.sh ]; then
 #    source /home/ezbc/.iraf/setup.sh
 #fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
