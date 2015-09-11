@@ -248,6 +248,9 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     # Ruby
     export PATH=/usr/users/ezbc/.gem/ruby/2.0.0/bin:$PATH
 
+    # Set display environment for X11 forwarding
+    #export DISPLAY=localhost:11.0
+
     # Aliases
     alias taurus='cd /d/bip3/ezbc/taurus'
     alias perseus='cd /d/bip3/ezbc/perseus'
