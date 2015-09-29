@@ -15,8 +15,21 @@ vmap <A-a> <Esc>
 map <S-space> :tabn<Enter>
 map <C-space> :tabp<Enter>
 
+"set wildchar=<TAB>	" start wild expansion (auto-completioin of filename) 
+                        " in the command line using <TAB>
+"set wildmenu		" wild char completion menu
 " Command mode autocomplete
-set wildmode=longest:full,list:full
+if has("wildmenu")
+    set wildignore+=*.h,*.mod
+    set wildignore+=*.a,*.o
+    set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+    set wildignore+=.DS_Store,.git,.hg,.svn
+    set wildignore+=*~,*.swp,*.tmp
+    set wildignore+=/usr/include/*,/usr/local/*
+    set wildmenu
+    set wildmode=longest,list
+endif
+
 
 " reformat paragraph
 nmap <A-r> gwap
@@ -56,9 +69,6 @@ set clipboard=unnamed	" yank to the system register (*) by default
 " Searching and completion
 set showmatch		" Cursor shows matching ) and }
 set showmode		" Show current mode
-set wildchar=<TAB>	" start wild expansion (auto-completioin of filename) 
-                        " in the command line using <TAB>
-set wildmenu		" wild char completion menu
 set hlsearch		" search highlighting
 set incsearch		" incremental search
 
