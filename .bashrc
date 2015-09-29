@@ -78,7 +78,7 @@ NC='\e[0m'            # No Color
 DEFAULT='\[\033[0;39m\]'
 
 # =========================== Prompt ==========================================
-prompt_command () {
+prompt_command_work () {
     if [ $? -eq 0 ]; then # set an error string for the prompt, if applicable
         ERRPROMPT="\[$LIGHTGREEN\] ==> $DEFAULT"
     else
@@ -92,23 +92,39 @@ prompt_command () {
     local __last_color="\[\033[00m\]"
 
     # Capture the output of the "git status" command.
-    #git_status="$(git status 2> /dev/null)"
+    git_status="$(git status 2> /dev/null)"
 
-    # Set color based on clean/staged/dirty.
-    #if [[ ${git_status} =~ "working directory clean" ]]; then
-    #    state="${GREEN}"
-    #elif [[ ${git_status} =~ "Changes to be committed" ]]; then
-    #    state="${YELLOW}"
-    #else
-    #    state="${RED}"
-    #fi
-
-    #export PS1="\n\[$YELLOW\] <\#> \[$LIGHTGREEN\]$PWD\n      \[$LIGHTRED\]\d \t \[$LIGHTPURPLE\]\u\[$NC\]@\[$LIGHTCYAN\]\h\[$NC\] ${state}$__git_branch$__prompt_tail$__last_color\n $ERRPROMPT"
     export PS1="\n\[$YELLOW\] <\#> \[$LIGHTGREEN\]$PWD\n      \[$LIGHTRED\]\d \t \[$LIGHTPURPLE\]\u\[$NC\]@\[$LIGHTCYAN\]\h\[$NC\] $__git_branch$__prompt_tail$__last_color\n $ERRPROMPT"
 }
 
-# Tell bash to execute this function just before displaying its prompt.
-PROMPT_COMMAND=prompt_command
+prompt_command_laptop () {
+    if [ $? -eq 0 ]; then # set an error string for the prompt, if applicable
+        ERRPROMPT="\[$LIGHTGREEN\] ==> $DEFAULT"
+    else
+        ERRPROMPT="\[$LIGHTRED\] ==> $DEFAULT"
+    fi
+
+    local __user_and_host="\[\033[01;32m\]\u@\h"
+    local __cur_location="\[\033[01;34m\]\w"
+    local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+    local __prompt_tail="\[\033[35m\]$"
+    local __last_color="\[\033[00m\]"
+
+    # Capture the output of the "git status" command.
+    git_status="$(git status 2> /dev/null)"
+
+    # Set color based on clean/staged/dirty.
+    if [[ ${git_status} =~ "working directory clean" ]]; then
+        state="${GREEN}"
+    elif [[ ${git_status} =~ "Changes to be committed" ]]; then
+        state="${YELLOW}"
+    else
+        state="${RED}"
+    fi
+
+    export PS1="\n\[$YELLOW\] <\#> \[$LIGHTGREEN\]$PWD\n      \[$LIGHTRED\]\d \t \[$LIGHTPURPLE\]\u\[$NC\]@\[$LIGHTCYAN\]\h\[$NC\] ${state}$__git_branch$__prompt_tail$__last_color\n $ERRPROMPT"
+}
+
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -190,7 +206,10 @@ if [ $HOSTNAME == latitude ]; then
     cosmos='ezbc@cosmos.astro.wisc.edu:'
     bip='ezbc@bip.astro.wisc.edu:'
     LOGIN_ARCH=linux
-    
+
+    # Prompt command
+    # Tell bash to execute this function just before displaying its prompt.
+    PROMPT_COMMAND=prompt_command_laptop
 
 fi
 
@@ -270,6 +289,10 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
 
     # Go to home directory
     cd ~
+    
+    # Prompt command
+    # Tell bash to execute this function just before displaying its prompt.
+    PROMPT_COMMAND=prompt_command_work
 fi
 
 #===============================================================================
