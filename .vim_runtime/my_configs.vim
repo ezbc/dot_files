@@ -12,8 +12,8 @@ imap <A-a> <Esc>
 vmap <A-a> <Esc>
 
 " Tab switching
-map <S-space> :tabn<Enter>
-map <C-space> :tabp<Enter>
+map <C-space> :tabn<Enter>
+map <S-space> :tabp<Enter>
 
 "set wildchar=<TAB>	" start wild expansion (auto-completioin of filename) 
                         " in the command line using <TAB>
