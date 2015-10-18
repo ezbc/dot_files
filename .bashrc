@@ -143,7 +143,7 @@ bigfiles () {
 }
 
 # ========================== Set bashrc for elijah ============================
-if [ $HOSTNAME == latitude ]; then
+if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; then
     PATH=/usr/bin/:/bin/
 
     # Read in astro library for gdl
