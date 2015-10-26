@@ -41,7 +41,6 @@ nmap <A-C-s> <Esc>:w<Enter>
 imap <A-C-s> <Esc>:w<Enter>
 
 " Indenting and wrapping
-set textwidth=80
 set whichwrap+=<,>,h,l,[,] " allows for cursor wrapping
 set wrap            " allow word wrapping
 set linebreak       " 
@@ -82,20 +81,29 @@ set autoread		" auto read when file is changed from outside
 " aesthetics
 set number              " shows line numbers
 
+
 " ----------------- gvim ----------------------------
 if has("gui_running")
     set guioptions-=m
     set guioptions-=T
     set guioptions-=r
     set guioptions-=L
-    set guifont=Monospace\ 8
+    set guifont=Monospace\ 9
+
+    " Window size
+    set textwidth=80
+    set lines=200
+
+    au BufRead * let &numberwidth = float2nr(log10(line("$"))) + 2
+          \| let &columns = &numberwidth + 80
 endif
+
 
 " folding
 autocmd FileType c,cpp set foldmethod=syntax
 autocmd FileType c,cpp set foldnestmax=2
 
-
+" Tab definitions for different filetypes
 autocmd BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 softtabstop=4 smarttab expandtab 		
 autocmd BufRead,BufNewFile *.html,*.md set tabstop=2 shiftwidth=2 softtabstop=2 smarttab expandtab 		
 
