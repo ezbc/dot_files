@@ -46,14 +46,11 @@ set whichwrap+=<,>,h,l,[,] " allows for cursor wrapping
 set wrap            " allow word wrapping
 set linebreak       " 
 set nolist          " list disables linebreak
-set tabstop=4		" use # of chars to display a <TAB> 
-set shiftwidth=4	" insert # of chars in autoindent
-set softtabstop=4	" insert # of chars when pressing <TAB>
-set smarttab		" insert tabs on the start of a line according to 
-                        " context
-set expandtab 		" will convert tabs to spaces
-set shiftwidth=4 	" will affect block indentation with >> and <<
-set softtabstop=4 	" sets the length of soft tab in spaces
+"set tabstop=4		" use # of chars to display a <TAB> 
+"set shiftwidth=4	" insert # of chars in autoindent
+"set softtabstop=4	" insert # of chars when pressing <TAB>
+"set smarttab		" insert tabs on the start of a line according to context
+"set noexpandtab     " will convert tabs to spaces
 "set copyindent		" copy the previous indentation on autoindenting
 "set smartindent	" smart indentation for C-like language
 "set cindent		" smart indentation especially for C language
@@ -97,6 +94,10 @@ endif
 " folding
 autocmd FileType c,cpp set foldmethod=syntax
 autocmd FileType c,cpp set foldnestmax=2
+
+
+autocmd BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 softtabstop=4 smarttab expandtab 		
+autocmd BufRead,BufNewFile *.html,*.md set tabstop=2 shiftwidth=2 softtabstop=2 smarttab expandtab 		
 
 " copy and paste commands
 vmap <C-c> "+yi

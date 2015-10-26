@@ -215,48 +215,52 @@ fi
 
 # ========================== Set bashrc for ezbc ============================
 if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || [ $HOSTNAME == uwast ]; then
+
     # IDL
-    export IDL_STARTUP=~/.idlstartup
-    export IDL_PATH=$IDL_PATH:+/usr/users/ezbc/idl/
+    export IDL_STARTUP=$HOME/.idlstartup
+    export IDL_PATH=$IDL_PATH:+$HOME/idl/
     export IDL_PATH=$IDL_PATH:+/usr/local/rsi/idl/idl82/lib/
 
     # KARMA, Miriad, GIPSY, and CASA
     alias miriad='tcsh | miriad'
     
     # Python
-    export PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/python/
-    export PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/research/python_modules
-    export PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/research/python_modules/miriad
+    export PYTHONPATH=$PYTHONPATH:/d/cosmos/ezbc/research/astropy
+    export PYTHONPATH=$PYTHONPATH:$HOME/.local/lib/python2.7/site-packages
+    export PYTHONPATH=$PYTHONPATH:$HOME/.local/lib64/python2.7/site-packages
+    export PYTHONPATH=$PYTHONPATH:/d/bip3/ezbc/python/
+    export PYTHONPATH=$PYTHONPATH:/d/cosmos/ezbc/research/python_modules
+    export PYTHONPATH=$PYTHONPATH:/d/cosmos/ezbc/research/python_modules/miriad
     export \
-        PYTHONPATH=$PYTHONPATH:/usr/users/ezbc/research/python_modules/planckpy
+        PYTHONPATH=$PYTHONPATH:/d/cosmos/ezbc/research/python_modules/planckpy
     #export PYTHONPATH=$PYTHONPATH:/.local/lib/python2.7/site-packages/scipy
     #export PYTHONPATH=$PYTHONPATH:/.local/lib/python2.7/site-packages/
-    export PATH=/usr/users/ezbc/python:$PATH # anaconda
+    export PATH=/d/bip3/ezbc/python:$PATH # anaconda
     
     # Texlive
-	export PATH=/usr/users/ezbc/.local/lib/texlive/bin/x86_64-linux:$PATH
+	export PATH=$HOME/.local/lib/texlive/bin/x86_64-linux:$PATH
 
     # Google-chrome
-    export PATH=/usr/users/ezbc/opt/usr/bin:$PATH
+    export PATH=$HOME/opt/usr/bin:$PATH
 
     # Local bin
-    export PATH=/usr/users/ezbc/.local/bin:$PATH
+    export PATH=$HOME/.local/bin:$PATH
 
     # Nodejs
-    export PATH=/usr/users/ezbc/opt/node-v0.12.0/~/.local/lib/bin:$PATH
+    export PATH=$HOME/opt/node-v0.12.0/~/.local/lib/bin:$PATH
 
     # Ruby
-    export PATH=/usr/users/ezbc/.gem/ruby/2.0.0/bin:$PATH
+    export PATH=$HOME/.gem/ruby/2.0.0/bin:$PATH
 
     # Set display environment for X11 forwarding
     #export DISPLAY=localhost:11.0
 
     # Aliases
-    alias taurus='cd /d/bip3/ezbc/taurus'
-    alias perseus='cd /d/bip3/ezbc/perseus'
-    alias please='sudo'
+    alias cdtaurus='cd /d/bip3/ezbc/taurus'
+    alias cdperseus='cd /d/bip3/ezbc/perseus'
+    alias cdcosmos='cd /d/cosmos/ezbc'
     alias engels='cd /d/engels2/ezbc/'
-    alias bip='ssh -XY bip'
+    alias sshbip='ssh -XY bip'
     alias latitude='ezbc@144.92.179.191'
     alias sshlatitude='ssh -XY ezbc@144.92.179.191'
     alias miriad='tcsh -c miriad'
@@ -267,16 +271,16 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     alias clean='rm -rf #* .*.swp .*.swn .*.swo'
     alias mac='ssh -XY research@141.140.86.26'
     alias screenshot='gnome-screenshot -a'
-    alias ipython='/usr/users/ezbc/.local/bin/ipython'
+    alias ipython='/d/bip3/ezbc/.local/bin/ipython'
     alias screen='~/apps/screen/bin/screen'
     alias sysmon='gnome-system-monitor'
     alias view='eog'
-    alias xflux='/usr/users/ezbc/apps/xflux -z 53703'
-    alias dropbox='/usr/users/ezbc/apps/dropbox.py start -i'
-    alias mendeley='/usr/users/ezbc/opt/mendeleydesktop-1.12.4-linux-x86_64/bin/mendeleydesktop'
+    alias xflux='$HOME/apps/xflux -z 53703'
+    alias dropbox='$HOME/apps/dropbox.py start -i'
+    alias mendeley='$HOME/opt/mendeleydesktop-1.12.4-linux-x86_64/bin/mendeleydesktop'
     alias bundle='bundle2.0'
 
-    #/usr/users/ezbc/apps/dropbox.py autostart y'
+    #$HOME/apps/dropbox.py autostart y'
     # Deine user variables 
     downloads='/d/bip3/ezbc/Downloads/'
     mac='research@141.140.86.26:'
@@ -287,8 +291,8 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     bip3='/d/bip3/ezbc/'
     engels='/d/engels2/ezbc/'
 
-    # Go to home directory
-    cd ~
+    # Go to computers directory
+    cd /d/cosmos/ezbc
     
     # Prompt command
     # Tell bash to execute this function just before displaying its prompt.
