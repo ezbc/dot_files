@@ -143,7 +143,7 @@ bigfiles () {
 }
 
 # ========================== Set bashrc for elijah ============================
-if [ $HOSTNAME == latitude ]; then
+if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; then
     PATH=/usr/bin/:/bin/
 
     # Read in astro library for gdl
@@ -168,7 +168,7 @@ if [ $HOSTNAME == latitude ]; then
     export MADSDK_ROOT=~/opt/madsdk
 
     # KARMA package
-    source /usr/local/karma/.karmarc
+    #source /usr/local/karma/.karmarc
 
     # Set up for Star-link
     #export STARLINK_DIR="/home/ezbc/opt/star-hawaiki"
@@ -202,6 +202,7 @@ if [ $HOSTNAME == latitude ]; then
     alias screenshot='gnome-screenshot -a'
     alias sysmon='gnome-system-monitor'
     alias testinternet='/home/ezbc/opt/speedtest-cli'
+    alias setdisplay='kcmshell5 kcm_kscreen &'
 
     cosmos='ezbc@cosmos.astro.wisc.edu:'
     bip='ezbc@bip.astro.wisc.edu:'
