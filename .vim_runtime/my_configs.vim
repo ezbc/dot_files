@@ -99,6 +99,11 @@ autocmd FileType c,cpp set foldnestmax=2
 autocmd BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 softtabstop=4 smarttab expandtab 		
 autocmd BufRead,BufNewFile *.html,*.md set tabstop=2 shiftwidth=2 softtabstop=2 smarttab expandtab 		
 
+" cursor line
+set cursorline
+hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkblue guifg=white
+
+
 " copy and paste commands
 vmap <C-c> "+yi
 vmap <C-x> "+c
