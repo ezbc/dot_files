@@ -92,10 +92,10 @@ if has("gui_running")
 
     " Window size
     set textwidth=80
-    set lines=200
+    set lines=50
 
     au BufRead * let &numberwidth = float2nr(log10(line("$"))) + 2
-          \| let &columns = &numberwidth + 80
+          \| let &columns = &numberwidth + 81
 endif
 
 
