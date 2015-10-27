@@ -78,8 +78,11 @@ set autoread		" auto read when file is changed from outside
 "set numberwidth=3
 "set cpoptions+=n
 
+
 " aesthetics
 set number              " shows line numbers
+syntax on
+colorscheme slate
 
 
 " ----------------- gvim ----------------------------
