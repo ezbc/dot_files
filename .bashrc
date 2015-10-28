@@ -167,6 +167,9 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     # Parellel programming
     export MADSDK_ROOT=~/opt/madsdk
 
+    # Vim runtime path
+    export VIMRUNTIME=/d/cosmos/ezbc/.vim_runtime/current
+
     # KARMA package
     #source /usr/local/karma/.karmarc
 
@@ -246,6 +249,9 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
 
     # Local bin
     export PATH=$HOME/.local/bin:$PATH
+
+    # Cosmos bin
+    #export PATH=/d/cosmos/ezbc/.local/bin:$PATH
 
     # Nodejs
     export PATH=$HOME/opt/node-v0.12.0/~/.local/lib/bin:$PATH

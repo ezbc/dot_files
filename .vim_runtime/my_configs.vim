@@ -116,7 +116,7 @@ autocmd BufRead,BufNewFile *.html,*.md,*.tex set tabstop=2 shiftwidth=2 softtabs
 " cursor line
 set cursorline
 "hi CursorLine cterm=NONE ctermbg=darkred guibg=purple4
-hi Cursor guibg=purple
+hi Cursor guibg=purple guibg=gray
 
 
 " copy and paste commands
