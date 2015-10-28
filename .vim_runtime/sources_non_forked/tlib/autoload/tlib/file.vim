@@ -1,15 +1,23 @@
-" file.vim
 " @Author:      Tom Link (micathom AT gmail com?subject=[vim])
 " @Website:     http://www.vim.org/account/profile.php?user_id=4037
 " @License:     GPL (see http://www.gnu.org/licenses/gpl.txt)
-" @Created:     2007-06-30.
-" @Last Change: 2013-09-25.
-" @Revision:    0.0.141
+" @Revision:    151
 
-if &cp || exists("loaded_tlib_file_autoload")
-    finish
+
+if !exists('g:tlib#file#drop')
+    " If true, use |:drop| to edit loaded buffers (only available with GUI).
+    let g:tlib#file#drop = has('gui')   "{{{2
 endif
-let loaded_tlib_file_autoload = 1
+
+
+if !exists('g:tlib#file#use_tabs')
+    let g:tlib#file#use_tabs = 0   "{{{2
+endif
+
+
+if !exists('g:tlib#file#edit_cmds')
+    let g:tlib#file#edit_cmds = g:tlib#file#use_tabs ? {'buffer': 'tab split | buffer', 'edit': 'tabedit'} : {}  "{{{2
+endif
 
 
 """ File related {{{1
@@ -36,12 +44,12 @@ function! tlib#file#Split(filename) "{{{3
 endf
 
 
-" :display: tlib#file#Join(filename_parts, ?strip_slashes=0)
+" :display: tlib#file#Join(filename_parts, ?strip_slashes=1)
 " EXAMPLES: >
 "   tlib#file#Join(['foo', 'bar', 'filename.txt'])
 "   => 'foo/bar/filename.txt'
 function! tlib#file#Join(filename_parts, ...) "{{{3
-    TVarArg 'strip_slashes'
+    TVarArg ['strip_slashes', 1]
     " TLogVAR a:filename_parts, strip_slashes
     if strip_slashes
         " let rx    = tlib#rx#Escape(g:tlib#dir#sep) .'$'
@@ -99,6 +107,25 @@ function! tlib#file#Absolute(filename, ...) "{{{3
     endif
     let filename = substitute(filename, '\(^\|[\/]\)\zs\.[\/]', '', 'g')
     let filename = substitute(filename, '[\/]\zs[^\/]\+[\/]\.\.[\/]', '', 'g')
+    return filename
+endf
+
+
+function! tlib#file#Canonic(filename, ...) "{{{3
+    TVarArg ['mode', '']
+    if a:filename =~ '^\\\\'
+        let mode = 'windows'
+    elseif a:filename =~ '^\(file\|ftp\|http\)s\?:'
+        let mode = 'url'
+    elseif (empty(mode) && g:tlib#sys#windows)
+        let mode = 'windows'
+    endif
+    let filename = a:filename
+    if mode == 'windows'
+        let filename = substitute(filename, '/', '\\', 'g')
+    else
+        let filename = substitute(filename, '\\', '/', 'g')
+    endif
     return filename
 endf
 
@@ -161,4 +188,51 @@ function! tlib#file#With(fcmd, bcmd, files, ...) "{{{3
     " TLogDBG "done"
 endf
 
+
+" Return 0 if the file isn't readable/doesn't exist.
+" Otherwise return 1.
+function! tlib#file#Edit(fileid) "{{{3
+    if type(a:fileid) == 0
+        let bn = a:fileid
+        let filename = fnamemodify(bufname(bn), ':p')
+    else
+        let filename = fnamemodify(a:fileid, ':p')
+        let bn = bufnr(filename)
+    endif
+    if filename == expand('%:p')
+        return 1
+    else
+        " TLogVAR a:fileid, bn, filename, g:tlib#file#drop, filereadable(filename)
+        if bn != -1 && buflisted(bn)
+            if g:tlib#file#drop
+                " echom "DBG" get(g:tlib#file#edit_cmds, 'drop', 'drop') fnameescape(filename)
+                exec get(g:tlib#file#edit_cmds, 'drop', 'drop') fnameescape(filename)
+            else
+                " echom "DBG" get(g:tlib#file#edit_cmds, 'buffer', 'buffer') bn
+                exec get(g:tlib#file#edit_cmds, 'buffer', 'buffer') bn
+            endif
+            return 1
+        elseif filereadable(filename)
+            try
+                " let file = tlib#arg#Ex(filename)
+                " " TLogVAR file
+                " echom "DBG" get(g:tlib#file#edit_cmds, 'edit', 'edit') fnameescape(filename)
+                exec get(g:tlib#file#edit_cmds, 'edit', 'edit') fnameescape(filename)
+            catch /E325/
+                " swap file exists, let the user handle it
+            catch
+                echohl error
+                echom v:exception
+                echohl NONE
+            endtry
+            return 1
+        else
+            echom "TLIB: File not readable: " . filename
+            if filename != a:fileid
+                echom "TLIB: original filename: " . a:fileid
+            endif
+        endif
+    endif
+    return 0
+endf
 

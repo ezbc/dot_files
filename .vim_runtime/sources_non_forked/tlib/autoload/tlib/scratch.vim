@@ -1,15 +1,7 @@
-" scratch.vim
 " @Author:      Tom Link (micathom AT gmail com?subject=[vim])
 " @Website:     http://www.vim.org/account/profile.php?user_id=4037
 " @License:     GPL (see http://www.gnu.org/licenses/gpl.txt)
-" @Created:     2007-07-18.
-" @Last Change: 2013-10-16.
-" @Revision:    0.0.242
-
-if &cp || exists("loaded_tlib_scratch_autoload")
-    finish
-endif
-let loaded_tlib_scratch_autoload = 1
+" @Revision:    255
 
 
 " Scratch window position. By default the list window is opened on the 
@@ -65,7 +57,7 @@ function! tlib#scratch#UseScratch(...) "{{{3
                 else
                     let cmd = 'buffer!'
                 endif
-                " TLogVAR cmd
+                " TLogVAR cmd, bn
                 silent exec 'noautocmd keepalt keepj' cmd bn
             endif
         else
@@ -77,7 +69,7 @@ function! tlib#scratch#UseScratch(...) "{{{3
             else
                 let cmd = 'edit'
             endif
-            " TLogVAR cmd
+            " TLogVAR cmd, id
             silent exec 'noautocmd keepalt keepj' cmd escape(id, '%#\ ')
             " silent exec 'split '. id
         endif
@@ -92,15 +84,18 @@ function! tlib#scratch#UseScratch(...) "{{{3
         setlocal nobuflisted
         setlocal foldmethod=manual
         setlocal foldcolumn=0
-        setlocal modifiable
         setlocal nospell
+        setlocal modifiable
+        setlocal noreadonly
         " TLogVAR &ft, ft
         if !empty(ft)
             let &l:ft = ft
         endif
     endif
     let keyargs.scratch = bufnr('%')
-    " TLogVAR 2, winnr(), bufnr('%'), bufname("%")
+    let keyargs.scratch_tabpagenr = tabpagenr()
+    let keyargs.scratch_winnr = winnr()
+    " TLogVAR 2, winnr(), bufnr('%'), bufname("%"), keyargs.scratch
     return keyargs.scratch
 endf
 
