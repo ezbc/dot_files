@@ -80,7 +80,7 @@ set autoread		" auto read when file is changed from outside
 
 " aesthetics
 set number              " shows line numbers
-
+colorscheme antares
 
 " ----------------- gvim ----------------------------
 if has("gui_running")
