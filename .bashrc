@@ -206,6 +206,7 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     alias sysmon='gnome-system-monitor'
     alias testinternet='/home/ezbc/opt/speedtest-cli'
     alias setdisplay='kcmshell5 kcm_kscreen &'
+    alias gvim='vim -g'
 
     cosmos='ezbc@cosmos.astro.wisc.edu:'
     bip='ezbc@bip.astro.wisc.edu:'
@@ -251,7 +252,7 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     export PATH=$HOME/.local/bin:$PATH
 
     # Cosmos bin
-    #export PATH=/d/cosmos/ezbc/.local/bin:$PATH
+    export PATH=/d/cosmos/ezbc/.local/bin:$PATH
 
     # Nodejs
     export PATH=$HOME/opt/node-v0.12.0/~/.local/lib/bin:$PATH

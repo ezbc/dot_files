@@ -79,7 +79,8 @@ set autoread		" auto read when file is changed from outside
 "set cpoptions+=n
 
 
-" aesthetics
+" ----------------------------- aesthetics -----------------------------------
+" ------------------------------------------------------------------------------
 set number              " shows line numbers
 colorscheme antares
 
@@ -87,8 +88,13 @@ colorscheme antares
 set cursorline
 "hi CursorLine cterm=NONE ctermbg=darkred guibg=purple4
 hi Cursor guibg=purple
+set number
+set cursorline
+hi cursorline cterm=none
+hi cursorlinenr ctermfg=red
 
-" ----------------- gvim ----------------------------
+" -------------------------------- gvim --------------------------------------
+" ------------------------------------------------------------------------------
 if has("gui_running")
     set guioptions-=m
     set guioptions-=T
@@ -117,7 +123,6 @@ autocmd FileType c,cpp set foldnestmax=2
 " Tab definitions for different filetypes
 autocmd BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 softtabstop=4 smarttab expandtab 		
 autocmd BufRead,BufNewFile *.html,*.md,*.tex set tabstop=2 shiftwidth=2 softtabstop=2 smarttab expandtab 		
-
 
 " copy and paste commands
 vmap <C-c> "+yi
