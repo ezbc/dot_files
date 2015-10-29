@@ -1,6 +1,8 @@
 let hostname = substitute(system('hostname'), '\n', '', '')
 if hostname == "latitude-laptop"
-  set runtimepath+=~/.vim_runtime
+  "set runtimepath+=~/.vim_runtime
+  "set runtimepath=~/dot_files/.vim_runtime/vim74_runtime
+  set runtimepath+=~/dot_files/.vim_runtime
   
   source ~/.vim_runtime/vimrcs/basic.vim
   source ~/.vim_runtime/vimrcs/filetypes.vim
