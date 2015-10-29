@@ -1,4 +1,5 @@
-if $HOSTNAME == "latitude-laptop"
+let hostname = substitute(system('hostname'), '\n', '', '')
+if hostname == "latitude-laptop"
   set runtimepath+=~/.vim_runtime
   
   source ~/.vim_runtime/vimrcs/basic.vim
