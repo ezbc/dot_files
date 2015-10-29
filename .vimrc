@@ -12,8 +12,12 @@ if hostname == "latitude-laptop"
   "catch
   "endtry
 else
-  set runtimepath=/d/cosmos/ezbc/dot_files/.vim_runtime/current
+  "set runtimepath=/d/cosmos/ezbc/opt/vim74/runtime
+  set runtimepath=/d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime
+  "set runtimepath=/d/cosmos/ezbc/dot_files/.vim_runtime/current
   set runtimepath+=/d/cosmos/ezbc/dot_files/.vim_runtime
+  "set runtimepath=/d/cosmos/ezbc/dot_files/.vim_runtime
+  "set runtimepath+=/d/cosmos/ezbc/dot_files/.vim_runtime/runtime
   
   source /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/basic.vim
   source /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/filetypes.vim

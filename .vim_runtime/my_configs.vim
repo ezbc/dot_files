@@ -79,11 +79,20 @@ set autoread		" auto read when file is changed from outside
 "set cpoptions+=n
 
 
-" aesthetics
+" ----------------------------- aesthetics -----------------------------------
+" ------------------------------------------------------------------------------
 set number              " shows line numbers
 colorscheme antares
 
-" ----------------- gvim ----------------------------
+" cursor line
+set cursorline
+"hi CursorLine cterm=NONE ctermbg=darkred guibg=purple4
+hi Cursor guibg=purple
+set number
+set cursorline
+
+" -------------------------------- gvim --------------------------------------
+" ------------------------------------------------------------------------------
 if has("gui_running")
     set guioptions-=m
     set guioptions-=T
@@ -113,12 +122,6 @@ autocmd FileType c,cpp set foldnestmax=2
 autocmd BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 softtabstop=4 smarttab expandtab 		
 autocmd BufRead,BufNewFile *.html,*.md,*.tex set tabstop=2 shiftwidth=2 softtabstop=2 smarttab expandtab 		
 
-" cursor line
-set cursorline
-"hi CursorLine cterm=NONE ctermbg=darkred guibg=purple4
-hi Cursor guibg=purple
-
-
 " copy and paste commands
 vmap <C-c> "+yi
 vmap <C-x> "+c
@@ -146,6 +149,10 @@ let g:tex_flavor='latex'
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['py'],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
+
+
+syn region markdownItalic start="[^* ]\@<=\*\*\@!\|\*\@<!\*[^* ]\@=" end="[^* ]\@<=\*\|\*\@<!\*[^* ]\@=" keepend contains=markdownLineStart
+syn region markdownItalic start="[^_ ]\@<=__\@!\|_\@<!_[^_]\@=" end="[^_ ]\@<=_\|_\@<!_[^_]\@=" keepend contains=markdownLineStart
 
 " ----------------------------------------------------------------------------
 " Snippets
