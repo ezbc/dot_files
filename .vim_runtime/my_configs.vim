@@ -90,8 +90,6 @@ set cursorline
 hi Cursor guibg=purple
 set number
 set cursorline
-hi cursorline cterm=none
-hi cursorlinenr ctermfg=red
 
 " -------------------------------- gvim --------------------------------------
 " ------------------------------------------------------------------------------
