@@ -1,0 +1,69 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.004  000.004: --- VIM STARTING ---
+000.066  000.062: Allocated generic buffers
+000.373  000.307: locale set
+000.395  000.022: GUI prepared
+000.397  000.002: clipboard setup
+000.403  000.006: window checked
+000.791  000.388: inits 1
+000.799  000.008: parsing arguments
+000.802  000.003: expanding arguments
+000.818  000.016: shell init
+062.778  061.960: xsmp init
+073.680  010.902: Termcap init
+073.730  000.050: inits 2
+073.846  000.116: init highlight
+178.674  000.054  000.054: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/autoload/paste.vim
+187.016  009.110  009.056: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/menu.vim
+187.060  026.662  017.552: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/filetype.vim
+187.155  000.047  000.047: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/ftplugin.vim
+187.207  000.012  000.012: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/filetype.vim
+187.278  000.037  000.037: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/indent.vim
+188.519  000.375  000.375: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/colors/desert.vim
+188.860  000.295  000.295: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/colors/desert.vim
+189.213  000.299  000.299: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/colors/desert.vim
+189.822  029.486  001.759: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vimrcs/basic.vim
+190.053  000.194  000.194: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vimrcs/filetypes.vim
+191.385  001.296  001.296: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vimrcs/plugins_config.vim
+191.813  000.300  000.300: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/colors/desert.vim
+192.492  001.070  000.770: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vimrcs/extended.vim
+200.958  000.205  000.205: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/syntax/syncolor.vim
+230.752  030.252  030.047: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/colors/antares.vim
+231.580  000.014  000.014: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/filetype.vim
+231.629  000.011  000.011: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/filetype.vim
+231.675  000.011  000.011: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/ftplugin.vim
+231.776  039.247  008.959: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vimrcs/my_configs.vim
+231.789  082.558  011.265: sourcing $HOME/.vimrc
+231.797  075.393: sourcing vimrc file(s)
+232.159  000.092  000.092: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/plugin/getscriptPlugin.vim
+232.420  000.234  000.234: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/plugin/gzip.vim
+232.654  000.204  000.204: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/plugin/matchparen.vim
+233.194  000.510  000.510: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/plugin/netrwPlugin.vim
+233.290  000.046  000.046: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/plugin/rrhelper.vim
+233.365  000.036  000.036: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/plugin/spellfile.vim
+233.570  000.168  000.168: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/plugin/tarPlugin.vim
+233.714  000.105  000.105: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/plugin/tohtml.vim
+233.925  000.174  000.174: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/plugin/vimballPlugin.vim
+234.182  000.211  000.211: sourcing /d/cosmos/ezbc/dot_files/.new_vim/vim74_runtime/plugin/zipPlugin.vim
+234.190  000.613: loading plugins
+234.196  000.006: inits 3
+5384.509  009.859  009.859: sourcing $HOME/.gvimrc
+7413.230  7169.175: starting GUI
+7422.740  009.510: reading viminfo
+7427.263  004.523: GUI delay
+7431.978  004.715: register server name
+7431.983  000.005: setting raw mode
+7431.985  000.002: start termcap
+7432.055  000.070: clearing screen
+7432.211  000.156: opening buffers
+7432.308  000.097: BufEnter autocommands
+7432.311  000.003: editing files in windows
+7434.596  002.285: VimEnter autocommands
+7434.598  000.002: before starting main loop
+7434.763  000.165: first screen update
+7434.766  000.003: --- VIM STARTED ---

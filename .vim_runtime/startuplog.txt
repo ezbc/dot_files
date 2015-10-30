@@ -1,0 +1,766 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.004  000.004: --- VIM STARTING ---
+000.064  000.060: Allocated generic buffers
+000.289  000.225: locale set
+000.305  000.016: GUI prepared
+000.307  000.002: clipboard setup
+000.313  000.006: window checked
+000.677  000.364: inits 1
+000.684  000.007: parsing arguments
+000.687  000.003: expanding arguments
+000.702  000.015: shell init
+054.745  054.043: xsmp init
+062.209  007.464: Termcap init
+062.254  000.045: inits 2
+062.365  000.111: init highlight
+084.636  000.050  000.050: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/autoload/paste.vim
+092.675  008.794  008.744: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/menu.vim
+092.713  026.233  017.439: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+092.804  000.042  000.042: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftplugin.vim
+092.862  000.012  000.012: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+092.947  000.039  000.039: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/indent.vim
+093.446  000.218  000.218: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+093.550  000.384  000.166: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/synload.vim
+093.588  000.475  000.091: sourcing /d/cosmos/ezbc/opt/vmi74/runtime/syntax/syntax.vim
+093.957  000.204  000.204: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+094.299  000.184  000.184: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+094.600  000.186  000.186: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+094.766  001.134  000.560: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/colors/desert.vim
+095.146  000.181  000.181: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+095.439  000.186  000.186: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+095.603  000.793  000.426: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/colors/desert.vim
+095.994  000.184  000.184: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+096.285  000.184  000.184: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+096.448  000.788  000.420: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/colors/desert.vim
+097.012  030.617  001.101: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/basic.vim
+097.189  000.139  000.139: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/filetypes.vim
+097.645  000.373  000.373: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/autoload/pathogen.vim
+394.813  000.834  000.834: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftoff.vim
+852.312  000.236  000.236: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-markdown/ftdetect/markdown.vim
+943.407  297.053  296.817: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+2050.699  000.775  000.775: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftoff.vim
+2421.403  000.244  000.244: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nginx-vim/ftdetect/nginx.vim
+2571.298  000.337  000.337: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-bundle-mako/ftdetect/mako.vim
+2621.389  000.403  000.403: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/coffee.vim
+2700.724  000.204  000.204: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-less/ftdetect/less.vim
+2746.257  000.295  000.295: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-markdown/ftdetect/markdown.vim
+3006.800  000.259  000.259: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-markdown/ftdetect/markdown.vim
+3122.395  850.955  849.213: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+10254.818  10157.592  9009.602: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/plugins_config.vim
+10375.251  000.230  000.230: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+10447.511  000.251  000.251: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+10455.107  144.081  143.600: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-colorschemes/colors/desert.vim
+10577.632  000.222  000.222: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+10714.324  000.228  000.228: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+10739.694  228.939  228.489: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/peaksea/colors/peaksea.vim
+10739.977  485.065  112.045: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/extended.vim
+13115.133  000.271  000.271: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+13492.541  000.261  000.261: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+13537.211  957.198  956.666: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/colors/antares.vim
+14266.609  000.036  000.036: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+14902.980  000.042  000.042: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+15425.211  000.040  000.040: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftplugin.vim
+15485.292  4746.244  3789.928: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/my_configs.vim
+15485.341  15420.113  001.456: sourcing $HOME/.vimrc
+15485.352  002.874: sourcing vimrc file(s)
+16738.253  1185.990  1185.990: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ack.vim/plugin/ack.vim
+16792.201  001.559  001.559: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/bufexplorer/plugin/bufexplorer.vim
+16885.801  000.313  000.313: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ctrlp.vim/autoload/ctrlp/mrufiles.vim
+16886.200  041.660  041.347: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ctrlp.vim/plugin/ctrlp.vim
+17106.807  000.066  000.066: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/goyo.vim/plugin/goyo.vim
+17309.338  000.359  000.359: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/autoload/nerdtree.vim
+17408.057  000.723  000.723: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/path.vim
+17505.765  000.200  000.200: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/menu_controller.vim
+17611.670  000.162  000.162: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/menu_item.vim
+17700.159  000.186  000.186: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/key_map.vim
+17798.447  000.276  000.276: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/bookmark.vim
+17892.301  000.360  000.360: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/tree_file_node.vim
+17991.715  000.478  000.478: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/tree_dir_node.vim
+18089.731  000.286  000.286: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/opener.vim
+18183.911  000.341  000.341: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/creator.vim
+18268.302  000.084  000.084: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/flag_set.vim
+18359.685  000.183  000.183: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/nerdtree.vim
+18447.681  000.420  000.420: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/ui.vim
+18541.189  000.071  000.071: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/event.vim
+18644.508  000.107  000.107: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/notifier.vim
+18744.030  000.638  000.638: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/autoload/nerdtree/ui_glue.vim
+19035.375  000.175  000.175: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/exec_menuitem.vim
+19047.484  000.529  000.529: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/fs_menu.vim
+19899.369  000.057  000.057: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/nerdtree/nerdtree_plugin/exec_menuitem.vim
+19909.695  000.045  000.045: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/nerdtree/nerdtree_plugin/fs_menu.vim
+20568.644  3370.514  3364.834: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/plugin/NERD_tree.vim
+20694.600  000.157  000.157: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/open_file_under_cursor.vim/plugin/open_file_under_cursor.vim
+21732.972  931.825  931.825: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/taglist/plugin/taglist.vim
+21807.215  000.301  000.301: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/taglist.vim/plugin/taglist.vim
+21882.946  000.346  000.346: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/tlib/plugin/02tlib.vim
+22199.318  000.239  000.239: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline.vim
+22385.854  000.222  000.222: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/init.vim
+22587.527  000.138  000.138: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/parts.vim
+22588.328  594.865  594.266: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/plugin/airline.vim
+22968.978  000.424  000.424: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-expand-region/autoload/expand_region.vim
+22969.176  240.655  240.231: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-expand-region/plugin/expand_region.vim
+23644.010  594.193  594.193: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-fugitive/plugin/fugitive.vim
+23728.403  000.388  000.388: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-indent-object/plugin/indent-object.vim
+23862.740  000.599  000.599: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-multiple-cursors/plugin/multiple_cursors.vim
+24121.176  000.109  000.109: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-addon-mw-utils/autoload/funcref.vim
+24121.810  166.682  166.573: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-snipmate/plugin/snipMate.vim
+24208.148  000.108  000.108: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-snippets/plugin/vimsnippets.vim
+24298.392  001.074  001.074: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-surround/plugin/surround.vim
+24388.487  000.202  000.202: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-zenroom2/plugin/zenroom2.vim
+24892.544  001.128  001.128: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/delimitMate/autoload/delimitMate.vim
+24896.028  371.108  369.980: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/delimitMate/plugin/delimitMate.vim
+25105.448  069.034  069.034: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/mru/plugin/mru.vim
+25187.853  000.051  000.051: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/nerdtree/plugin/NERD_tree.vim
+25317.956  000.159  000.159: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/set_tabline/plugin/set_tabline.vim
+26072.710  000.182  000.182: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/autoloclist.vim
+26081.243  000.220  000.220: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/balloons.vim
+26090.846  000.377  000.377: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/checker.vim
+26098.555  000.214  000.214: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/cursor.vim
+26107.661  000.291  000.291: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/highlighting.vim
+26118.524  000.659  000.659: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/loclist.vim
+26127.560  000.212  000.212: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/modemap.vim
+26137.010  000.087  000.087: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/notifiers.vim
+26146.848  000.321  000.321: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/registry.vim
+26156.723  000.169  000.169: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/signs.vim
+27050.444  000.030  000.030: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/autoloclist.vim
+27055.673  000.020  000.020: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/balloons.vim
+27061.802  000.017  000.017: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/checker.vim
+27067.558  000.022  000.022: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/cursor.vim
+27072.752  000.018  000.018: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/highlighting.vim
+27079.319  000.019  000.019: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/loclist.vim
+27084.450  000.031  000.031: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/modemap.vim
+27090.165  000.022  000.022: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/notifiers.vim
+27096.058  000.035  000.035: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/registry.vim
+27102.135  000.012  000.012: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/signs.vim
+27559.573  000.328  000.328: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/autoload/syntastic/util.vim
+27931.767  000.303  000.303: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/autoload/syntastic/log.vim
+28678.098  2512.608  2511.751: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic.vim
+28816.047  000.275  000.275: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-peepopen/plugin/peepopen.vim
+28914.005  000.056  000.056: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-snipmate/plugin/snipMate.vim
+28999.068  000.058  000.058: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-surround/plugin/surround.vim
+29131.190  002.689  002.689: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/zencoding/plugin/zencoding.vim
+29131.590  000.090  000.090: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/getscriptPlugin.vim
+29132.023  000.403  000.403: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/gzip.vim
+29132.263  000.211  000.211: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/matchparen.vim
+29132.854  000.561  000.561: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/netrwPlugin.vim
+29132.964  000.049  000.049: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/rrhelper.vim
+29133.039  000.034  000.034: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/spellfile.vim
+29133.249  000.176  000.176: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/tarPlugin.vim
+29133.402  000.108  000.108: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/tohtml.vim
+29133.618  000.181  000.181: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/vimballPlugin.vim
+29133.875  000.205  000.205: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/zipPlugin.vim
+29230.136  000.451  000.451: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-snipmate/after/plugin/snipMate.vim
+29315.414  000.356  000.356: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-snipmate/after/plugin/snipMate.vim
+29356.238  3781.107: loading plugins
+29356.261  000.023: inits 3
+34298.931  001.364  001.364: sourcing $VIMRUNTIME/menu.vim
+34376.669  007.052  007.052: sourcing $HOME/.gvimrc
+47438.778  18074.101: starting GUI
+47453.118  001.558  001.558: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ctrlp.vim/autoload/ctrlp/utils.vim
+47479.684  039.348: reading viminfo
+47480.013  000.329: GUI delay
+47484.445  004.432: register server name
+47484.447  000.002: setting raw mode
+47484.449  000.002: start termcap
+47484.501  000.052: clearing screen
+47510.702  000.573  000.573: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions.vim
+47535.585  000.090  000.090: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/quickfix.vim
+47558.264  000.115  000.115: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/netrw.vim
+47583.303  000.153  000.153: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/ctrlp.vim
+47606.426  000.207  000.207: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/branch.vim
+47631.687  000.100  000.100: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/syntastic.vim
+47655.270  000.217  000.217: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/whitespace.vim
+47678.307  000.070  000.070: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/wordcount.vim
+47948.907  006.774  006.774: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/section.vim
+47971.499  000.244  000.244: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/highlighter.vim
+48023.771  000.096  000.096: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/themes.vim
+48024.435  024.877  024.781: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/themes/luna.vim
+48051.140  000.419  000.419: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/util.vim
+48075.457  000.162  000.162: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/builder.vim
+48101.941  000.140  000.140: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/default.vim
+48117.239  599.597: opening buffers
+48121.698  004.459: BufEnter autocommands
+48121.704  000.006: editing files in windows
+48150.999  000.085  000.085: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/deprecation.vim
+48153.003  031.214: VimEnter autocommands
+48153.006  000.003: before starting main loop
+48153.256  000.250: first screen update
+48153.258  000.002: --- VIM STARTED ---
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.005  000.005: --- VIM STARTING ---
+000.067  000.062: Allocated generic buffers
+000.304  000.237: locale set
+000.322  000.018: GUI prepared
+000.323  000.001: clipboard setup
+000.330  000.007: window checked
+000.697  000.367: inits 1
+000.705  000.008: parsing arguments
+000.707  000.002: expanding arguments
+000.723  000.016: shell init
+101.179  100.456: xsmp init
+102.243  001.064: Termcap init
+102.286  000.043: inits 2
+102.410  000.124: init highlight
+137.794  000.053  000.053: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/autoload/paste.vim
+152.384  015.402  015.349: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/menu.vim
+152.438  046.029  030.627: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+152.565  000.044  000.044: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftplugin.vim
+152.625  000.012  000.012: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+152.704  000.038  000.038: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/indent.vim
+153.215  000.228  000.228: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+153.328  000.399  000.171: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/synload.vim
+153.366  000.490  000.091: sourcing /d/cosmos/ezbc/opt/vmi74/runtime/syntax/syntax.vim
+153.722  000.185  000.185: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+154.068  000.186  000.186: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+154.406  000.224  000.224: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+154.576  001.164  000.569: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/colors/desert.vim
+154.953  000.182  000.182: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+161.142  006.083  006.083: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+161.358  006.738  000.473: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/colors/desert.vim
+161.791  000.183  000.183: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+162.084  000.183  000.183: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+162.255  000.802  000.436: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/colors/desert.vim
+162.897  056.551  001.234: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/basic.vim
+163.149  000.212  000.212: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/filetypes.vim
+163.614  000.372  000.372: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/autoload/pathogen.vim
+1350.750  000.883  000.883: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftoff.vim
+2301.518  000.105  000.105: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-markdown/ftdetect/markdown.vim
+2309.150  041.789  041.684: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+3358.125  000.753  000.753: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftoff.vim
+3431.240  000.127  000.127: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nginx-vim/ftdetect/nginx.vim
+3442.164  000.058  000.058: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-bundle-mako/ftdetect/mako.vim
+3446.606  000.170  000.170: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/coffee.vim
+3454.623  000.066  000.066: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-less/ftdetect/less.vim
+3461.875  000.317  000.317: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-markdown/ftdetect/markdown.vim
+3483.393  000.235  000.235: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-markdown/ftdetect/markdown.vim
+3493.508  089.234  088.261: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+15107.138  14944.952  14812.921: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/plugins_config.vim
+16014.575  000.291  000.291: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+16591.308  000.257  000.257: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+16657.757  1081.305  1080.757: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-colorschemes/colors/desert.vim
+17508.274  000.254  000.254: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+18100.794  000.226  000.226: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+18169.961  1114.293  1113.813: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/peaksea/colors/peaksea.vim
+18170.242  3063.001  867.403: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/extended.vim
+19000.233  000.289  000.289: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+19072.333  000.269  000.269: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+19110.057  160.332  159.774: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/colors/antares.vim
+19183.481  000.022  000.022: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+19251.107  000.041  000.041: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+19297.920  000.039  000.039: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftplugin.vim
+19302.799  1132.499  972.065: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/my_configs.vim
+19302.817  19197.357  001.142: sourcing $HOME/.vimrc
+19302.824  003.057: sourcing vimrc file(s)
+19401.833  092.192  092.192: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ack.vim/plugin/ack.vim
+19410.706  001.497  001.497: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/bufexplorer/plugin/bufexplorer.vim
+19426.109  000.300  000.300: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ctrlp.vim/autoload/ctrlp/mrufiles.vim
+19426.484  006.259  005.959: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ctrlp.vim/plugin/ctrlp.vim
+19434.734  000.047  000.047: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/goyo.vim/plugin/goyo.vim
+19456.386  000.260  000.260: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/autoload/nerdtree.vim
+19466.011  000.674  000.674: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/path.vim
+19476.777  000.171  000.171: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/menu_controller.vim
+19486.635  000.102  000.102: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/menu_item.vim
+19494.632  000.128  000.128: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/key_map.vim
+19502.792  000.310  000.310: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/bookmark.vim
+19513.528  000.339  000.339: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/tree_file_node.vim
+19522.178  000.463  000.463: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/tree_dir_node.vim
+19531.851  000.274  000.274: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/opener.vim
+19541.440  000.309  000.309: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/creator.vim
+19550.574  000.086  000.086: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/flag_set.vim
+19559.142  000.140  000.140: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/nerdtree.vim
+19568.026  000.816  000.816: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/ui.vim
+19577.400  000.046  000.046: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/event.vim
+19587.291  000.085  000.085: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/notifier.vim
+19596.247  000.568  000.568: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/autoload/nerdtree/ui_glue.vim
+19649.541  000.163  000.163: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/exec_menuitem.vim
+19651.445  000.485  000.485: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/fs_menu.vim
+19716.258  000.052  000.052: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/nerdtree/nerdtree_plugin/exec_menuitem.vim
+19717.236  000.017  000.017: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/nerdtree/nerdtree_plugin/fs_menu.vim
+19754.402  307.775  302.287: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/plugin/NERD_tree.vim
+19765.031  000.129  000.129: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/open_file_under_cursor.vim/plugin/open_file_under_cursor.vim
+21366.800  1594.230  1594.230: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/taglist/plugin/taglist.vim
+21442.717  000.356  000.356: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/taglist.vim/plugin/taglist.vim
+21519.791  000.314  000.314: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/tlib/plugin/02tlib.vim
+21818.347  000.237  000.237: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline.vim
+22019.293  000.146  000.146: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/init.vim
+22225.703  000.152  000.152: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/parts.vim
+22226.558  605.730  605.195: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/plugin/airline.vim
+22543.455  000.431  000.431: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-expand-region/autoload/expand_region.vim
+22543.653  176.237  175.806: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-expand-region/plugin/expand_region.vim
+23362.587  752.331  752.331: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-fugitive/plugin/fugitive.vim
+23451.325  000.381  000.381: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-indent-object/plugin/indent-object.vim
+23586.697  000.513  000.513: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-multiple-cursors/plugin/multiple_cursors.vim
+23836.580  000.140  000.140: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-addon-mw-utils/autoload/funcref.vim
+23837.224  152.445  152.305: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-snipmate/plugin/snipMate.vim
+23913.711  000.087  000.087: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-snippets/plugin/vimsnippets.vim
+23990.293  001.157  001.157: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-surround/plugin/surround.vim
+24065.501  000.207  000.207: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-zenroom2/plugin/zenroom2.vim
+24657.729  001.170  001.170: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/delimitMate/autoload/delimitMate.vim
+24661.227  357.397  356.227: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/delimitMate/plugin/delimitMate.vim
+24827.412  052.309  052.309: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/mru/plugin/mru.vim
+24897.499  000.058  000.058: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/nerdtree/plugin/NERD_tree.vim
+24932.039  000.165  000.165: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/set_tabline/plugin/set_tabline.vim
+25021.918  000.187  000.187: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/autoloclist.vim
+25023.451  000.216  000.216: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/balloons.vim
+25025.235  000.401  000.401: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/checker.vim
+25026.827  000.235  000.235: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/cursor.vim
+25028.359  000.244  000.244: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/highlighting.vim
+25030.374  000.698  000.698: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/loclist.vim
+25031.894  000.213  000.213: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/modemap.vim
+25033.279  000.111  000.111: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/notifiers.vim
+25035.015  000.359  000.359: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/registry.vim
+25036.592  000.212  000.212: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/signs.vim
+26324.525  000.040  000.040: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/autoloclist.vim
+26335.524  000.019  000.019: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/balloons.vim
+26457.769  000.034  000.034: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/checker.vim
+26469.773  000.027  000.027: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/cursor.vim
+26480.826  000.016  000.016: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/highlighting.vim
+26491.788  000.022  000.022: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/loclist.vim
+26502.797  000.011  000.011: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/modemap.vim
+26514.128  000.030  000.030: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/notifiers.vim
+26525.008  000.035  000.035: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/registry.vim
+26536.041  000.022  000.022: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/signs.vim
+27159.347  000.350  000.350: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/autoload/syntastic/util.vim
+27341.627  000.310  000.310: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/autoload/syntastic/log.vim
+27437.662  2399.650  2398.734: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic.vim
+27449.740  000.284  000.284: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-peepopen/plugin/peepopen.vim
+27457.998  000.029  000.029: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-snipmate/plugin/snipMate.vim
+27464.632  000.048  000.048: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-surround/plugin/surround.vim
+27475.526  002.701  002.701: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/zencoding/plugin/zencoding.vim
+27475.886  000.085  000.085: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/getscriptPlugin.vim
+27476.318  000.404  000.404: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/gzip.vim
+27476.565  000.219  000.219: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/matchparen.vim
+27477.144  000.550  000.550: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/netrwPlugin.vim
+27477.244  000.048  000.048: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/rrhelper.vim
+27477.317  000.034  000.034: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/spellfile.vim
+27477.537  000.185  000.185: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/tarPlugin.vim
+27477.691  000.108  000.108: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/tohtml.vim
+27477.911  000.185  000.185: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/vimballPlugin.vim
+27478.177  000.210  000.210: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/zipPlugin.vim
+27486.806  000.399  000.399: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-snipmate/after/plugin/snipMate.vim
+27495.396  000.315  000.315: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-snipmate/after/plugin/snipMate.vim
+27498.647  1689.677: loading plugins
+27498.662  000.015: inits 3
+28411.254  001.486  001.486: sourcing $VIMRUNTIME/menu.vim
+28416.689  000.840  000.840: sourcing $HOME/.gvimrc
+47553.534  20052.546: starting GUI
+47703.209  007.809  007.809: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ctrlp.vim/autoload/ctrlp/utils.vim
+47834.180  272.837: reading viminfo
+47834.634  000.454: GUI delay
+47847.314  012.680: register server name
+47847.316  000.002: setting raw mode
+47847.318  000.002: start termcap
+47847.372  000.054: clearing screen
+48007.731  000.358  000.358: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions.vim
+48172.254  000.135  000.135: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/quickfix.vim
+48354.582  000.112  000.112: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/netrw.vim
+48546.338  000.130  000.130: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/ctrlp.vim
+48746.037  000.214  000.214: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/branch.vim
+48951.946  000.085  000.085: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/syntastic.vim
+49152.375  000.187  000.187: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/whitespace.vim
+49312.690  000.095  000.095: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/wordcount.vim
+50010.822  000.137  000.137: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/section.vim
+50025.673  000.283  000.283: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/highlighter.vim
+50062.243  000.100  000.100: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/themes.vim
+50062.674  015.895  015.795: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/themes/luna.vim
+50083.661  000.143  000.143: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/util.vim
+50103.902  000.191  000.191: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/builder.vim
+50126.728  000.154  000.154: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/default.vim
+50145.977  2281.486: opening buffers
+50149.792  003.815: BufEnter autocommands
+50149.795  000.003: editing files in windows
+50183.135  000.069  000.069: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/deprecation.vim
+50184.871  035.007: VimEnter autocommands
+50184.875  000.004: before starting main loop
+50185.136  000.261: first screen update
+50185.138  000.002: --- VIM STARTED ---
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.004  000.004: --- VIM STARTING ---
+000.066  000.062: Allocated generic buffers
+000.287  000.221: locale set
+000.304  000.017: GUI prepared
+000.306  000.002: clipboard setup
+000.312  000.006: window checked
+000.727  000.415: inits 1
+000.735  000.008: parsing arguments
+000.737  000.002: expanding arguments
+000.755  000.018: shell init
+010.220  009.465: xsmp init
+011.657  001.437: Termcap init
+011.724  000.067: inits 2
+011.859  000.135: init highlight
+035.380  000.057  000.057: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/autoload/paste.vim
+043.436  008.878  008.821: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/menu.vim
+043.479  026.230  017.352: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+043.580  000.043  000.043: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftplugin.vim
+043.640  000.012  000.012: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+043.719  000.039  000.039: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/indent.vim
+044.224  000.222  000.222: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+044.330  000.386  000.164: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/synload.vim
+044.377  000.486  000.100: sourcing /d/cosmos/ezbc/opt/vmi74/runtime/syntax/syntax.vim
+044.730  000.187  000.187: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+045.134  000.246  000.246: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+045.442  000.191  000.191: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+045.613  001.188  000.564: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/colors/desert.vim
+045.990  000.182  000.182: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+046.282  000.186  000.186: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+046.454  000.796  000.428: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/colors/desert.vim
+046.840  000.178  000.178: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+047.133  000.187  000.187: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+047.298  000.786  000.421: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/colors/desert.vim
+047.924  030.734  001.154: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/basic.vim
+048.163  000.201  000.201: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/filetypes.vim
+048.636  000.389  000.389: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/autoload/pathogen.vim
+247.202  000.842  000.842: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftoff.vim
+325.303  000.252  000.252: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-markdown/ftdetect/markdown.vim
+336.698  059.661  059.409: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+764.365  000.756  000.756: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftoff.vim
+1382.209  000.242  000.242: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nginx-vim/ftdetect/nginx.vim
+1526.548  000.232  000.232: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-bundle-mako/ftdetect/mako.vim
+1582.116  000.351  000.351: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/coffee.vim
+1682.797  000.213  000.213: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-less/ftdetect/less.vim
+1739.763  000.323  000.323: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-markdown/ftdetect/markdown.vim
+1960.951  000.254  000.254: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-markdown/ftdetect/markdown.vim
+2062.184  819.895  818.280: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+15509.654  15461.455  14580.912: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/plugins_config.vim
+15630.823  000.282  000.282: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+15704.305  000.235  000.235: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+15717.017  149.527  149.010: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-colorschemes/colors/desert.vim
+15903.694  000.224  000.224: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+15983.101  000.254  000.254: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+15991.405  223.295  222.817: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/peaksea/colors/peaksea.vim
+15991.660  481.905  109.083: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/extended.vim
+16364.858  000.033  000.033: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+16438.710  000.040  000.040: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+16515.968  000.041  000.041: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftplugin.vim
+16525.682  534.978  534.864: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/my_configs.vim
+16525.710  16509.860  001.587: sourcing $HOME/.vimrc
+16525.716  003.997: sourcing vimrc file(s)
+16664.749  129.200  129.200: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ack.vim/plugin/ack.vim
+16676.365  001.493  001.493: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/bufexplorer/plugin/bufexplorer.vim
+16694.542  000.322  000.322: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ctrlp.vim/autoload/ctrlp/mrufiles.vim
+16694.774  008.367  008.045: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ctrlp.vim/plugin/ctrlp.vim
+16708.552  000.064  000.064: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/goyo.vim/plugin/goyo.vim
+16734.593  000.283  000.283: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/autoload/nerdtree.vim
+16747.292  000.714  000.714: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/path.vim
+16758.638  000.222  000.222: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/menu_controller.vim
+16775.340  000.177  000.177: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/menu_item.vim
+16786.882  000.196  000.196: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/key_map.vim
+16799.480  000.328  000.328: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/bookmark.vim
+16812.167  000.471  000.471: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/tree_file_node.vim
+16823.766  000.522  000.522: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/tree_dir_node.vim
+16839.899  000.262  000.262: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/opener.vim
+16851.332  000.349  000.349: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/creator.vim
+16862.489  000.086  000.086: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/flag_set.vim
+16873.777  000.156  000.156: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/nerdtree.vim
+16885.702  000.491  000.491: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/ui.vim
+16901.530  000.028  000.028: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/event.vim
+16912.673  000.106  000.106: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/notifier.vim
+16924.479  000.610  000.610: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/autoload/nerdtree/ui_glue.vim
+16976.742  000.198  000.198: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/exec_menuitem.vim
+16978.561  000.546  000.546: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/fs_menu.vim
+17076.152  000.042  000.042: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/nerdtree/nerdtree_plugin/exec_menuitem.vim
+17077.528  000.028  000.028: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/nerdtree/nerdtree_plugin/fs_menu.vim
+17126.264  405.734  399.919: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/plugin/NERD_tree.vim
+17141.540  000.159  000.159: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/open_file_under_cursor.vim/plugin/open_file_under_cursor.vim
+17340.638  186.655  186.655: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/taglist/plugin/taglist.vim
+17350.951  000.291  000.291: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/taglist.vim/plugin/taglist.vim
+17361.188  000.324  000.324: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/tlib/plugin/02tlib.vim
+17400.603  000.245  000.245: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline.vim
+17423.567  000.158  000.158: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/init.vim
+17449.900  000.170  000.170: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/parts.vim
+17450.703  076.932  076.359: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/plugin/airline.vim
+17501.533  000.402  000.402: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-expand-region/autoload/expand_region.vim
+17501.734  033.918  033.516: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-expand-region/plugin/expand_region.vim
+17593.177  081.709  081.709: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-fugitive/plugin/fugitive.vim
+17603.323  000.325  000.325: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-indent-object/plugin/indent-object.vim
+17625.352  000.511  000.511: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-multiple-cursors/plugin/multiple_cursors.vim
+17658.663  000.142  000.142: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-addon-mw-utils/autoload/funcref.vim
+17659.299  021.629  021.487: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-snipmate/plugin/snipMate.vim
+17675.999  000.074  000.074: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-snippets/plugin/vimsnippets.vim
+17686.577  001.073  001.073: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-surround/plugin/surround.vim
+17696.768  000.228  000.228: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-zenroom2/plugin/zenroom2.vim
+17763.758  001.192  001.192: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/delimitMate/autoload/delimitMate.vim
+17767.240  055.797  054.605: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/delimitMate/plugin/delimitMate.vim
+17817.974  011.200  011.200: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/mru/plugin/mru.vim
+17845.668  000.049  000.049: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/nerdtree/plugin/NERD_tree.vim
+17947.421  000.171  000.171: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/set_tabline/plugin/set_tabline.vim
+18515.182  000.217  000.217: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/autoloclist.vim
+18526.334  000.228  000.228: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/balloons.vim
+18537.339  000.399  000.399: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/checker.vim
+18549.024  000.159  000.159: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/cursor.vim
+18560.324  000.246  000.246: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/highlighting.vim
+18571.920  000.652  000.652: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/loclist.vim
+18582.381  000.220  000.220: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/modemap.vim
+18593.382  000.120  000.120: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/notifiers.vim
+18604.691  000.341  000.341: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/registry.vim
+18615.677  000.217  000.217: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/signs.vim
+19641.635  000.030  000.030: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/autoloclist.vim
+19651.780  000.023  000.023: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/balloons.vim
+19662.665  000.048  000.048: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/checker.vim
+19671.809  000.019  000.019: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/cursor.vim
+19682.733  000.011  000.011: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/highlighting.vim
+19693.964  000.017  000.017: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/loclist.vim
+19705.146  000.028  000.028: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/modemap.vim
+19715.747  000.019  000.019: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/notifiers.vim
+19727.050  000.019  000.019: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/registry.vim
+19738.222  000.032  000.032: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/signs.vim
+20250.641  000.393  000.393: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/autoload/syntastic/util.vim
+20488.664  000.308  000.308: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/autoload/syntastic/log.vim
+21114.209  2488.162  2487.215: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic.vim
+21272.867  000.271  000.271: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-peepopen/plugin/peepopen.vim
+21373.354  000.062  000.062: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-snipmate/plugin/snipMate.vim
+21460.980  000.056  000.056: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-surround/plugin/surround.vim
+21572.902  002.718  002.718: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/zencoding/plugin/zencoding.vim
+21573.265  000.084  000.084: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/getscriptPlugin.vim
+21573.724  000.430  000.430: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/gzip.vim
+21573.968  000.214  000.214: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/matchparen.vim
+21574.546  000.549  000.549: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/netrwPlugin.vim
+21574.650  000.054  000.054: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/rrhelper.vim
+21574.726  000.035  000.035: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/spellfile.vim
+21574.942  000.178  000.178: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/tarPlugin.vim
+21575.101  000.111  000.111: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/tohtml.vim
+21575.315  000.178  000.178: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/vimballPlugin.vim
+21575.591  000.218  000.218: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/zipPlugin.vim
+21673.653  000.457  000.457: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-snipmate/after/plugin/snipMate.vim
+21767.756  000.375  000.375: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-snipmate/after/plugin/snipMate.vim
+21806.016  1769.446: loading plugins
+21806.038  000.022: inits 3
+27230.040  001.279  001.279: sourcing $VIMRUNTIME/menu.vim
+27286.141  009.445  009.445: sourcing $HOME/.gvimrc
+57467.605  35651.843: starting GUI
+57491.319  001.729  001.729: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ctrlp.vim/autoload/ctrlp/utils.vim
+57521.513  052.179: reading viminfo
+57521.872  000.359: GUI delay
+57526.028  004.156: register server name
+57526.031  000.003: setting raw mode
+57526.068  000.037: start termcap
+57526.128  000.060: clearing screen
+57550.550  000.357  000.357: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions.vim
+57574.884  000.116  000.116: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/quickfix.vim
+57599.043  000.081  000.081: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/netrw.vim
+57624.493  000.132  000.132: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/ctrlp.vim
+57646.962  000.228  000.228: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/branch.vim
+57672.448  000.111  000.111: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/syntastic.vim
+57695.224  000.194  000.194: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/whitespace.vim
+57718.331  000.129  000.129: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/wordcount.vim
+57990.938  000.134  000.134: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/section.vim
+58013.196  000.245  000.245: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/highlighter.vim
+58062.234  000.098  000.098: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/themes.vim
+58062.651  023.318  023.220: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/themes/luna.vim
+58092.272  000.147  000.147: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/util.vim
+58115.142  000.205  000.205: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/builder.vim
+58140.961  000.114  000.114: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/default.vim
+58154.702  604.063: opening buffers
+58158.536  003.834: BufEnter autocommands
+58158.541  000.005: editing files in windows
+58188.054  000.075  000.075: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/deprecation.vim
+58189.671  031.055: VimEnter autocommands
+58189.674  000.003: before starting main loop
+58189.922  000.248: first screen update
+58189.925  000.003: --- VIM STARTED ---
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.005  000.005: --- VIM STARTING ---
+000.067  000.062: Allocated generic buffers
+000.298  000.231: locale set
+000.316  000.018: GUI prepared
+000.318  000.002: clipboard setup
+000.324  000.006: window checked
+000.690  000.366: inits 1
+000.698  000.008: parsing arguments
+000.700  000.002: expanding arguments
+000.716  000.016: shell init
+045.967  045.251: xsmp init
+051.734  005.767: Termcap init
+051.802  000.068: inits 2
+051.948  000.146: init highlight
+096.650  000.049  000.049: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/autoload/paste.vim
+104.720  008.834  008.785: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/menu.vim
+104.756  026.898  018.064: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+104.848  000.042  000.042: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftplugin.vim
+104.907  000.012  000.012: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+104.989  000.038  000.038: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/indent.vim
+105.485  000.214  000.214: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+105.591  000.384  000.170: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/synload.vim
+105.629  000.475  000.091: sourcing /d/cosmos/ezbc/opt/vmi74/runtime/syntax/syntax.vim
+105.977  000.183  000.183: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+106.322  000.186  000.186: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+106.622  000.181  000.181: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+106.789  001.114  000.564: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/colors/desert.vim
+107.160  000.179  000.179: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+107.454  000.183  000.183: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+107.615  000.782  000.420: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/colors/desert.vim
+107.999  000.177  000.177: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+108.290  000.186  000.186: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+108.452  000.780  000.417: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/colors/desert.vim
+109.013  031.220  001.079: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/basic.vim
+109.198  000.147  000.147: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/filetypes.vim
+109.659  000.372  000.372: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/autoload/pathogen.vim
+1398.730  000.870  000.870: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftoff.vim
+1817.576  000.254  000.254: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-markdown/ftdetect/markdown.vim
+1919.779  308.382  308.128: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+3757.217  000.737  000.737: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftoff.vim
+4467.229  000.243  000.243: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nginx-vim/ftdetect/nginx.vim
+4602.005  000.211  000.211: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-bundle-mako/ftdetect/mako.vim
+4648.058  000.332  000.332: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/coffee.vim
+4734.543  000.214  000.214: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-less/ftdetect/less.vim
+4785.125  000.319  000.319: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-markdown/ftdetect/markdown.vim
+5042.879  000.258  000.258: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-markdown/ftdetect/markdown.vim
+5155.703  828.583  827.006: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+27598.660  27489.421  26352.477: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/plugins_config.vim
+28593.776  000.240  000.240: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+29519.076  000.248  000.248: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+29582.497  1826.132  1825.644: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-colorschemes/colors/desert.vim
+30902.207  000.241  000.241: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+30996.158  000.248  000.248: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/syntax/syncolor.vim
+31003.446  945.297  944.808: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/peaksea/colors/peaksea.vim
+31003.698  3405.938  635.509: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vimrcs/extended.vim
+32098.145  000.041  000.041: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+32681.210  000.034  000.034: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/filetype.vim
+32926.102  000.038  000.038: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/ftplugin.vim
+33220.459  2216.720  2216.607: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/my_configs.vim
+33220.493  33148.690  006.244: sourcing $HOME/.vimrc
+33220.500  019.862: sourcing vimrc file(s)
+34554.245  1213.287  1213.287: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ack.vim/plugin/ack.vim
+34616.657  001.495  001.495: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/bufexplorer/plugin/bufexplorer.vim
+34649.650  000.325  000.325: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ctrlp.vim/autoload/ctrlp/mrufiles.vim
+34650.010  023.779  023.454: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ctrlp.vim/plugin/ctrlp.vim
+34709.909  000.049  000.049: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/goyo.vim/plugin/goyo.vim
+34735.853  000.218  000.218: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/autoload/nerdtree.vim
+34748.464  000.715  000.715: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/path.vim
+34759.485  000.161  000.161: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/menu_controller.vim
+34831.565  000.158  000.158: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/menu_item.vim
+34876.168  000.185  000.185: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/key_map.vim
+34911.520  000.272  000.272: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/bookmark.vim
+34923.184  000.384  000.384: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/tree_file_node.vim
+34934.706  000.509  000.509: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/tree_dir_node.vim
+34946.436  000.330  000.330: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/opener.vim
+35011.092  000.299  000.299: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/creator.vim
+35022.974  000.114  000.114: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/flag_set.vim
+35049.516  000.218  000.218: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/nerdtree.vim
+35060.850  000.368  000.368: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/ui.vim
+35072.736  000.052  000.052: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/event.vim
+35107.476  000.076  000.076: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/notifier.vim
+35135.472  000.572  000.572: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/autoload/nerdtree/ui_glue.vim
+35531.599  000.201  000.201: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/exec_menuitem.vim
+35543.281  000.544  000.544: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/fs_menu.vim
+35726.191  000.044  000.044: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/nerdtree/nerdtree_plugin/exec_menuitem.vim
+35727.555  000.024  000.024: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/nerdtree/nerdtree_plugin/fs_menu.vim
+35864.421  1142.394  1136.950: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/nerdtree/plugin/NERD_tree.vim
+35964.969  000.149  000.149: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/open_file_under_cursor.vim/plugin/open_file_under_cursor.vim
+36314.169  335.140  335.140: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/taglist/plugin/taglist.vim
+36401.355  000.365  000.365: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/taglist.vim/plugin/taglist.vim
+36411.475  000.311  000.311: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/tlib/plugin/02tlib.vim
+36455.558  000.217  000.217: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline.vim
+36648.502  000.137  000.137: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/init.vim
+36736.646  000.181  000.181: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/parts.vim
+36737.435  314.035  313.500: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/plugin/airline.vim
+36842.394  000.393  000.393: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-expand-region/autoload/expand_region.vim
+36842.598  093.377  092.984: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-expand-region/plugin/expand_region.vim
+37125.416  223.152  223.152: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-fugitive/plugin/fugitive.vim
+37139.794  000.326  000.326: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-indent-object/plugin/indent-object.vim
+37240.757  000.472  000.472: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-multiple-cursors/plugin/multiple_cursors.vim
+37276.977  000.140  000.140: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-addon-mw-utils/autoload/funcref.vim
+37277.618  022.373  022.233: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-snipmate/plugin/snipMate.vim
+37287.864  000.044  000.044: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-snippets/plugin/vimsnippets.vim
+37306.417  001.093  001.093: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-surround/plugin/surround.vim
+37316.666  000.206  000.206: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-zenroom2/plugin/zenroom2.vim
+37492.434  001.166  001.166: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/delimitMate/autoload/delimitMate.vim
+37496.195  141.699  140.533: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/delimitMate/plugin/delimitMate.vim
+37528.802  011.500  011.500: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/mru/plugin/mru.vim
+37539.134  000.032  000.032: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/nerdtree/plugin/NERD_tree.vim
+37593.510  000.168  000.168: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/set_tabline/plugin/set_tabline.vim
+37808.253  000.193  000.193: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/autoloclist.vim
+37809.643  000.154  000.154: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/balloons.vim
+37811.179  000.404  000.404: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/checker.vim
+37812.833  000.256  000.256: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/cursor.vim
+37814.311  000.184  000.184: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/highlighting.vim
+37816.219  000.699  000.699: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/loclist.vim
+37817.767  000.207  000.207: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/modemap.vim
+37819.177  000.104  000.104: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/notifiers.vim
+37820.782  000.347  000.347: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/registry.vim
+37822.251  000.161  000.161: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/signs.vim
+37962.624  000.038  000.038: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/autoloclist.vim
+37978.123  000.022  000.022: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/balloons.vim
+37980.462  000.025  000.025: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/checker.vim
+37981.610  000.015  000.015: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/cursor.vim
+37983.080  000.011  000.011: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/highlighting.vim
+37984.392  000.014  000.014: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/loclist.vim
+37985.660  000.020  000.020: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/modemap.vim
+37986.882  000.017  000.017: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/notifiers.vim
+37988.128  000.018  000.018: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/registry.vim
+37989.344  000.011  000.011: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic/signs.vim
+38069.657  000.334  000.334: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/autoload/syntastic/util.vim
+38129.343  000.321  000.321: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/autoload/syntastic/log.vim
+38306.430  483.831  482.985: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/syntastic/plugin/syntastic.vim
+38333.261  000.291  000.291: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-peepopen/plugin/peepopen.vim
+38346.002  000.058  000.058: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-snipmate/plugin/snipMate.vim
+38389.883  000.046  000.046: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-surround/plugin/surround.vim
+38405.776  002.751  002.751: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/zencoding/plugin/zencoding.vim
+38406.139  000.084  000.084: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/getscriptPlugin.vim
+38406.579  000.411  000.411: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/gzip.vim
+38406.821  000.212  000.212: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/matchparen.vim
+38407.418  000.566  000.566: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/netrwPlugin.vim
+38407.516  000.047  000.047: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/rrhelper.vim
+38407.588  000.035  000.035: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/spellfile.vim
+38407.804  000.178  000.178: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/tarPlugin.vim
+38407.958  000.107  000.107: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/tohtml.vim
+38408.169  000.177  000.177: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/vimballPlugin.vim
+38408.433  000.216  000.216: sourcing /d/cosmos/ezbc/dot_files/.vim_runtime/vim74_runtime/plugin/zipPlugin.vim
+38421.374  000.436  000.436: sourcing /usr/users/ezbc/.vim_runtime/sources_forked/vim-snipmate/after/plugin/snipMate.vim
+38433.940  000.300  000.300: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-snipmate/after/plugin/snipMate.vim
+38438.905  1201.504: loading plugins
+38438.920  000.015: inits 3
+39868.590  001.236  001.236: sourcing $VIMRUNTIME/menu.vim
+39876.253  001.261  001.261: sourcing $HOME/.gvimrc
+149855.366  111413.949: starting GUI
+150416.459  032.799  032.799: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/ctrlp.vim/autoload/ctrlp/utils.vim
+150836.820  949.655: reading viminfo
+150837.152  000.332: GUI delay
+150841.173  004.021: register server name
+150841.206  000.033: setting raw mode
+150841.208  000.002: start termcap
+150841.269  000.061: clearing screen
+151153.609  000.340  000.340: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions.vim
+151251.185  000.091  000.091: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/quickfix.vim
+151400.447  000.105  000.105: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/netrw.vim
+151709.418  000.138  000.138: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/ctrlp.vim
+152184.456  000.203  000.203: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/branch.vim
+152467.610  000.098  000.098: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/syntastic.vim
+152776.656  000.168  000.168: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/whitespace.vim
+153075.799  000.123  000.123: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/wordcount.vim
+157021.990  000.148  000.148: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/section.vim
+157290.732  000.224  000.224: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/highlighter.vim
+158116.218  000.115  000.115: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/themes.vim
+158116.631  541.269  541.154: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/themes/luna.vim
+158260.524  000.151  000.151: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/util.vim
+158288.640  000.202  000.202: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/builder.vim
+158313.911  000.153  000.153: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/extensions/default.vim
+158327.563  6945.881: opening buffers
+158331.294  003.731: BufEnter autocommands
+158331.298  000.004: editing files in windows
+158360.978  000.069  000.069: sourcing /usr/users/ezbc/.vim_runtime/sources_non_forked/vim-airline/autoload/airline/deprecation.vim
+158362.553  031.186: VimEnter autocommands
+158362.555  000.002: before starting main loop
+158362.800  000.245: first screen update
+158362.802  000.002: --- VIM STARTED ---

@@ -8,6 +8,9 @@ setlocal spell spelllang=en_us   " Allows for spellchecking
 "vmap kj <Esc>
 "imap kj <Esc>l
 
+" prevent tab completion
+imap <Tab> <Tab>
+
 imap <A-a> <Esc>
 vmap <A-a> <Esc>
 
@@ -88,8 +91,8 @@ colorscheme antares
 set cursorline
 "hi CursorLine cterm=NONE ctermbg=darkred guibg=purple4
 hi Cursor guibg=purple
+hi CursorLine guibg=gray20
 set number
-set cursorline
 
 " -------------------------------- gvim --------------------------------------
 " ------------------------------------------------------------------------------

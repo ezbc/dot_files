@@ -167,9 +167,6 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     # Parellel programming
     export MADSDK_ROOT=~/opt/madsdk
 
-    # Vim runtime path
-    export VIMRUNTIME=/d/cosmos/ezbc/.vim_runtime/current
-
     # KARMA package
     #source /usr/local/karma/.karmarc
 
@@ -206,7 +203,6 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     alias sysmon='gnome-system-monitor'
     alias testinternet='/home/ezbc/opt/speedtest-cli'
     alias setdisplay='kcmshell5 kcm_kscreen &'
-    alias gvim='vim -g'
 
     cosmos='ezbc@cosmos.astro.wisc.edu:'
     bip='ezbc@bip.astro.wisc.edu:'
@@ -244,6 +240,10 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     
     # Texlive
 	export PATH=$HOME/.local/lib/texlive/bin/x86_64-linux:$PATH
+
+    # Vim runtime path
+    export VIMRUNTIME=/d/cosmos/ezbc/.new_vim/vim74_runtime
+    export VIMRUNTIME=$VIMRUNTIME:/d/cosmos/ezbc/.new_vim/
 
     # Google-chrome
     export PATH=$HOME/opt/usr/bin:$PATH
@@ -287,6 +287,7 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     alias dropbox='$HOME/apps/dropbox.py start -i'
     alias mendeley='$HOME/opt/mendeleydesktop-1.12.4-linux-x86_64/bin/mendeleydesktop'
     alias bundle='bundle2.0'
+    alias gvim='vim -g'
 
     #$HOME/apps/dropbox.py autostart y'
     # Deine user variables 
