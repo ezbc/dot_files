@@ -1,5 +1,6 @@
 
 setlocal spell spelllang=en_us   " Allows for spellchecking
+set spell spelllang=en_us   " Allows for spellchecking
 
 " mappings
 "imap jk <Esc>l
@@ -89,9 +90,12 @@ colorscheme antares
 " cursor line
 set cursorline
 "hi CursorLine cterm=NONE ctermbg=darkred guibg=purple4
-hi Cursor guibg=purple
-hi CursorLine guibg=gray20
+hi Cursor guibg=white guifg=black
+hi CursorLine guibg=gray30
 set number
+
+" Visual mode highlighting
+hi Visual guibg=white guifg=black 
 
 " -------------------------------- gvim --------------------------------------
 " ------------------------------------------------------------------------------
