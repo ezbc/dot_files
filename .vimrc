@@ -7,7 +7,7 @@ if $HOSTNAME == "latitude-laptop"
   source ~/.new_vim/vimrcs/extended.vim
   
   "try
-  source ~/.new_vim/my_configs.vim
+  source ~/.new_vim/vimrcs/my_configs.vim
   "catch
   "endtry
 else
