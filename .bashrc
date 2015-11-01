@@ -203,6 +203,7 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     alias sysmon='gnome-system-monitor'
     alias testinternet='/home/ezbc/opt/speedtest-cli'
     alias setdisplay='kcmshell5 kcm_kscreen &'
+    alias gvim='gvim -p'
 
     cosmos='ezbc@cosmos.astro.wisc.edu:'
     bip='ezbc@bip.astro.wisc.edu:'
@@ -286,7 +287,7 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     alias dropbox='$HOME/apps/dropbox.py start -i'
     alias mendeley='$HOME/opt/mendeleydesktop-1.12.4-linux-x86_64/bin/mendeleydesktop'
     alias bundle='bundle2.0'
-    alias gvim='vim -g'
+    alias gvim='vim -g -p'
 
     #$HOME/apps/dropbox.py autostart y'
     # Deine user variables 
