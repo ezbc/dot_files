@@ -126,7 +126,7 @@ autocmd FileType c,cpp set foldnestmax=2
 
 " Tab definitions for different filetypes
 autocmd BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 softtabstop=4 smarttab expandtab 		
-autocmd BufRead,BufNewFile *.html,*.md,*.tex set tabstop=2 shiftwidth=2 softtabstop=2 smarttab expandtab 		
+autocmd BufRead,BufNewFile *.html,*.md,*.tex,*.scss,*.css set tabstop=2 shiftwidth=2 softtabstop=2 smarttab expandtab
 
 " copy and paste commands
 vmap <C-c> "+yi
