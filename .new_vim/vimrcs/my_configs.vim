@@ -91,7 +91,7 @@ colorscheme antares
 set cursorline
 "hi CursorLine cterm=NONE ctermbg=darkred guibg=purple4
 hi Cursor guibg=white guifg=black
-hi CursorLine guibg=gray30
+hi CursorLine guibg=gray20
 set number
 
 " Visual mode highlighting
