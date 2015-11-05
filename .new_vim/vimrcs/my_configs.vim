@@ -97,6 +97,11 @@ set number
 " Visual mode highlighting
 hi Visual guibg=white guifg=black 
 
+" Tab line colors
+"hi TabLine guibg=green
+hi TabLineSel guibg=white guifg=black
+hi TabLineFill guibg=gray10
+
 " -------------------------------- gvim --------------------------------------
 " ------------------------------------------------------------------------------
 if has("gui_running")
