@@ -1,4 +1,4 @@
 [submodule "docs"]
 	path = docs
-	url = git@github.com:lervag/vimtex.git
+    url = git@github.com:lervag/vimtex.git
 	branch = master

@@ -91,11 +91,16 @@ colorscheme antares
 set cursorline
 "hi CursorLine cterm=NONE ctermbg=darkred guibg=purple4
 hi Cursor guibg=white guifg=black
-hi CursorLine guibg=gray30
+hi CursorLine guibg=gray20
 set number
 
 " Visual mode highlighting
 hi Visual guibg=white guifg=black 
+
+" Tab line colors
+"hi TabLine guibg=green
+hi TabLineSel guibg=white guifg=black
+hi TabLineFill guibg=gray10
 
 " -------------------------------- gvim --------------------------------------
 " ------------------------------------------------------------------------------
@@ -126,7 +131,7 @@ autocmd FileType c,cpp set foldnestmax=2
 
 " Tab definitions for different filetypes
 autocmd BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 softtabstop=4 smarttab expandtab 		
-autocmd BufRead,BufNewFile *.html,*.md,*.tex set tabstop=2 shiftwidth=2 softtabstop=2 smarttab expandtab 		
+autocmd BufRead,BufNewFile *.html,*.md,*.tex,*.scss,*.css set tabstop=2 shiftwidth=2 softtabstop=2 smarttab expandtab
 
 " copy and paste commands
 vmap <C-c> "+yi
