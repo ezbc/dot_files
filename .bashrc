@@ -167,6 +167,10 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     # Parellel programming
     export MADSDK_ROOT=~/opt/madsdk
 
+
+    # git auto complete
+    test -f ~/.git-completion.bash && . $_
+
     # KARMA package
     #source /usr/local/karma/.karmarc
 
