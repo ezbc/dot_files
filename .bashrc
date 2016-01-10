@@ -188,7 +188,8 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     alias iraf='cl'
     
     # TOPCAT
-    alias topcat='java -jar /home/ezbc/opt/topcat-lite.jar'
+    #alias topcat='java -jar /home/ezbc/opt/topcat-full.jar'
+    alias topcat='/home/ezbc/opt/topcat'
 
     # Bbarolo
     alias bbarolo='/home/ezbc/opt/Bbarolo_Linux_x64/Bbarolo'
@@ -208,6 +209,9 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     alias testinternet='/home/ezbc/opt/speedtest-cli'
     alias setdisplay='kcmshell5 kcm_kscreen &'
     alias gvim='gvim -p'
+    alias homedisplay='kquitapp plasmashell && kstart plasmashell && xrandr --auto --output HDMI2 --mode 1920x1080 --above eDP1 --primary'
+    alias turnoffhdmi='xrandr --output HDMI2 --off && kquitapp plasmashell && kstart plasmashell'
+    alias laptopdisplay=''
 
     cosmos='ezbc@cosmos.astro.wisc.edu:'
     bip='ezbc@bip.astro.wisc.edu:'
