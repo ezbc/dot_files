@@ -116,9 +116,9 @@ if has("gui_running")
     set lines=50
 
     au BufReadPre,TabEnter * let &numberwidth = float2nr(log10(line("$"))) + 3
-          \| let &columns = &numberwidth + 81
+          \| let &columns = &numberwidth + 82
     au BufRead * let &numberwidth = float2nr(log10(line("$"))) + 3
-          \| let &columns = &numberwidth + 81
+          \| let &columns = &numberwidth + 82
 
     "autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>'.&l:textwidth.'v.\+', -1)
 
