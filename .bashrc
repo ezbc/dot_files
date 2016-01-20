@@ -157,6 +157,7 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     export PATH=$PATH:/sbin/
     export PATH=$PATH:/usr/games/
     export PATH=$PATH:/home/ezbc/opt/hdf5-1.8.13/hdf5/bin
+    export PATH=$PATH:/home/ezbc/opt/otp_src_18.2.1/bin
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/research/python_modules/
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/brewing/modules/
     export GAUSSPY=/home/ezbc/classes/machine_learning/project/gausspy_module/gausspy/
@@ -172,11 +173,15 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     test -f ~/.git-completion.bash && . $_
 
     # KARMA package
-    #source /usr/local/karma/.karmarc
+    export KARMABASE=/usr/local/karma
+    export PATH=$PATH:/usr/local/karma/bin
 
     # Set up for Star-link
     #export STARLINK_DIR="/home/ezbc/opt/star-hawaiki"
     #source $STARLINK_DIR/etc/profile
+
+    # Matplotlibrc
+    export MATPLOTLIBRC=/home/ezbc/.config/matplotlibrc/
 
     # Set up for cloudy
     alias cloudy='/home/ezbc/opt/c13.03/source/sys_gcc/cloudy.exe'
