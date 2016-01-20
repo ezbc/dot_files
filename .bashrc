@@ -146,6 +146,8 @@ bigfiles () {
 if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; then
     PATH=/usr/bin/:/bin/
 
+    export HOME=/home/ezbc
+
     # Read in astro library for gdl
     export GDL_STARTUP=~/.gdl_startup
     export thunderbird=/usr/local/thunderbird
@@ -175,6 +177,9 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     # KARMA package
     export KARMABASE=/usr/local/karma
     export PATH=$PATH:/usr/local/karma/bin
+
+    # Casa 4.5
+    export PATH=$HOME/opt/casa-release-4.5.0-el6/bin:$PATH
 
     # Set up for Star-link
     #export STARLINK_DIR="/home/ezbc/opt/star-hawaiki"
