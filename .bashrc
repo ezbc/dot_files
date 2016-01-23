@@ -345,5 +345,5 @@ function start_agent {
     . "${SSH_ENV}" > /dev/null
     /usr/bin/ssh-add
 }
-   
+alias init_ssh='start_agent'
 
