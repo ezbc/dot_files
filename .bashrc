@@ -346,20 +346,4 @@ function start_agent {
     /usr/bin/ssh-add
 }
    
-#if [ -f "${SSH_ENV}" ]; then
-#     . "${SSH_ENV}" > /dev/null
-#     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-#        start_agent;
-#    }
-#else
-#    start_agent;
-#fi
 
-alias init_ssh='start_agent'
-
-# Add iraf setup commands
-#if [ -e /home/ezbc/.iraf/setup.sh ]; then
-#    source /home/ezbc/.iraf/setup.sh
-#fi
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
