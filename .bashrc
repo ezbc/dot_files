@@ -201,6 +201,9 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     #alias topcat='java -jar /home/ezbc/opt/topcat-full.jar'
     alias topcat='/home/ezbc/opt/topcat'
 
+    # PCGen, RPG character generators
+    alias pcgen='/home/ezbc/opt/pcgen/pcgen.sh'
+
     # Bbarolo
     alias bbarolo='/home/ezbc/opt/Bbarolo_Linux_x64/Bbarolo'
     
