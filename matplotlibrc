@@ -268,7 +268,8 @@ axes.labelweight    : 600  # weight of the x and y labels
                                             # as list of string colorspecs:
                                             # single letter, long name, or
                                             # web-style hex
-axes.color_cycle    : 000000, 7202f3, a11096, c63700, e48300
+#axes.color_cycle    : 000000, 7202f3, a11096, c63700, e48300
+axes.prop_cycle    : 000000, 7202f3, a11096, c63700, e48300
 
 #axes.xmargin        : 0  # x margin.  See `axes.Axes.margins`
 #axes.ymargin        : 0  # y margin See `axes.Axes.margins`
