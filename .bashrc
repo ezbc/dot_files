@@ -322,7 +322,7 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     engels='/d/engels2/ezbc/'
 
     # Go to computers directory
-    cd /d/cosmos/ezbc
+    #cd /d/cosmos/ezbc
     
     # Prompt command
     # Tell bash to execute this function just before displaying its prompt.
