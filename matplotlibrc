@@ -269,7 +269,7 @@ axes.labelweight    : 600  # weight of the x and y labels
                                             # single letter, long name, or
                                             # web-style hex
 #axes.color_cycle    : 000000, 7202f3, a11096, c63700, e48300
-axes.prop_cycle    : 000000, 7202f3, a11096, c63700, e48300
+axes.prop_cycle    : cycler('color', 'cymk') + cycler('lw', [1, 2, 3, 4])
 
 #axes.xmargin        : 0  # x margin.  See `axes.Axes.margins`
 #axes.ymargin        : 0  # y margin See `axes.Axes.margins`
