@@ -15,6 +15,9 @@ imap <Tab> <Tab>
 imap <A-a> <Esc>
 vmap <A-a> <Esc>
 
+" Resync syntax highlighting when fold interferes
+map <A-s> :syntax sync fromstart<Enter>
+
 " Tab switching
 map <C-space> :tabn<Enter>
 map <S-space> :tabp<Enter>
