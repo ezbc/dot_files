@@ -1,4 +1,5 @@
 if $HOSTNAME == "latitude-laptop"
+
   set runtimepath+=~/.new_vim
   
   source ~/.new_vim/vimrcs/basic.vim

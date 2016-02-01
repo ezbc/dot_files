@@ -18,9 +18,17 @@ vmap <A-a> <Esc>
 " Resync syntax highlighting when fold interferes
 map <A-s> :syntax sync fromstart<Enter>
 
+" line switching
+":nnoremap <silent> gw "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o><c-l>
+":nnoremap <silent> gr "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\_W\+<CR><c-l>
+
 " Tab switching
 map <C-space> :tabn<Enter>
 map <S-space> :tabp<Enter>
+
+" Line switching
+map <A-k> ddkkp " move down
+map <A-j> ddp " move up
 
 "set wildchar=<TAB>	" start wild expansion (auto-completioin of filename) 
                         " in the command line using <TAB>
