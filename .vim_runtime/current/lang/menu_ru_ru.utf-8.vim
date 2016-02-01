@@ -1,1 +1,0 @@
-menu_ru.utf-8.vim

@@ -1,1 +1,0 @@
-menu_ja.ujis.vim

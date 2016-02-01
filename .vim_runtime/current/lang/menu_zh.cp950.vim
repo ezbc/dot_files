@@ -1,1 +1,0 @@
-menu_zh.big5.vim

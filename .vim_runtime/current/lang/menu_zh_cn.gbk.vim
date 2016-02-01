@@ -1,1 +1,0 @@
-menu_zh_cn.18030.vim

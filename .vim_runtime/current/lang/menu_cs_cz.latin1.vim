@@ -1,1 +1,0 @@
-menu_cs.latin1.vim

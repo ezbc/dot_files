@@ -146,6 +146,8 @@ bigfiles () {
 if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; then
     PATH=/usr/bin/:/bin/
 
+    export HOME=/home/ezbc
+
     # Read in astro library for gdl
     export GDL_STARTUP=~/.gdl_startup
     export thunderbird=/usr/local/thunderbird
@@ -157,6 +159,7 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     export PATH=$PATH:/sbin/
     export PATH=$PATH:/usr/games/
     export PATH=$PATH:/home/ezbc/opt/hdf5-1.8.13/hdf5/bin
+    export PATH=$PATH:/home/ezbc/opt/otp_src_18.2.1/bin
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/research/python_modules/
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/brewing/modules/
     export GAUSSPY=/home/ezbc/classes/machine_learning/project/gausspy_module/gausspy/
@@ -172,11 +175,18 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     test -f ~/.git-completion.bash && . $_
 
     # KARMA package
-    #source /usr/local/karma/.karmarc
+    export KARMABASE=/usr/local/karma
+    export PATH=$PATH:/usr/local/karma/bin
+
+    # Casa 4.5
+    export PATH=$HOME/opt/casa-release-4.5.0-el6/bin:$PATH
 
     # Set up for Star-link
     #export STARLINK_DIR="/home/ezbc/opt/star-hawaiki"
     #source $STARLINK_DIR/etc/profile
+
+    # Matplotlibrc
+    export MATPLOTLIBRC=/home/ezbc/.config/matplotlibrc/
 
     # Set up for cloudy
     alias cloudy='/home/ezbc/opt/c13.03/source/sys_gcc/cloudy.exe'
@@ -188,7 +198,11 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     alias iraf='cl'
     
     # TOPCAT
-    alias topcat='java -jar /home/ezbc/opt/topcat-lite.jar'
+    #alias topcat='java -jar /home/ezbc/opt/topcat-full.jar'
+    alias topcat='/home/ezbc/opt/topcat'
+
+    # PCGen, RPG character generators
+    alias pcgen='/home/ezbc/opt/pcgen/pcgen.sh'
 
     # Bbarolo
     alias bbarolo='/home/ezbc/opt/Bbarolo_Linux_x64/Bbarolo'
@@ -208,6 +222,9 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     alias testinternet='/home/ezbc/opt/speedtest-cli'
     alias setdisplay='kcmshell5 kcm_kscreen &'
     alias gvim='gvim -p'
+    alias homedisplay='kquitapp plasmashell && kstart plasmashell && xrandr --auto --output HDMI2 --mode 1920x1080 --above eDP1 --primary'
+    alias turnoffhdmi='xrandr --output HDMI2 --off && kquitapp plasmashell && kstart plasmashell'
+    alias laptopdisplay=''
 
     cosmos='ezbc@cosmos.astro.wisc.edu:'
     bip='ezbc@bip.astro.wisc.edu:'
@@ -305,7 +322,7 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
     engels='/d/engels2/ezbc/'
 
     # Go to computers directory
-    cd /d/cosmos/ezbc
+    #cd /d/cosmos/ezbc
     
     # Prompt command
     # Tell bash to execute this function just before displaying its prompt.
@@ -328,21 +345,5 @@ function start_agent {
     . "${SSH_ENV}" > /dev/null
     /usr/bin/ssh-add
 }
-   
-#if [ -f "${SSH_ENV}" ]; then
-#     . "${SSH_ENV}" > /dev/null
-#     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-#        start_agent;
-#    }
-#else
-#    start_agent;
-#fi
-
 alias init_ssh='start_agent'
 
-# Add iraf setup commands
-#if [ -e /home/ezbc/.iraf/setup.sh ]; then
-#    source /home/ezbc/.iraf/setup.sh
-#fi
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

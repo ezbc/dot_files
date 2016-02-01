@@ -1,1 +1,0 @@
-menu_zh.cp936.vim

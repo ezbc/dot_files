@@ -1,1 +1,0 @@
-menu_sk.cp1250.vim
