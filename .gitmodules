@@ -1,0 +1,3 @@
+[submodule ".new_vim/sources_forked/SimplyFold"]
+	path = .new_vim/sources_forked/SimplyFold
+	url = https://github.com/tmhedberg/SimpylFold.git
