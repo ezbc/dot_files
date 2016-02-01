@@ -264,7 +264,7 @@ if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || 
 	export PATH=$HOME/.local/lib/texlive/bin/x86_64-linux:$PATH
 
     # Vim runtime path
-    export VIMRUNTIME=/d/cosmos/ezbc/.vim_runtime/current
+    export VIMRUNTIME=~/.new_vim
 
     # Google-chrome
     export PATH=$HOME/opt/usr/bin:$PATH
