@@ -12,6 +12,7 @@ set spell spelllang=en_us   " Allows for spellchecking
 " prevent tab completion
 imap <Tab> <Tab>
 
+" escape to normal mode with Alt+a
 imap <A-a> <Esc>
 vmap <A-a> <Esc>
 
