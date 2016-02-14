@@ -1,5 +1,3 @@
-
-
 prompt_command () {
     # Capture the output of the "git status" command.
     git_status="$(git status 2> /dev/null)"
