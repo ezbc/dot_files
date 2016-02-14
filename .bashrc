@@ -225,6 +225,7 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     alias homedisplay='kquitapp plasmashell && kstart plasmashell && xrandr --auto --output HDMI2 --mode 1920x1080 --above eDP1 --primary'
     alias turnoffhdmi='xrandr --output HDMI2 --off && kquitapp plasmashell && kstart plasmashell'
     alias laptopdisplay=''
+    alias gitremovebigfiles='java -jar ~/opt/bfg-1.12.8.jar --strip-blobs-bigger-than'
 
     cosmos='ezbc@cosmos.astro.wisc.edu:'
     bip='ezbc@bip.astro.wisc.edu:'
