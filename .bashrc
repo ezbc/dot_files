@@ -156,6 +156,7 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; 
     export PATH=$PATH:'/home/elijah/applications/miriad/bin/linux/miriad'
     export PATH=$PATH:/usr/local/bin/miriad
     export PATH=$PATH:/usr/local/bin
+    export PATH=$PATH:~/bash_scripts/
     export PATH=$PATH:/sbin/
     export PATH=$PATH:/usr/games/
     export PATH=$PATH:/home/ezbc/opt/hdf5-1.8.13/hdf5/bin
