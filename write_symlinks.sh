@@ -17,3 +17,4 @@ ln -s $DOTLOC/matplotlibrc $XDG_CONFIG_HOME/matplotlib/matplotlibrc
 ln -s $DOTLOC/matplotlibrc $HOME/.matplotlib/matplotlibrc
 sudo ln -s $DOTLOC/matplotlibrc /etc/matplotlibrc
 sudo ln -s $DOTLOC/matplotlibrc /usr/lib64/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc
+
