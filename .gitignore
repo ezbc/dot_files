@@ -5,5 +5,5 @@
 *.pdf
 *.out
 .vim_runtime/temp_dirs
-
+.new_vim/sources_forked/SimpylFold/spell/en.utf-8.add*
 
