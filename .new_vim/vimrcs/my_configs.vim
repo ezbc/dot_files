@@ -156,6 +156,9 @@ filetype on			" Enable filetype detection
 "filetype indent on	" Enable filetype-specific indenting
 filetype plugin on	" Enable filetype-specific plugins
 
+" Commit messages for git
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
 " ----------------------------------------------------------------------------
 " plug-in settings
 " ----------------------------------------------------------------------------
