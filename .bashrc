@@ -143,7 +143,7 @@ bigfiles () {
 }
 
 # ========================== Set bashrc for elijah ============================
-if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; then
+if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == laptop ] ; then
     PATH=/usr/bin/:/bin/
 
     export HOME=/home/ezbc
