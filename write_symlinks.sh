@@ -1,6 +1,6 @@
 
 # Get the location for the dot_files repo
-if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == latitude-laptop ] ; then
+if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == laptop ] ; then
     export DOTLOC=/home/ezbc/dot_files
 fi
 if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || [ $HOSTNAME == uwast ]; then
@@ -15,6 +15,6 @@ ln -s $DOTLOC/.tcshrc ~/.tcshrc
 ln -s $DOTLOC/matplotlibrc $HOME/.config/matplotlib/matplotlibrc
 ln -s $DOTLOC/matplotlibrc $XDG_CONFIG_HOME/matplotlib/matplotlibrc
 ln -s $DOTLOC/matplotlibrc $HOME/.matplotlib/matplotlibrc
-sudo ln -s $DOTLOC/matplotlibrc /etc/matplotlibrc
-sudo ln -s $DOTLOC/matplotlibrc /usr/lib64/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc
+ln -s $DOTLOC/matplotlibrc /etc/matplotlibrc
+ln -s $DOTLOC/matplotlibrc /usr/lib64/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc
 
