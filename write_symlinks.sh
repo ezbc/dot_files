@@ -2,6 +2,7 @@
 # Get the location for the dot_files repo
 if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == laptop ] ; then
     export DOTLOC=/home/ezbc/dot_files
+    echo Writing symlinks for $HOSTNAME
 fi
 if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || [ $HOSTNAME == uwast ]; then
     export DOTLOC=/d/cosmos/ezbc/dot_files
