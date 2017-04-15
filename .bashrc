@@ -149,8 +149,6 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == laptop ] ; then
     export HOME=/home/ezbc
 
     # Read in astro library for gdl
-    export GDL_STARTUP=~/.gdl_startup
-    export thunderbird=/usr/local/thunderbird
     export vnc=/usr/local/bin/.VNC-Viewer-5.0.5-Linux-x86
     export PATH=$PATH:/usr/local/bin/casa
     export PATH=$PATH:'/home/elijah/applications/miriad/bin/linux/miriad'
@@ -163,40 +161,16 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == laptop ] ; then
     export PATH=$PATH:/home/ezbc/opt/otp_src_18.2.1/bin
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/research/python_modules/
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/brewing/modules/
-    export GAUSSPY=/home/ezbc/classes/machine_learning/project/gausspy_module/gausspy/
-    export PYTHONPATH=$PYTHONPATH:/home/ezbc/classes/machine_learning/project/gausspy_module/gausspy
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/python/galactus
 
-
-    # Parellel programming
-    export MADSDK_ROOT=~/opt/madsdk
-
-
     # git auto complete
-    test -f ~/.git-completion.bash && . $_
-
-    # KARMA package
-    export KARMABASE=/usr/local/karma
-    export PATH=$PATH:/usr/local/karma/bin
-
-    # Casa 4.5
-    export PATH=$HOME/opt/casa-release-4.5.0-el6/bin:$PATH
-
-    # Set up for Star-link
-    #export STARLINK_DIR="/home/ezbc/opt/star-hawaiki"
-    #source $STARLINK_DIR/etc/profile
+    source ~/opt/.git-completion.bash
 
     # Matplotlibrc
     export MATPLOTLIBRC=/home/ezbc/.config/matplotlibrc/
 
-    # Set up for cloudy
-    alias cloudy='/home/ezbc/opt/c13.03/source/sys_gcc/cloudy.exe'
-
     # Kerbel Space program
     alias kerbal='cd /home/ezbc/opt/KSP_linux/ && /home/ezbc/opt/KSP_linux/KSP.x86_64'
-
-    # Switch iraf login command
-    alias iraf='cl'
     
     # TOPCAT
     #alias topcat='java -jar /home/ezbc/opt/topcat-full.jar'
@@ -204,9 +178,6 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == laptop ] ; then
 
     # PCGen, RPG character generators
     alias pcgen='/home/ezbc/opt/pcgen/pcgen.sh'
-
-    # Bbarolo
-    alias bbarolo='/home/ezbc/opt/Bbarolo_Linux_x64/Bbarolo'
     
     # Set up aliases
     alias eclipse='/usr/bin/eclipse'
@@ -216,11 +187,8 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == laptop ] ; then
                       #'sudo ifconfig eth0 down && '\
                       #'sudo ifconfig eth0 up && '\
                       #'sudo service network-manager start'
-    alias sshbip='ssh -XY ezbc@bip.astro.wisc.edu'
-    alias sshcosmos='ssh -XY ezbc@cosmos.astro.wisc.edu'
     alias screenshot='gnome-screenshot -a'
     alias sysmon='gnome-system-monitor'
-    alias testinternet='/home/ezbc/opt/speedtest-cli'
     alias setdisplay='kcmshell5 kcm_kscreen &'
     alias gvim='gvim -p'
     alias homedisplay='kquitapp plasmashell && kstart plasmashell && xrandr --auto --output HDMI2 --mode 1920x1080 --above eDP1 --primary'
@@ -228,107 +196,10 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == laptop ] ; then
     alias laptopdisplay=''
     alias gitremovebigfiles='java -jar ~/opt/bfg-1.12.8.jar --strip-blobs-bigger-than'
 
-    cosmos='ezbc@cosmos.astro.wisc.edu:'
-    bip='ezbc@bip.astro.wisc.edu:'
-    LOGIN_ARCH=linux
-
     # Prompt command
     # Tell bash to execute this function just before displaying its prompt.
     PROMPT_COMMAND=prompt_command_laptop
 
-fi
-
-# ========================== Set bashrc for ezbc ============================
-if [ $HOSTNAME == cosmos ] || [ $HOSTNAME == bip ] || [ $HOSTNAME == leffe ] || [ $HOSTNAME == uwast ]; then
-
-    # IDL
-    export IDL_STARTUP=$HOME/.idlstartup
-    export IDL_PATH=$IDL_PATH:+$HOME/idl/
-    export IDL_PATH=$IDL_PATH:+/usr/local/rsi/idl/idl82/lib/
-
-    # KARMA, Miriad, GIPSY, and CASA
-    alias miriad='tcsh | miriad'
-    
-    # Python
-    export PYTHONPATH=$PYTHONPATH:/d/cosmos/ezbc/research/astropy
-    export PYTHONPATH=$PYTHONPATH:$HOME/.local/lib/python2.7/site-packages
-    export PYTHONPATH=$PYTHONPATH:$HOME/.local/lib64/python2.7/site-packages
-    export PYTHONPATH=$PYTHONPATH:/d/bip3/ezbc/python/
-    export PYTHONPATH=$PYTHONPATH:/d/cosmos/ezbc/research/python_modules
-    export PYTHONPATH=$PYTHONPATH:/d/cosmos/ezbc/research/python_modules/miriad
-    export \
-        PYTHONPATH=$PYTHONPATH:/d/cosmos/ezbc/research/python_modules/planckpy
-    #export PYTHONPATH=$PYTHONPATH:/.local/lib/python2.7/site-packages/scipy
-    #export PYTHONPATH=$PYTHONPATH:/.local/lib/python2.7/site-packages/
-    export PATH=/d/bip3/ezbc/python:$PATH # anaconda
-    
-    # Texlive
-	export PATH=$HOME/.local/lib/texlive/bin/x86_64-linux:$PATH
-
-    # Vim runtime path
-    export VIMRUNTIME=~/.new_vim
-
-    # Google-chrome
-    export PATH=$HOME/opt/usr/bin:$PATH
-
-    # Local bin
-    export PATH=$HOME/.local/bin:$PATH
-
-    # Cosmos bin
-    export PATH=/d/cosmos/ezbc/.local/bin:$PATH
-
-    # Nodejs
-    export PATH=$HOME/opt/node-v0.12.0/~/.local/lib/bin:$PATH
-
-    # Ruby
-    export PATH=$HOME/.gem/ruby/2.0.0/bin:$PATH
-
-    # Set display environment for X11 forwarding
-    #export DISPLAY=localhost:11.0
-
-    # Aliases
-    alias cdtaurus='cd /d/bip3/ezbc/taurus'
-    alias cdperseus='cd /d/bip3/ezbc/perseus'
-    alias cdcosmos='cd /d/cosmos/ezbc'
-    alias engels='cd /d/engels2/ezbc/'
-    alias sshbip='ssh -XY bip'
-    alias latitude='ezbc@144.92.179.191'
-    alias sshlatitude='ssh -XY ezbc@144.92.179.191'
-    alias miriad='tcsh -c miriad'
-    alias kvis='tcsh -c kvis'
-    alias kpvslice='tcsh -c kpvslice'
-    alias gipsy='tcsh -c gipsy'
-    alias sl='ls --color=auto'
-    alias clean='rm -rf #* .*.swp .*.swn .*.swo'
-    alias mac='ssh -XY research@141.140.86.26'
-    alias screenshot='gnome-screenshot -a'
-    alias ipython='/d/bip3/ezbc/.local/bin/ipython'
-    alias screen='~/apps/screen/bin/screen'
-    alias sysmon='gnome-system-monitor'
-    alias view='eog'
-    alias xflux='$HOME/apps/xflux -z 53703'
-    alias dropbox='$HOME/apps/dropbox.py start -i'
-    alias mendeley='$HOME/opt/mendeleydesktop-1.12.4-linux-x86_64/bin/mendeleydesktop'
-    alias bundle='bundle2.0'
-    alias gvim='vim -g -p'
-
-    #$HOME/apps/dropbox.py autostart y'
-    # Deine user variables 
-    downloads='/d/bip3/ezbc/Downloads/'
-    mac='research@141.140.86.26:'
-    elijah='elijah@144.92.179.225:'
-    home='elijah@192.168.1.124:'
-    cosmos='/d/cosmos/ezbc/'
-    classes='/d/cosmos/ezbc/classes/'
-    bip3='/d/bip3/ezbc/'
-    engels='/d/engels2/ezbc/'
-
-    # Go to computers directory
-    #cd /d/cosmos/ezbc
-    
-    # Prompt command
-    # Tell bash to execute this function just before displaying its prompt.
-    PROMPT_COMMAND=prompt_command_work
 fi
 
 #===============================================================================
