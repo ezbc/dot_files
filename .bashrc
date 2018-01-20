@@ -22,7 +22,7 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-shopt -s globstar
+#shopt -s globstar/
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -36,8 +36,6 @@ fi
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-
-alias ls='ls --color=auto'
 
 chkload () { #gets the current 1m avg CPU load
     local CURRLOAD=`uptime|awk '{print $8}'`
@@ -55,7 +53,7 @@ chkload () { #gets the current 1m avg CPU load
 # ==================== Colors ====================
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 [ -e "$DIR_COLORS" ] || DIR_COLORS=""
-eval "`dircolors -b $DIR_COLORS`"
+#eval "`dircolors -b $DIR_COLORS`"
 
 # Set colors
 BLACK='\e[0;30m'
@@ -142,6 +140,36 @@ bigfiles () {
     du * | sort -nr | head -n $NUM_FILES
 }
 
+# ============================= default bashrc  ================================
+if [ "default" == "default" ]; then
+
+    export PATH=$PATH:~/.bash_scripts/
+
+    # git auto complete
+    source git-completion.bash
+
+    # Prompt command
+    # Tell bash to execute this function just before displaying its prompt.
+    PROMPT_COMMAND=prompt_command_laptop
+
+fi
+
+# ========================== Set bashrc for elijah ============================
+if [ $HOSTNAME == Omni-MAC-3622 ]; then
+    PATH=/usr/bin/:/bin/
+
+    export PATH=$PATH:/usr/local/bin
+    export PATH=$PATH:~/.bash_scripts/
+
+    # git auto complete
+    source git-completion.bash
+
+    # Prompt command
+    # Tell bash to execute this function just before displaying its prompt.
+    PROMPT_COMMAND=prompt_command_laptop
+
+fi
+
 # ========================== Set bashrc for elijah ============================
 if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == laptop ] ; then
     PATH=/usr/bin/:/bin/
@@ -164,7 +192,7 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == laptop ] ; then
     export PYTHONPATH=$PYTHONPATH:/home/ezbc/python/galactus
 
     # git auto complete
-    source ~/opt/.git-completion.bash
+    source ./git-completion.bash
 
     # Matplotlibrc
     export MATPLOTLIBRC=/home/ezbc/.config/matplotlibrc/
@@ -220,3 +248,14 @@ function start_agent {
 }
 alias init_ssh='start_agent'
 
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/elijah/opt/google-cloud-sdk/path.bash.inc' ]; then source '/Users/elijah/opt/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/elijah/opt/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/elijah/opt/google-cloud-sdk/completion.bash.inc'; fi
