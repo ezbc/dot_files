@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+# first check if input file is found
+if [ ! -f $2 ]; then
+    echo "Input file not found!"
+    exit 1
+fi
+
+# reduce the filesize with ghostscript
+gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -sOutputFile=$1 $2
+

@@ -1,0 +1,17 @@
+#!/bin/bash
+# Recursively searches for and replaces text in files within a directory.
+# ARGUMENTS
+# #########
+# $1: directory to search
+# $2: text to replace
+# $3: replacement text
+
+# EXAMPLE:
+# ########
+# $ replace-text directory-to-search text-to-replace replacement-text
+
+# find and replace strings in files with sed regex
+# avoid directories
+
+grep -rl --exclude-dir="*.git" "$2" "$1" | xargs sed -i s^"$2"^"$3"^g
+

@@ -143,10 +143,12 @@ bigfiles () {
 # ============================= default bashrc  ================================
 if [ "default" == "default" ]; then
 
-    export PATH=$PATH:~/.bash_scripts/
+    export BASHENV=~/bash_env
+
+    export PATH=$PATH:$BASHENV/bin
 
     # git auto complete
-    source git-completion.bash
+    source $BASHENV/bin/git-completion.bash
 
     # Prompt command
     # Tell bash to execute this function just before displaying its prompt.
