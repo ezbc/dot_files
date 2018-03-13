@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# make the opt directory
-mkdir -p ~/opt
+bash ./lib/write_symlinks.sh
 
-# get a script for git auto completion
-wget -O ~/opt/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash 
 
