@@ -259,3 +259,4 @@ if [ -f '/Users/elijah/opt/google-cloud-sdk/path.bash.inc' ]; then source '/User
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/elijah/opt/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/elijah/opt/google-cloud-sdk/completion.bash.inc'; fi
+
