@@ -112,7 +112,7 @@ prompt_command_laptop () {
     git_status="$(git status 2> /dev/null)"
 
     # Set color based on clean/staged/dirty.
-    if [[ ${git_status} =~ "working directory clean" ]]; then
+    if [[ ${git_status} =~ "working tree clean" ]]; then
         state="${GREEN}"
     elif [[ ${git_status} =~ "Changes to be committed" ]]; then
         state="${YELLOW}"
@@ -261,3 +261,6 @@ if [ -f '/Users/elijah/opt/google-cloud-sdk/path.bash.inc' ]; then source '/User
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/elijah/opt/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/elijah/opt/google-cloud-sdk/completion.bash.inc'; fi
+
+# added by travis gem
+[ -f /Users/ezbc/.travis/travis.sh ] && source /Users/ezbc/.travis/travis.sh
