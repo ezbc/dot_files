@@ -143,7 +143,7 @@ bigfiles () {
 # ============================= default bashrc  ================================
 if [ "default" == "default" ]; then
 
-    export BASHENV=~/bash_env
+    export BASHENV=~/dot_files
 
     export PATH=$PATH:$BASHENV/bin
 
