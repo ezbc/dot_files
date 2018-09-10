@@ -150,21 +150,7 @@ if [ "default" == "default" ]; then
     # git auto complete
     source $BASHENV/bin/git-completion.bash
 
-    # Prompt command
-    # Tell bash to execute this function just before displaying its prompt.
-    PROMPT_COMMAND=prompt_command_laptop
-
-fi
-
-# ========================== Set bashrc for elijah ============================
-if [ $HOSTNAME == Omni-MAC-3622 ]; then
-    PATH=/usr/bin/:/bin/
-
-    export PATH=$PATH:/usr/local/bin
-    export PATH=$PATH:~/.bash_scripts/
-
-    # git auto complete
-    source git-completion.bash
+    export SUBLIME_USER_PREFS="~/Library/Application Support/Sublime Text 3/Packages/User"
 
     # Prompt command
     # Tell bash to execute this function just before displaying its prompt.
