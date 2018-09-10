@@ -254,10 +254,17 @@ alias init_ssh='start_agent'
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+##########
+# PYTHON #
+##########
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
+
+# Make python3 the default
+alias python='python3'
+
 
 # added by travis gem
 [ -f /Users/ezbc/.travis/travis.sh ] && source /Users/ezbc/.travis/travis.sh
