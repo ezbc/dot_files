@@ -218,6 +218,24 @@ if [ $HOSTNAME == localhost.localdomain ] || [ $HOSTNAME == laptop ] ; then
 
 fi
 
+if [ $HOSTNAME == "mac" ]; then
+
+    # Node Version Manager
+    export NVM_DIR=~/.nvm
+    source $(brew --prefix nvm)/nvm.sh
+fi
+
+if [ $HOSTNAME == "elijah-ThinkPad-T480s" ]; then
+
+    echo ""
+    export SUBLIME_SETTINGS="/home/elijah/.config/sublime-text-3/Packages/User"
+
+    # Node Version Manager
+    export NVM_DIR=~/.nvm
+    source "$NVM_DIR/nvm.sh"
+    
+fi
+
 #===============================================================================
 # Set up SSH environment
 #===============================================================================
@@ -235,10 +253,6 @@ function start_agent {
     /usr/bin/ssh-add
 }
 alias init_ssh='start_agent'
-
-# Node Version Manager
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 
 ##########
 # PYTHON #
@@ -262,3 +276,7 @@ if [ -f '/Users/Elijah/Downloads/google-cloud-sdk/path.bash.inc' ]; then source 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/Elijah/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/Elijah/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
+export http_proxy=''
+export https_proxy=''
+export ftp_proxy=''
+export socks_proxy=''

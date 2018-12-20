@@ -1,0 +1,44 @@
+# example user config (see 'hg help config' for more info)
+[ui]
+# name and email, e.g.
+# username = Jane Doe <jdoe@example.com>
+username = ebernstein-cooper@lexile.com
+editor=vim
+ignore=~/.hgignore
+ssh = ssh -C
+merge = vimdiff
+
+# We recommend enabling tweakdefaults to get slight improvements to
+# the UI over time. Make sure to set HGPLAIN in the environment when
+# writing scripts!
+# tweakdefaults = True
+
+# uncomment to disable color in command output
+# (see 'hg help color' for details)
+# color = never
+
+# uncomment to disable command output pagination
+# (see 'hg help pager' for details)
+# paginate = never
+
+[extensions]
+# uncomment these lines to enable some popular extensions
+# (see 'hg help extensions' for more info)
+#
+# churn =
+purge =
+shelve = 
+mq = 
+
+[merge-tools]
+vimdiff.executable = vim
+#vimdiff.args = -d $base $local $output $other +close +close
+#vimdiff.args = -d $base $local $output $other
+
+#   [merge-tools]
+#   vimdiff.executable = vim
+#   vimdiff.args = -f -d -c 'wincmd J' "$output" "$local" "$base" "$other" 
+[merge-tools]
+vimdiff.executable = vimdiff
+vimdiff.args = -f -d $output -M $local $base $other -c "wincmd J" -c "set modifiable" -c "set write"
+vimdiff.premerge = keep
