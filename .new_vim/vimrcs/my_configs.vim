@@ -208,6 +208,7 @@ syn region markdownItalic start="[^_ ]\@<=__\@!\|_\@<!_[^_]\@=" end="[^_ ]\@<=_\
 setlocal spelllang=en_us   " Allows for spellchecking
 set spelllang=en_us   " Allows for spellchecking
 
-hi clear SpellBad
-hi SpellBad ctermfg=015 ctermbg=000 cterm=none guifg=#FFFFFF guibg=#000000 gui=none
+hi clear SpellBad SpellCap
+hi SpellBad ctermfg=015 ctermbg=000 cterm=none guifg=red guibg=#000000 gui=none
+hi SpellCap ctermfg=013 ctermbg=000 cterm=none guifg=lightred guibg=#000000 gui=none
 
