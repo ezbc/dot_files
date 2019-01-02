@@ -1,7 +1,4 @@
 
-setlocal spell spelllang=en_us   " Allows for spellchecking
-set spell spelllang=en_us   " Allows for spellchecking
-
 " mappings
 "imap jk <Esc>l
 "vmap jk <Esc>
@@ -101,7 +98,7 @@ colorscheme antares
 
 " cursor line
 set cursorline
-"hi CursorLine cterm=NONE ctermbg=darkred guibg=purple4
+" hi CursorLine cterm=NONE ctermbg=darkred guibg=purple4
 hi Cursor guibg=white guifg=black
 hi CursorLine guibg=gray20
 set number
@@ -156,9 +153,6 @@ filetype on			" Enable filetype detection
 "filetype indent on	" Enable filetype-specific indenting
 filetype plugin on	" Enable filetype-specific plugins
 
-" Commit messages for git
-autocmd Filetype gitcommit setlocal spell textwidth=72
-
 " ----------------------------------------------------------------------------
 " plug-in settings
 " ----------------------------------------------------------------------------
@@ -202,9 +196,18 @@ syn region markdownItalic start="[^_ ]\@<=__\@!\|_\@<!_[^_]\@=" end="[^_ ]\@<=_\
 " ----------------------------
 " Vimdiff syntax highlighting
 " ---------------------------
-hi DiffAdd      gui=none    guifg=NONE          guibg=#bada9f
-hi DiffChange   gui=none    guifg=NONE          guibg=#e5d5ac
-hi DiffDelete   gui=bold    guifg=#ff8080       guibg=#ffb0b0
-hi DiffText     gui=none    guifg=NONE          guibg=#8cbee2
+" hi DiffAdd      gui=none    guifg=NONE          guibg=#bada9f
+" hi DiffChange   gui=none    guifg=NONE          guibg=#e5d5ac
+" hi DiffDelete   gui=bold    guifg=#ff8080       guibg=#ffb0b0
+" hi DiffText     gui=none    guifg=NONE          guibg=#8cbee2
 
+
+" ----------------------------------
+"  Spell Highlighting
+" ----------------------------------
+setlocal spelllang=en_us   " Allows for spellchecking
+set spelllang=en_us   " Allows for spellchecking
+
+hi clear SpellBad
+hi SpellBad ctermfg=015 ctermbg=000 cterm=none guifg=#FFFFFF guibg=#000000 gui=none
 

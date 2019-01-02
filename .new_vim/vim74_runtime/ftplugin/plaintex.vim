@@ -35,3 +35,5 @@ let &cpo = s:save_cpo
 unlet s:save_cpo
 
 " vim:sts=2:sw=2:
+
+setlocal spell
