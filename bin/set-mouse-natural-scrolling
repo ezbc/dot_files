@@ -1,0 +1,2 @@
+id=$(xinput list | grep -Po $1'.*id=\K[0-9]+') 
+xinput --set-int-prop $id "libinput Natural Scrolling Enabled" 8 1
