@@ -2,7 +2,7 @@
 [ui]
 # name and email, e.g.
 # username = Jane Doe <jdoe@example.com>
-username = ebernstein-cooper@lexile.com
+username = ebernsteincooper
 editor=vim
 ignore=~/.hgignore
 ssh = ssh -C
