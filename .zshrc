@@ -1,8 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export DOTFILES=/home/elijah/dot_files/
+
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/elijah/.oh-my-zsh"
+export ZSH="/home/elijah/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -64,8 +66,17 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  mercurial
+  #mercurial
   zsh-completions
+  colored-man-pages
+  history
+  aws
+  docker
+  pip
+  vi-mode
+  #virtualenv
+  #vagrant
+  npm
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -100,6 +111,8 @@ autoload -U compinit && compinit
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias python=python3
+alias pip=pip3
 #
 #
 ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
@@ -127,3 +140,29 @@ source "$NVM_DIR/nvm.sh"
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /home/elijah/.nvm/versions/node/v11.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /home/elijah/.nvm/versions/node/v11.12.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
+
+# For using local history
+bindkey "${key[Up]}" up-line-or-local-history
+bindkey "${key[Down]}" down-line-or-local-history
+
+up-line-or-local-history() {
+    zle set-local-history 1
+    zle up-line-or-history
+    zle set-local-history 0
+}
+zle -N up-line-or-local-history
+down-line-or-local-history() {
+    zle set-local-history 1
+    zle down-line-or-history
+    zle set-local-history 0
+}
+zle -N down-line-or-local-history
+
+eval $(thefuck --alias)
+
+export CURRENT_UID=$(id -u):$(id -g)
+
+alias bfg="java -jar ~/.local/lib/bfg.jar"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

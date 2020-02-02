@@ -263,6 +263,7 @@ export PATH
 
 # Make python3 the default
 alias python='python3'
+alias pip='pip3'
 
 
 # added by travis gem
@@ -295,3 +296,5 @@ else
 fi
 unset __conda_setup
 # <<< conda init <<<
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
