@@ -113,6 +113,7 @@ autoload -U compinit && compinit
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias python=python3
 alias pip=pip3
+alias docker-pull-latest=docker images | grep -Ev "(REPOSITORY|none|\_)" | awk '{print ($1 ":" $2)}' | xargs -L1 docker pull
 #
 #
 ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
@@ -166,3 +167,6 @@ export CURRENT_UID=$(id -u):$(id -g)
 alias bfg="java -jar ~/.local/lib/bfg.jar"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# added by travis gem
+[ -f /home/elijah/.travis/travis.sh ] && source /home/elijah/.travis/travis.sh

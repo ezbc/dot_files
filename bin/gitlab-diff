@@ -1,0 +1,22 @@
+#!/bin/bash
+
+git fetch
+latest_tag=$(git tag --sort=-refname | head -n 1)
+repo=${PWD##*/}
+URL="https://gitlab.com/metametrics/$repo/compare/$latest_tag...master"
+
+if [ -z "${latest_tag}" ];
+then
+    echo "tag not found, exiting..."
+    exit
+fi
+
+echo $URL
+
+if which xdg-open > /dev/null
+then
+  xdg-open $URL
+elif which gnome-open > /dev/null
+then
+  gnome-open $URL
+fi

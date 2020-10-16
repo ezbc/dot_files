@@ -88,8 +88,8 @@ bindsym $mod+BackSpace split toggle
 bindsym $mod+f fullscreen toggle
 
 # change gaps interactively
-bindsym $mod+minus gaps inner current minus 6
-bindsym $mod+plus gaps inner current plus 6
+bindsym $mod+Ctrl+minus gaps inner current minus 6
+bindsym $mod+Ctrl+plus gaps inner current plus 6
 
 # show/hide keybindings
 bindsym $mod+Shift+question exec --no-startup-id /usr/bin/conky-toggle
@@ -358,4 +358,11 @@ bindsym $mod+Escape exec "sh /home/elijah/dot_files/bin/lock"
 exec xautolock -time 10 -locker "/home/elijah/dot_files/bin/lock" &
 
 set $terminal_path /usr/bin/gnome-terminal
+
+# https://i3wm.org/docs/userguide.html#_scratchpad
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
 
