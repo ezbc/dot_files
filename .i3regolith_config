@@ -355,7 +355,7 @@ bindsym $mod+e layout stacking
 
 # lock screen
 bindsym $mod+Escape exec "sh /home/elijah/dot_files/bin/lock"
-exec xautolock -time 10 -locker "/home/elijah/dot_files/bin/lock" &
+# exec xautolock -time 10 -locker "/home/elijah/dot_files/bin/lock" &
 
 set $terminal_path /usr/bin/gnome-terminal
 
@@ -365,4 +365,5 @@ bindsym $mod+Shift+minus move scratchpad
 
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
+
 

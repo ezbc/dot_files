@@ -66,13 +66,13 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  #mercurial
   zsh-completions
   colored-man-pages
   history
   aws
   docker
   pip
+  poetry
   vi-mode
   #virtualenv
   #vagrant
@@ -113,7 +113,8 @@ autoload -U compinit && compinit
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias python=python3
 alias pip=pip3
-alias docker-pull-latest=docker images | grep -Ev "(REPOSITORY|none|\_)" | awk '{print ($1 ":" $2)}' | xargs -L1 docker pull
+alias docker-pull-latest='docker images | grep -Ev "(REPOSITORY|none|\_)" | awk "{print ($1 \":\" $2)}" | xargs -L1 docker pull'
+alias emojis="cat ~/.commit-emojis.txt"
 #
 #
 ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
@@ -170,3 +171,10 @@ alias bfg="java -jar ~/.local/lib/bfg.jar"
 
 # added by travis gem
 [ -f /home/elijah/.travis/travis.sh ] && source /home/elijah/.travis/travis.sh
+
+export PATH="$HOME/.poetry/bin:$HOME/.pyenv/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+

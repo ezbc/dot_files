@@ -301,3 +301,10 @@ unset __conda_setup
 
 # added by travis gem
 [ -f /home/elijah/.travis/travis.sh ] && source /home/elijah/.travis/travis.sh
+
+export PATH="$HOME/.poetry/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+

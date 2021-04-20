@@ -24,3 +24,9 @@ if [ -f '/Users/ezbc/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/
 if [ -f '/Users/ezbc/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/ezbc/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
 export PATH="$HOME/.poetry/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+echo "BASH PROFILE"
