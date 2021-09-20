@@ -114,7 +114,6 @@ autoload -U compinit && compinit
 alias python=python3
 alias pip=pip3
 alias docker-pull-latest='docker images | grep -Ev "(REPOSITORY|none|\_)" | awk "{print ($1 \":\" $2)}" | xargs -L1 docker pull'
-alias emojis="cat ~/.commit-emojis.txt"
 #
 #
 ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"

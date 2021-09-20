@@ -1,0 +1,1 @@
+cat $DOTFILES/lib/commit-emojis.txt
