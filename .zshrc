@@ -160,7 +160,8 @@ down-line-or-local-history() {
 }
 zle -N down-line-or-local-history
 
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
+alias fucky="fuck --yeah"
 
 export CURRENT_UID=$(id -u):$(id -g)
 
@@ -177,3 +178,4 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+alias myname="echo '✨🇪 🇱 🇮 🇯 🇦 🇭 ✨'"
