@@ -165,9 +165,6 @@ let g:Tex_MultipleCompileFormats = 'pdf'
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
-" The following toggles syntastic
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['py'],'passive_filetypes': [] }
-nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 
 

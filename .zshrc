@@ -69,13 +69,13 @@ plugins=(
   zsh-completions
   colored-man-pages
   history
+  git history-substring-search
   aws
   docker
   pip
   poetry
   vi-mode
   #virtualenv
-  #vagrant
   npm
 )
 
@@ -160,7 +160,7 @@ down-line-or-local-history() {
 }
 zle -N down-line-or-local-history
 
-#eval $(thefuck --alias)
+eval $(thefuck --alias)
 alias fucky="fuck --yeah"
 
 export CURRENT_UID=$(id -u):$(id -g)
