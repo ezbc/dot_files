@@ -66,7 +66,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  zsh-completions
+  #zsh-completions
   colored-man-pages
   history
   git history-substring-search
@@ -178,4 +178,4 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-alias myname="echo '✨🇪 🇱 🇮 🇯 🇦 🇭 ✨'"
+alias myname="echo '🔥✨🇪 🇱 🇮 🇯 🇦 🇭 ✨🔥'"
