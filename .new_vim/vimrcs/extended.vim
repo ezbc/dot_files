@@ -34,9 +34,9 @@ set guioptions-=L
 " Colorscheme
 if has("gui_running")
     set background=dark
-    colorscheme antares
+    "colorscheme desert
 else
-    colorscheme desert
+    "colorscheme desert
     let g:colors_name="desert"
 endif
 

@@ -94,7 +94,7 @@ set autoread		" auto read when file is changed from outside
 " ----------------------------- aesthetics -----------------------------------
 " ------------------------------------------------------------------------------
 set number              " shows line numbers
-colorscheme antares
+"colorscheme desert
 
 " cursor line
 set cursorline
