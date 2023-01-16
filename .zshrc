@@ -3,6 +3,8 @@
 
 export DOTFILES=/home/elijah/dot_files/
 
+export PATH=$DOTFILES/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/elijah/.oh-my-zsh"
 
@@ -162,6 +164,7 @@ zle -N down-line-or-local-history
 
 eval $(thefuck --alias)
 alias fucky="fuck --yeah"
+alias 🖕=fuck
 
 export CURRENT_UID=$(id -u):$(id -g)
 
@@ -179,3 +182,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 alias myname="echo '🔥✨🇪 🇱 🇮 🇯 🇦 🇭 ✨🔥'"
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

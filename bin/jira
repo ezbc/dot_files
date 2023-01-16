@@ -1,0 +1,13 @@
+#!/bin/bash
+
+URL="https://metametrics.atlassian.net/browse/$1"
+
+echo "JIRA url: $URL"
+
+if which xdg-open > /dev/null
+then
+  xdg-open $URL
+elif which gnome-open > /dev/null
+then
+  gnome-open $URL
+fi

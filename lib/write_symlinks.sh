@@ -29,3 +29,13 @@ do
     ln -s "$filepath" "$HOME/.local/bin/$filename"
 done
 
+
+# profile.d
+FILEPATHS="$DOTFILES/profile.d/*"
+for filepath in $FILEPATHS
+do
+    filename=$(basename $filepath)
+    echo "adding $filename to path"
+    sudo ln -s "$filepath" "/etc/profile.d/$filename"
+done
+
