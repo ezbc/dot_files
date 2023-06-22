@@ -1,0 +1,94 @@
+#!/bin/bash
+
+# Default values if not specified
+resize=""
+delay=10
+angle_step=30
+
+while getopts ":r:d:a:" opt; do
+  case $opt in
+    r)
+      resize=$OPTARG
+      ;;
+    d)
+      delay=$OPTARG
+      ;;
+    a)
+      angle_step=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+shift $((OPTIND -1))
+
+# Check that two arguments are provided
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 [-r widthxheight] [-d delay] [-a angle] <input_file_path> <output_file_path>"
+    exit 1
+fi
+
+input_file="$1"
+output_file="$2"
+
+# Check that ImageMagick is installed
+if ! command -v convert &> /dev/null; then
+    echo "ImageMagick is not installed. Please install it and try again."
+    exit 1
+fi
+
+# Function to validate if the file is an image and not a gif
+function is_image_not_gif() {
+    local format
+    format=$(identify -format "%m" "$1" 2>/dev/null)
+    [[ $format && $format != "GIF" ]]
+}
+
+# Check that the input file exists and is an image
+if [ ! -f "$input_file" ]; then
+    echo "Input file does not exist: $input_file"
+    exit 1
+elif ! is_image_not_gif "$input_file"; then
+    echo "Input file is not an image or it's a gif: $input_file"
+    exit 1
+fi
+
+# Check that the input file exists
+if [ ! -f "$input_file" ]; then
+    echo "Input file does not exist: $input_file"
+    exit 1
+fi
+
+# Directory for temporary frames
+temp_dir="temp_frames"
+mkdir -p $temp_dir
+
+# Generate rotated frames
+for angle in $(seq 0 $angle_step 350); do
+    padded_angle=$(printf "%03d" $angle)
+    if [ -z "$resize" ]; then
+        convert "$input_file" -background none -distort SRT "$angle" \
+            -gravity center -crop "$(identify -format "%wx%h" "$input_file")+0+0" +repage \
+            "$temp_dir/frame_$padded_angle.png"
+    else
+        convert "$input_file" -background none -distort SRT "$angle" \
+            -gravity center -crop "$(identify -format "%wx%h" "$input_file")+0+0" +repage \
+            -resize $resize "$temp_dir/frame_$padded_angle.png"
+    fi
+done
+
+# Generate the GIF
+convert -dispose Background -loop 0 -delay $delay $(ls $temp_dir/*.png | sort -n -t _ -k 2) "$output_file"
+
+# Remove the temporary frames
+rm -r "$temp_dir"
+
+echo "The rotating GIF has been successfully created and saved to: $output_file"
+
