@@ -15,10 +15,10 @@ ln -s $DOTFILES/.bashrc ~/.bashrc
 ln -s $DOTFILES/.hgrc ~/.hgrc
 ln -s $DOTFILES/.bash_profile ~/.bash_profile
 ln -s $DOTFILES/.zshrc ~/.zshrc
-ln -s $DOTFILES/.i3config ~/.config/i3/config
-ln -s $DOTFILES/.i3status ~/.config/i3status/config
-ln -s $DOTFILES/.i3regolith_config ~/.config/regolith/i3/config
-ln -s $DOTFILES/.i3regolith2_config ~/.config/regolith2/i3/config
+#ln -s $DOTFILES/.i3config ~/.config/i3/config
+#ln -s $DOTFILES/.i3status ~/.config/i3status/config
+#ln -s $DOTFILES/.i3regolith_config ~/.config/regolith/i3/config
+#ln -s $DOTFILES/.i3regolith2_config ~/.config/regolith2/i3/config
 
 # bin
 FILEPATHS="$DOTFILES/bin/*"

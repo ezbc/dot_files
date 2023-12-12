@@ -1,7 +1,7 @@
 #!/bin/bash
 string=$1
-match1="New message from"
-match2="New message in"
+match1="Slack"
+match2="Slack"
 echo "Bingo"
 if [[ "$string" =~ "$match1" || "$string" =~ "$match2" ]]
   then

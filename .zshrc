@@ -113,8 +113,8 @@ autoload -U compinit && compinit
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias python=python3
-alias pip=pip3
+#alias python=python3
+#al#ias pip=pip3
 alias docker-pull-latest='docker images | grep -Ev "(REPOSITORY|none|\_)" | awk "{print ($1 \":\" $2)}" | xargs -L1 docker pull'
 #
 #
@@ -162,10 +162,6 @@ down-line-or-local-history() {
 }
 zle -N down-line-or-local-history
 
-eval $(thefuck --alias)
-alias fucky="fuck --yeah"
-alias 🖕=fuck
-
 export CURRENT_UID=$(id -u):$(id -g)
 
 alias bfg="java -jar ~/.local/lib/bfg.jar"
@@ -188,3 +184,10 @@ export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+
+# bit
+export PATH="$PATH:/home/elijah/bin"
+# bit end
+#
+ulimit -n 100000

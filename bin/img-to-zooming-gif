@@ -1,0 +1,90 @@
+#!/bin/bash
+
+# Default values if not specified
+resize=""
+delay=10
+zoom_step=10
+max_zoom=100
+
+while getopts ":r:d:z:m:" opt; do
+  case $opt in
+    r)
+      resize=$OPTARG
+      ;;
+    d)
+      delay=$OPTARG
+      ;;
+    z)
+      zoom_step=$OPTARG
+      ;;
+    m)
+      max_zoom=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+shift $((OPTIND -1))
+
+# Check that two arguments are provided
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 [-r widthxheight] [-d delay] [-z zoom_step] [-m max_zoom] <input_file_path> <output_file_path>"
+    exit 1
+fi
+
+input_file="$1"
+output_file="$2"
+
+# Check that ImageMagick is installed
+if ! command -v convert &> /dev/null; then
+    echo "ImageMagick is not installed. Please install it and try again."
+    exit 1
+fi
+
+# Function to validate if the file is an image and not a gif
+function is_image_not_gif() {
+    local format
+    format=$(identify -format "%m" "$1" 2>/dev/null)
+    [[ $format && $format != "GIF" ]]
+}
+
+# Check that the input file exists and is an image
+if [ ! -f "$input_file" ]; then
+    echo "Input file does not exist: $input_file"
+    exit 1
+elif ! is_image_not_gif "$input_file"; then
+    echo "Input file is not an image or it's a gif: $input_file"
+    exit 1
+fi
+
+# Directory for temporary frames
+temp_dir="temp_frames"
+mkdir -p $temp_dir
+
+# Generate zooming frames
+for zoom in $(seq 10 $zoom_step $max_zoom); do
+    padded_zoom=$(printf "%03d" $zoom)
+    convert "$input_file" -resize ${zoom}% \
+        -gravity center -extent "$(identify -format "%wx%h" "$input_file")" \
+        "$temp_dir/frame_$padded_zoom.png"
+done
+
+# Generate the GIF
+if [ -n "$resize" ]; then
+    convert -dispose Background -loop 0 -delay $delay $(ls $temp_dir/*.png | sort -n -t _ -k 2) -resize $resize "$output_file"
+else
+    convert -dispose Background -loop 0 -delay $delay $(ls $temp_dir/*.png | sort -n -t _ -k 2) "$output_file"
+fi
+
+# Remove the temporary frames
+rm -r "$temp_dir"
+
+echo "The zooming GIF has been successfully created and saved to: $output_file"
+
